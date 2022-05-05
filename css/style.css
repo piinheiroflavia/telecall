@@ -1,0 +1,190 @@
+*{
+    padding: 0px;
+}
+:root {
+    --cor-vermelho: #CA1C2A;
+    --cor-azul-1: #0B8CED;
+    --cor-azul-2: #0C4B77;
+    --cor-cinza: #31353B;
+    --cor-branco: #fff;
+}
+.headerTopo{
+    height: 38px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.pull-right{
+    float: right;
+}
+.atendimento {
+    color: #979797;
+    display: block;
+    min-height: 40px;
+    margin: 8px 20px 0 0;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    float: left;
+    position: relative;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+/*ÁREA CLIENTE- LOGIN*/
+.cliente {
+    color: #fff;
+    background-color: #0f96ae;
+    display: block;
+    min-height: 40px;
+    font-size: 14px;
+    float: left;
+    padding: 10px 50px;
+    position: relative;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+a {
+    background: transparent;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+/*WhatsApp*/
+.wp {
+    background-color:var(--cor-azul-2);
+    color: #fff;
+    float: left;
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+    padding: 11px 40px;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+a {
+    background: transparent;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+/**/
+.idioma{
+    background-color:var(--cor-azul-2);
+    color: #fff;
+    float: right;
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+    padding: 11px 20px;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+/**/
+#menu-fixo{
+    z-index: 9999;
+    width: 100%;
+    color: var(--cor-branco);
+    background-color: var(--cor-vermelho);
+    font-size: 1.2rem;
+    height: 72px;  
+    position:sticky;
+    top:0;
+}
+.logo{
+    background-position: center center;
+    position: absolute;
+    width: 18%;
+}
+/*PRIMEIRO MENU*/
+.primeiro-menu ul {
+    list-style-type: none; 
+    padding:  10px;
+    display: flex;
+    justify-content:flex-end;
+    text-align: center;
+    flex-wrap: wrap;
+}
+/*SERVIÇO*/
+.primeiro-menu ul li {
+    border-radius: 25% 10%;
+    margin: 0px 5px;
+    display:inline;  
+    position: relative;
+}
+/*SERVIÇO A*/
+.primeiro-menu ul li a {  
+    color:rgba(255,255,255,0.85);
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    transition: background .3s;
+}
+/*HOVER SERVIÇOS*/
+.primeiro-menu ul li:hover {
+    padding: 10px;
+}
+/* HOME*/
+.primeiro-menu  a {
+    color:rgba(255,255,255,0.85);
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    transition: background .3s;
+}
+/*HOVER HOME*/
+.primeiro-menu a:hover {
+    color:var(--cor-branco);
+   
+}
+.primeiro-menu ul ul li a:hover {
+    background-color:var(--cor-vermelho);
+}
+/*sub menu*/
+.primeiro-menu ul ul {
+    color: #3a82ef;
+    display: none;
+}
+/*CAIXA DROPDOWN */
+.primeiro-menu ul ul {
+    border-radius: 1px;
+    padding: 0px;
+    font-size: 1rem;
+    width: 180px;
+}
+/*LISTA DROPDOWN SERVIÇO*/
+.primeiro-menu ul ul li a {
+    font-weight: bold;
+    color:var(--cor-azul-2);
+    display: block;
+}
+/*LISTA DROPDOWN HOVER*/
+.primeiro-menu ul li:hover ul {
+    background-color:rgba(255, 255, 255, 0.796);
+    display: block;  
+}
+
+/*CAROUSEL*/

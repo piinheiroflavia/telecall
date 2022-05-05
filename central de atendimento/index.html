@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Atendimento</title>
+
+        <!--BOOTSTRAP-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="../css/style.css">
+    
+        <!--ICONS-->
+        <script src="https://kit.fontawesome.com/7198f8d6d1.js" crossorigin="anonymous"></script>
+    
+        <!--LOGIN CPF E CNPJ-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="headerTopo">
+            <div class="pull-right">
+                <a href="./central de atendimento/index.html" class="atendimento" target="_blank"><i class="fa-regular fa-user-headset"></i> Central de Atendimento
+                </a>
+            
+            <a href="./login/index.html" class="cliente" target="_blank">
+                <i class="fa-regular fa-user"></i> Área Cliente
+            </a>
+            <!--ZAP-->
+            <a href="https://api.whatsapp.com/send/?phone=5521936180100&text&app_absent=0" class="wp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Fale Pelo WhatsApp</a>
+            
+            
+            <a href="" class="idioma"> <i class="fa-solid fa-globe"></i> PT - Brasil
+                        <ul class="lista-idioma">
+                            <li><a href="#  ">Português</a></li>
+                            <li><a href="#">English</a></li>
+                        </ul>
+            </a>
+            <li><a href="#">Serviços <i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="#">SMS Programável</a></li>
+                    <li><a href="#">Google Verfied Calls</a></li>
+                    <li><a href="#">2FA</a></li>
+                    <li><a href="#">Número Máscara</a></li>
+                </ul>
+            </li>
+            </div>         
+        </div>
+
+        <!--menu-->
+        <div id="menu-fixo" class="hidden-sm hidden-xs">
+            <a href="../index.html" class="lg"><img class="logo" src="../img/telecall.png" alt=""></a>
+            <nav class="primeiro-menu">
+                <ul class="dropdown">
+                    <a href="#">Home</a>
+
+                    <li><a href="#">Serviços <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">SMS Programável</a></li>
+                            <li><a href="#">Google Verfied Calls</a></li>
+                            <li><a href="#">2FA</a></li>
+                            <li><a href="#">Número Máscara</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section>
+        <div id="pag5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contato-info">
+                        <h2>Entre em Contato</h2>
+                        <p>flavia.p_17@hotmail.com <br> 21995919189  </p>
+                                         
+                    </div>
+                </div>
+                <div id="ctt" class="col-md-6">
+                    <div class="Contato">
+                        <div class="form-group">
+                          <label class="control-label col-sm-2" for="fname">Nome</label>
+                          <div class="col-sm-10">          
+                            <input type="text" class="form-control" id="fname" placeholder="nome" name="fname">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-2" for="lname">Sobrenome:</label>
+                          <div class="col-sm-10">          
+                            <input type="text" class="form-control" id="lname" placeholder="sobrenome" name="lname">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-2" for="email">Email:</label>
+                          <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" placeholder="email" name="email">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-2" for="comment">Mensagem:</label>
+                          <div class="col-sm-10">
+                            <textarea class="form-control" rows="5" id="comment" placeholder="digite aqui sua mensagem.."></textarea><br>
+                                <a class="btn5" href="#">Enviar email</a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
