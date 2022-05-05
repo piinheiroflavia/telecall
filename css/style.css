@@ -188,3 +188,399 @@ a {
 }
 
 /*CAROUSEL*/
+
+
+/*TELA DE LOGIN*/
+.login body {
+    background-image: url('../img/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: auto;
+    overflow: hidden;
+   
+}
+.container{
+    margin-top: 50px;
+    width: 800px;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px  rgba(31, 38, 135, 0.2);  
+    display: flex;
+    flex-wrap: wrap;
+} 
+#lado1{
+    padding: 50px 40px 2px 29px    ;
+    color: var(--cor-branco);
+    background-color:var(--cor-vermelho);
+    
+}
+#lado1 h2{
+    color: var(--cor-branco);
+    letter-spacing: 0.5px;
+
+}
+.icon{
+    font-size: 1.2rem;
+    margin: 3px;
+    color:var(--cor-branco);
+}
+.icon:hover{
+     color: rgba(255, 255, 255, 0.78);
+}
+#lado2{
+    padding:  50px 29px 29px 37px;
+    background: rgba(255, 255, 255, 0.316);
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+}
+#lado2 h3{
+    color: var(--cor-cinza);
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+.input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.cpf {
+    margin-top: 30px;
+}
+.icon1{
+    position: absolute;
+    transition: all 0.35s;
+    top:70%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: rgba(0, 0, 0, 0.354);
+} 
+/*.validation{
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translate(5rem, -50%);
+    opacity: 0;
+    color: #CA1C2A;
+    transition: all 0.35s;
+}
+input:valid {border: 1px solid yellow;}
+input:invalid {border: 1px solid #CA1C2A;}*/
+/*input:invalid ~ .validation{
+    opacity: 1;
+    transform: translate(0,-50%);
+}
+@keyframes shake {
+    25%{
+        transform: translate(4px);
+    }
+    50%{
+        transform: translateX(-4px);
+    }
+    75%{
+        transform: translateX(4px);
+    }
+}*/
+.icon2{
+    position: absolute;
+    transition: all 0.35s;
+    top:70%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: rgba(0, 0, 0, 0.354);
+} 
+.senha{
+    margin-top: 30px;
+}
+.input{
+    background-color: rgba(255, 255, 255, 0);
+    border:0;
+    caret-color:var(--cor-vermelho);
+    color: #000;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.354);
+    font-size: 18px;
+    height: 100%;
+    width: 100%;
+    outline: 0;
+    padding: 2px 5px ;   
+    
+}
+.vago { 
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 96px;
+} 
+/*INPUT COM A BORDAR VERMELHA*/
+.input:focus,
+.input:not(:placeholder-shown) {
+    transform: translateY(8px);
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.274);
+    border-top: 2px solid rgba(0, 0, 0, 0.274);
+    border-left: 2px solid rgba(0, 0, 0, 0.274);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.274);
+    border-right: 2px solid rgba(0, 0, 0, 0.274);
+}
+.input:focus ~ .vago,
+.input:not(:placeholder-shown) ~ .vago {
+    transform: translateY(8px);
+}
+.placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    left: 20px;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+    background-color:#ffffff00;
+}
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+.input:not(:placeholder-shown) ~ .placeholder {
+    color: #000000;
+}  
+.input:focus ~ .placeholder {
+    color: #000;
+}
+
+  /*btn TELA DE LOGIN*/
+#btn{
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.submit { 
+   background-color:var(--cor-vermelho);
+    border: none;
+    text-transform: uppercase;
+    width: 25%;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    padding: 8px;
+    margin: 0px 10px;
+    text-align: center; 
+    position: relative;
+    transition: 0.6s;
+}
+.submit:hover {
+    background-color:var(--cor-azul-2); 
+}
+.submit a{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--cor-branco);
+}
+.cadastra{
+    border: none;
+    position: relative;
+    padding: 10px 15px;
+    margin: 10px;
+    background-color:rgba(255, 255, 255, 0);
+    color:var(--cor-vermelho);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.cadastra a{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--cor-vermelho);
+}
+.cadastra a:hover {
+    color: var(--cor-azul-2);
+    transition-delay: 0.1s;
+}
+.cadastra:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid var(--cor-vermelho);
+    border-left: 2px solid var(--cor-vermelho);
+    transition: 0.5s;
+    transition-delay: 0.3s;
+}
+.cadastra:hover:before{ 
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid var(--cor-azul-2);
+    border-left: 2px solid var(--cor-azul-2);
+    transition-delay: 0.4s;
+}
+.cadastra:after{
+    color:var(--cor-azul-2);
+    content: '';
+    position: absolute;
+    bottom:0px;
+    right: 0px;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid var(--cor-vermelho);
+    border-right: 2px solid var(--cor-vermelho);
+    transition: 0.5s;
+    transition-delay: 0.3s;
+}
+.cadastra:hover:after{
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid var(--cor-azul-2);
+    border-right: 2px solid var(--cor-azul-2);
+    transition-delay: 0.4s;
+}
+.span{
+    font-size: 0.7rem;
+}
+.span a{
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: var(--cor-vermelho);
+}
+.span a:hover{
+    text-decoration: underline;
+    color: var(--cor-azul-2);
+}
+
+
+/*BTN TELA DE ÁREA DO CLIENTE*/
+.area-cliente h2{
+    font-size: 2rem;
+}
+.area-cliente h4{
+    font-size: 1.7rem;
+}
+.area-cliente p{
+    font-size: 1.3rem;
+    flex-wrap: wrap;
+}
+.area-cliente-logo{
+    margin: 5px;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#btn{
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.submit-2 { 
+    border: none;
+    text-transform: uppercase;
+    width: 20%;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    padding: 8px;
+    margin: 0px 10px;
+    text-align: center; 
+    position: relative;
+    transition: 0.6s;
+   transition: all 0.2s linear 0s;
+ }       
+.submit-2:before {
+    content: "\f178";
+    font-family: FontAwesome;
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s;
+}
+.submit-2:hover {
+    text-indent: -20px;
+} 
+.submit-2:before {
+    opacity: 1;
+    text-indent: 0px;
+}
+.submit-2 a{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--cor-vermelho);
+}
+.cadastra-2{
+    width: 25%;
+    border: none;
+    position: relative;
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--cor-vermelho);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    overflow: hidden;
+}
+.cadastra-2 a{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--cor-branco);
+}
+.cadastra-2 a:hover {
+    color: var(--cor-branco);
+    transition-delay: 0.1s;
+}
+.cadastra-2:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid var(--cor-branco);
+    border-left: 2px solid var(--cor-branco);
+    transition: 0.5s;
+    transition-delay: 0.3s;
+}
+.cadastra-2:hover:before{ 
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid var(--cor-branco);
+    border-left: 2px solid var(--cor-branco);
+    transition-delay: 0.4s;
+}
+.cadastra-2:after{
+    color:var(--cor-azul-2);
+    content: '';
+    position: absolute;
+    bottom:0px;
+    right: 0px;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid var(--cor-branco);
+    border-right: 2px solid var(--cor-branco);
+    transition: 0.5s;
+    transition-delay: 0.3s;
+}
+.cadastra-2:hover:after{
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid var(--cor-branco);
+    border-right: 2px solid var(--cor-branco);
+    transition-delay: 0.4s;
+}
