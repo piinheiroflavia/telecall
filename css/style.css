@@ -8,6 +8,12 @@
     --cor-cinza: #31353B;
     --cor-branco: #fff;
 }
+#pagina-inicial{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
 .headerTopo{
     height: 38px;
     display: flex;
@@ -19,7 +25,8 @@
     float: right;
 }
 .atendimento {
-    color: #979797;
+    text-decoration: none;
+    color: #777575;
     display: block;
     min-height: 40px;
     margin: 8px 20px 0 0;
@@ -36,6 +43,7 @@
 }
 /*ÁREA CLIENTE- LOGIN*/
 .cliente {
+    text-decoration: none;
     color: #fff;
     background-color: #0f96ae;
     display: block;
@@ -50,18 +58,13 @@
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
 }
-a {
-    background: transparent;
+.cliente:hover {
+    color:rgba(255,255,255,0.85);
 }
-a {
-    color: #337ab7;
-    text-decoration: none;
-}
-a {
-    background-color: transparent;
-}
+
 /*WhatsApp*/
 .wp {
+    text-decoration: none;
     background-color:var(--cor-azul-2);
     color: #fff;
     float: left;
@@ -75,18 +78,12 @@ a {
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
 }
-a {
-    background: transparent;
-}
-a {
-    color: #337ab7;
-    text-decoration: none;
-}
-a {
-    background-color: transparent;
+.wp:hover {
+    color:rgba(255,255,255,0.85);
 }
 /**/
 .idioma{
+    text-decoration: none;
     background-color:var(--cor-azul-2);
     color: #fff;
     float: right;
@@ -100,6 +97,9 @@ a {
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
 }
+.idioma:hover {
+    color:rgba(255,255,255,0.85);
+}
 
 /**/
 #menu-fixo{
@@ -108,7 +108,7 @@ a {
     color: var(--cor-branco);
     background-color: var(--cor-vermelho);
     font-size: 1.2rem;
-    height: 72px;  
+    height: 75px;  
     position:sticky;
     top:0;
 }
@@ -168,7 +168,7 @@ a {
     color: #3a82ef;
     display: none;
 }
-/*CAIXA DROPDOWN */
+/*CAIXA DROPDOWN SERVIÇO*/
 .primeiro-menu ul ul {
     border-radius: 1px;
     padding: 0px;
@@ -186,12 +186,114 @@ a {
     background-color:rgba(255, 255, 255, 0.796);
     display: block;  
 }
+/*CARDS*/
+#content {
+    max-width: 1024px;
+    width: 100%;
+    padding: 0 4%;
+    padding-top: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #content a{
+    text-decoration: none;
+  }
+  @media screen and (max-width: 767px) {
+      #content {
+        padding-top: 300px;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+  }
+  .card {
+      width: 100%;
+      max-width: 300px;
+      min-width: 200px;
+      height: 250px;
+      background: rgba(197, 195, 195, 0.316);
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+      border: 2px solid rgba(7, 7, 7, 0.12);
+      font-size: 16px;
+      transition: all 0.3s ease;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+  .icons-cards-servicos {
+    margin: 0 auto;
+    font-size: 2rem;
+    width: 100%;
+    height: 80px;
+    max-width: 80px;
+    background: linear-gradient(90deg, #63b2ef 0%,#0B8CED 50%, #0C4B77 50%);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 0.8s ease;
+    background-position: 0px;
+    background-size: 200px;
+  }  
+  .card .title {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    margin-top: 30px;
+    color: #0C4B77;
+    font-weight:bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }  
+  .card .text {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 2px;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.3s ease;
+  }  
+  .card:hover {
+    height: 270px;
+  }  
+  .card:hover .info {
+    height: 90%;
+  }
+  .card:hover .text {
+    transition: all 0.3s ease;
+    opacity: 1;
+    max-height: 40px;
+  } 
+  .card:hover .icons-cards-servicos{
+    background-position: -120px;
+    transition: all 0.3s ease;
+  }  
+  .card:hover .icons-cards-servicosi {
+    background-color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
 
-/*CAROUSEL*/
+
 
 
 /*TELA DE LOGIN*/
-.login body {
+.login {
     background-image: url('../img/fundo.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -210,7 +312,7 @@ a {
 #lado1{
     padding: 50px 40px 2px 29px    ;
     color: var(--cor-branco);
-    background-color:var(--cor-vermelho);
+    background-color:var(--cor-azul-2);
     
 }
 #lado1 h2{
@@ -288,10 +390,15 @@ input:invalid {border: 1px solid #CA1C2A;}*/
     position: absolute;
     transition: all 0.35s;
     top:70%;
+    cursor: pointer;
     right: 20px;
     transform: translateY(-50%);
     color: rgba(0, 0, 0, 0.354);
 } 
+#unlock{
+    display: none;
+
+}
 .senha{
     margin-top: 30px;
 }
@@ -354,7 +461,6 @@ input:invalid {border: 1px solid #CA1C2A;}*/
 .input:focus ~ .placeholder {
     color: #000;
 }
-
   /*btn TELA DE LOGIN*/
 #btn{
     margin: 20px 10px;
@@ -458,8 +564,14 @@ input:invalid {border: 1px solid #CA1C2A;}*/
     color: var(--cor-azul-2);
 }
 
-
 /*BTN TELA DE ÁREA DO CLIENTE*/
+.fundo-area-cliente{
+    background-image: url('../img/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: auto;
+    overflow: hidden;
+}
 .area-cliente h2{
     font-size: 2rem;
 }

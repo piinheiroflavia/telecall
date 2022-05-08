@@ -6,3 +6,21 @@ $('#cpfcnpj').mask('000.000.000-00', {
       $('#cpfcnpj').mask(mask, options);
     }
   });
+
+//OCULTAR A SENHA
+function showPassword() {
+  const senha = document.getElementById('Senha');
+  const aberto = document.getElementById('lock');
+  const fechado = document.getElementById('unlock')
+
+  if (aberto.style.display === 'block'){
+    aberto.style.display = 'none';
+    fechado.style.display = 'block';
+    senha.type = 'text';
+  }else{
+    aberto.style.display = 'block';
+    fechado.style.display = 'none';
+    senha.type = 'password';
+  }
+};
+
