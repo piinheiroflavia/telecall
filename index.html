@@ -14,15 +14,13 @@
     <!--ICONS-->
     <script src="https://kit.fontawesome.com/7198f8d6d1.js" crossorigin="anonymous"></script>
 
-    <!--LOGIN CPF E CNPJ-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
+   
  
 
     
 </head>
 <body>
-    <header id="pagina-inicial">
+    <header id="pagina-inicial" class="col-12">
         <div class="headerTopo">
             <div class="pull-right">
                 <a href="./central de atendimento/index.html" class="atendimento" target="_blank"><i class="fa-regular fa-user-headset"></i> Central de Atendimento
@@ -68,76 +66,89 @@
         </div>
     </header>
 
-    <section>
-        <img src="./img/modavo2 (1).jpg" class="w-100" alt="banner sobre os serviços da telecall">
+    <section class="banner-principal">
+   <img class="img-gif" src="./img/Banner para CPaaS.gif" alt="banner sobre os serviços da telecall">
     </section>
 
     <section class="parte2-pagina-principal" >
         <h2>Conheça os nossos serviços</h2>
         <h4>Plataforma e soluções</h4>
-        <div  id="bloco1" class="p-4 p-md-5 mb-4 row "> 
+        <div  id="bloco1-pagina-principal" class="col-12 row "> 
             <div class="col-md-6 col-sm-12">
-                <img src="./img/modavo p.png" width="70%" class="img">
+                <img src="./img/modavo p.png" width="70%" class="parte2-img">
             </div>
-            <div id="pagsobre" class="col-md-6 col-sm-12 px-0 ">
+            <div id="pagsobre-servico" class="col-md-6 col-sm-12 px-0 ">
                 <h3>Communications Platform as a Service</h3>
-                <h4>Plataforma de comunicação e serviço</h4>
-                <p>É uma solução de software de comunicação que atua como uma base sobre a qual desenvolvedores podem integrar uma variedade de aplicativos</p>
+                <h5>Plataforma de comunicação e serviço</h5>
+                <p>É uma solução de software de comunicação que atua
+                  como uma base sobre a qual desenvolvedores podem
+                  integrar uma variedade de aplicativos. <br>
+                  Métodos de comunicação típicos, como voz, chamadas
+                  de vídeo ou mensagens de texto SMS, podem ser
+                  incorporados em outros sistemas por meio de APIs que
+                  se conectam à plataforma CPaaS. <br>
+                  Essas APIs permitem que as empresas expandam suas
+                  ofertas sem a necessidade de hardware ou software
+                  adicional.</p>
                 <br>
-                <button><a class="btn2" href="#">Saber Mais</a></button>  
+                <button class="parte2-btn" ><a href="#">Saber Mais</a></button>  
             </div>
         </div>
 
         <!--CARDS-->
-    <div  id="content" class="p-4 p-md-5 mb-4 row "> 
+    <div id="fundo-cards">
+      <div  id="content" class="p-4 p-md-5 mb-4 row ">
+              <div class="col-md-6 col-sm-12">
+                <a href="#">
+                  <div class="card">
+                    <div class="icons-cards-servicos"><i class="fa-solid fa-comment-sms"></i></div>
+                    <p class="title">SMS Prográmavel</p>
+                    <p class="text">SMS é a forma mais rápida, eficiente e de baixo custo para se
+                      comunicar com seus clientes.</p>
+                  </div>
+                </a>
+              </div>
+          <br>
+              <div class="col-md-6 col-sm-12 px-0 ">
+                <a href="#">
+                  <div class="card">
+                    <div class="icons-cards-servicos"><i class="fa-solid fa-check"></i></div>
+                      <p class="title">Googles Verfied Calls</p>
+                      <p class="text">permite que empresas exibam
+                        para o cliente na hora da chamada sua marca,</p>
+                  </div>
+                </a>
+              </div>
+      </div>
+      
+           <!--CARDS-->
+      <div  id="content" class="p-4 p-md-5 mb-4 row " background="red">
+            <div class="col-md-6 col-sm-12">
+              <a href="#" class="ancora-cards-tela-principal">
+                <div class="card">
+                  <div class="icons-cards-servicos"><i class="fa-solid fa-lock"></i></div>
+                    <p class="title">2FA</p>
+                    <p class="text">Fortaleça a estratégia de segurança de seu negócio.</p>
+                </div>
+              </a>
+            </div>
+          <br>
             <div class="col-md-6 col-sm-12">
               <a href="#">
                 <div class="card">
-                  <div class="icons-cards-servicos"><i class="fa-solid fa-comment-sms"></i></div>
-                  <p class="title">SMS Prográmavel</p>
-                  <p class="text">Click to see or edit your profile page.</p>
+                  <div class="icons-cards-servicos"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <p class="title">Número Máscara</p>
+                    <p class="text">Proteja identidades profissionais</p>
+                  </div>
                 </div>
               </a>
-            </div>
-        <br>
-            <div class="col-md-6 col-sm-12 px-0 ">
-              <a href="#">
-                <div class="card">
-                  <div class="icons-cards-servicos"><i class="fa-solid fa-check"></i></div>
-                    <p class="title">Googles Verfied Calls</p>
-                    <p class="text">Check all your favourites in one place.</p>
-                </div>
-              </a>
-            </div>
-    </div>
-        
-         <!--CARDS-->
-    <div  id="content" class="p-4 p-md-5 mb-4 row " background="red"> 
-          <div class="col-md-6 col-sm-12">
-            <a href="#" class="ancora-cards-tela-principal">
-              <div class="card">
-                <div class="icons-cards-servicos"><i class="fa-solid fa-lock"></i></div>
-                  <p class="title">2FA</p>
-                  <p class="text">Add or change your contacts and links.</p>
-              </div>
-            </a>
-          </div>
-        <br>
-          <div class="col-md-6 col-sm-12 px-0 ">
-            <a href="#">
-              <div class="card">
-                <div class="icons-cards-servicos"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                  <p class="title">Número Máscara</p>
-                  <p class="text">Check all your favourites in one place.</p>
-                </div>
-              </div>
-            </a>
+      </div>
     </div>
 
 
 
         <!--SOBRE A EMPRESA-->
-        <div  id="bloco3" class="p-4 p-md-5 mb-4 row " style="background-color: #CA1C2A; color: #fff"> 
+        <div  id="bloco3" class="col-12 row " style="background-color: #CA1C2A; color: #fff"> 
             <div class="col-md-6 col-sm-12">
                 <img src="./img/vetor empresa.png" width="70%" class="img">
             </div>
@@ -150,8 +161,11 @@
             </div>
         </div>
     </section>
-    
-    <script src="./script/script.js"> </script>
 
+
+     <!--LOGIN CPF E CNPJ-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
+    <script src="./script/script.js"> </script>
 </body>
 </html>
