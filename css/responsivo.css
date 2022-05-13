@@ -1,0 +1,113 @@
+/*ÁREA CLIENTE*/
+@media screen  and (max-width: 590px){
+    .area-cliente-logo{
+        width: 60%;
+    }
+    .fundo-area-cliente{
+        background-image: none;
+        background-color: var(--cor-azul-2);
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "f015"; color: #fff;
+    }
+    #btn .cadastra-2{
+        width: 30%;
+    }
+    .container{
+        box-shadow: none;
+    }
+    .area-cliente h2{
+        font-size: 2.3rem;
+    }
+    .area-cliente h4{
+        font-size: 2.2rem;
+    }
+    .area-cliente p{
+        font-size: 1.8rem;
+    }
+    #btn{
+        margin-top: 60px;
+    }
+    .cliente-footer{
+        color: var(--cor-branco);
+        margin-top: 350px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+/*CADASTRO*/
+@media screen  and (max-width: 900px){
+    :root {
+        --cor-vermelho: #CA1C2A;
+        --cor-azul-1: #0B8CED;
+        --cor-azul-2: #0C4B77;
+        --cor-cinza: #31353B;
+        --cor-branco: #fff;
+    }
+    #cadastro-lado1{
+        padding-top: 2px;
+    }
+    .cadastro-logo{
+        width: 50%;
+    }
+    .fundo-cadastro{
+       background-image: none;
+       background-color: var(--cor-azul-2);
+    }
+    .container-cadastro{
+        box-shadow: none;
+    }
+    #cadastro-lado2 .input-cadastro #check-inline{
+        padding: 5px;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
+    #cadastro-lado2 .input-cadastro #check-inline label{
+        font-size: 1px;
+    }
+    .cadastro-footer{
+        color: #fff;
+        margin-top: 60px ;
+    }
+    #cadastro-lado2 .input1, .input2, .input3, .input4, .input5{
+    flex-direction: column;
+    }
+    #cadastro-lado2 .input-container-cadastro{
+        width: 90%;
+    }
+}
+/*CADASTRO*/
+@media screen  and (max-width: 450px){
+    :root {
+        --cor-vermelho: #CA1C2A;
+        --cor-azul-1: #0B8CED;
+        --cor-azul-2: #0C4B77;
+        --cor-cinza: #31353B;
+        --cor-branco: #fff;
+    }
+    .cadastro-logo{
+        width: 65%;
+    }
+    .cadastro{
+        justify-content: flex-start;
+    }
+    #cadastro-lado2 .input1 .input2 .input3 .input4 .input5{
+       flex-direction: column;
+        
+    }
+   #cadastro-lado1-btn{
+    padding: 40px 10px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+   }
+   .cadastra-2 {
+       width: 35%;
+   }
+ 
+}
