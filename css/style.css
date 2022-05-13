@@ -371,10 +371,6 @@
     padding: 50px 40px;
 
 }
-#bloco3-tela-principal:hover{
-    background-color: #00C4D6;
-
-}
 #bloco3-tela-principal img{
     padding: 0px 20px 0px 10px;
 }
@@ -398,10 +394,6 @@
     text-align: center; 
     position: relative;
     transition: 0.6s;
-}
-#bloco3-tela-principal #pagsobre .btn2-saber .btn2:hover {
-    background-color:var(--cor-azul-1); 
-   
 }
 #bloco3-tela-principal #pagsobre .btn2-saber a{
     font-weight: bold;
