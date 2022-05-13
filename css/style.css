@@ -86,22 +86,15 @@
 .idioma{
     text-decoration: none;
     background-color:var(--cor-azul-2);
-    color: #fff;
     float: right;
-    height: 40px;
-    text-align: center;
     font-size: 14px;
-    padding: 11px 20px;
+    padding: 10px 5px;
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
 }
-.idioma:hover {
-    color:rgba(255,255,255,0.85);
-}
-
 /**/
 #menu-fixo{
     z-index: 9999;
@@ -365,15 +358,19 @@
     opacity: 1;
     transition: all 0.3s ease;
 }
+#bloco3-tela-principal-fundo{
+    background-image: url(../img/fundo-inv.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
 #bloco3-tela-principal{
     background-color: var(--cor-vermelho);
     color:var(--cor-branco);
     padding: 50px 40px;
-
-}
-#bloco3-tela-principal:hover{
-    background-color: #00C4D6;
-
 }
 #bloco3-tela-principal img{
     padding: 0px 20px 0px 10px;
@@ -399,14 +396,15 @@
     position: relative;
     transition: 0.6s;
 }
-#bloco3-tela-principal #pagsobre .btn2-saber .btn2:hover {
-    background-color:var(--cor-azul-1); 
-   
-}
 #bloco3-tela-principal #pagsobre .btn2-saber a{
     font-weight: bold;
     text-decoration: none;
-    color: var(--cor-azul-1);
+    color: var(--cor-vermelho);
+}
+#bloco3-tela-principal #pagsobre .btn2-saber a:hover{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--cor-vermelho);
 }
 
 
@@ -489,6 +487,9 @@
     color: rgba(0, 0, 0, 0.354);
 } 
 #unlock{
+    display: none;
+}
+#unlock2{
     display: none;
 }
 .senha{

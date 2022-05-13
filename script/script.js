@@ -100,7 +100,7 @@ function validar(){
 //OCULTAR A SENHA
 function showPassword() {
   const aberto = document.getElementById('lock');
-  const fechado = document.getElementById('unlock')
+  const fechado = document.getElementById('unlock');
 
   if (aberto.style.display === 'block'){
     aberto.style.display = 'none';
@@ -109,6 +109,20 @@ function showPassword() {
   }else{
     aberto.style.display = 'block';
     fechado.style.display = 'none';
+    senha.confirma.type = 'password';
+  }
+}
+function showPassword2() {
+  const aberto2 = document.getElementById('lock2');
+  const fechado2 = document.getElementById('unlock2');
+  
+  if (aberto2.style.display === 'block'){
+    aberto2.style.display = 'none';
+    fechado2.style.display = 'block';
+    senha.confirma.type = 'text';
+  }else{
+    aberto2.style.display = 'block';
+    fechado2.style.display = 'none';
     senha.confirma.type = 'password';
   }
 }
