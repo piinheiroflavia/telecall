@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telecall</title>
 
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
+
+    <!--RESPONSIVO-->
+    <link rel="stylesheet" href="./css/responsivo.css">
+
     <!--BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <!--CSS-->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!--REDES SOCIAS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
     <!--ICONS-->
     <script src="https://kit.fontawesome.com/7198f8d6d1.js" crossorigin="anonymous"></script>
-
-   
- 
-
     
 </head>
 <body>
@@ -31,33 +36,59 @@
             </a>
             <!--ZAP-->
             <a href="https://api.whatsapp.com/send/?phone=5521936180100&text&app_absent=0" class="wp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Fale Pelo WhatsApp</a>
-           <a href="" class="idioma"><abba ><img src="./img/estados-unidos.png" alt="Bandeira Estados Unidos" title="PT-BR"></abba></a>
-            <a href="./index.html" class="idioma"><img src="./img/brasil.png" alt="Bandeira Brasil" ></a>
-            
+
+            <a href="" class="idioma"><abba ><img src="./img/estados-unidos.png" alt="Bandeira Estados Unidos" title="EN"></abba></a>
+
+            <a href="./index.html" class="idioma"><abba><img src="./img/brasil.png" alt="Bandeira Brasil" title="PT-BR"></abba></a>
+
             </div>         
         </div>
         
 
 
         <!--menu-->
-        <div id="menu-fixo" class="hidden-sm hidden-xs">
-            <a href="/index.html" class="lg"><img class="logo" src="./img/telecall.png" alt=""></a>
-            <nav class="primeiro-menu">
-                <ul class="dropdown">
-                    <a href="#">Home</a>
+        <div id="menu-fixo" class="col-12">
+          <a href="/index.html" class="lg"><img class="logo" src="./img/telecall.png" alt=""></a>
 
-                    <li><a href="#">Serviços <i class="fa-solid fa-chevron-down"></i></a>
+          <nav class="primeiro-menu">
+            <div class="mobile-menu">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+
+            <ul class="nav-list">
+                <li><a href="#"> <i class="fa-solid fa-house-chimney"></i> Home</a></li>
                 
-                        <ul class="dropdow2">
-                            <li><a href="#">SMS Programável</a></li>
-                            <li><a href="#">Google Verfied Calls</a></li>
-                            <li><a href="#">2FA</a></li>
-                            <li><a href="#">Número Máscara</a></li>
-                        </ul>
-         
-                    </li>
-                </ul>
-            </nav>
+                <li><a href="#"><i class="fa-solid fa-cloud"></i> Serviços <i class="fa-solid fa-chevron-down"></i></a>                
+                  <ul class="dropdown2">
+                    <li><a href="#">SMS Programável</a></li>
+                    <li><a href="#">Google Verfied Calls</a></li>
+                    <li><a href="#">2FA</a></li>
+                    <li><a href="#">Número Máscara</a></li>
+                  </ul>
+            
+                  <li><a href="./cliente/index.html" class="fantasma" target="_blank">
+                      <i class="fa-solid fa-user-lock"></i> Área Cliente</a></li>
+                  
+                  <li><a href=""><i class="fa-solid fa-building"></i> Sobre Nós</a></li>
+    
+                  <li><a href="https://api.whatsapp.com/send/?phone=5521936180100&text&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i> Fale Pelo WhatsApp</a></li>
+
+                  <li>
+                    <a href="./central de atendimento/index.html" target="_blank"><i class="fa-solid fa-headset"></i> Central de Atendimento
+                    </a>
+                  </li>
+
+                  <li><a href="#"><i class="fa-solid fa-globe"></i> Idiomas <i class="fa-solid fa-chevron-down"></i></a>      
+
+                    <ul class="dropdown2">
+                      <li><a href="#">Inglês</a></li>
+                      <li><a href="#">Portuguê -BR </a></li>                    
+                    </ul>
+            </ul>
+          </nav>
+
         </div>
     </header>
 
@@ -104,7 +135,7 @@
                 </a>
               </div>
           <br>
-              <div class="col-md-6 col-sm-12 px-0 ">
+              <div class="col-md-6 col-sm-12">
                 <a href="#">
                   <div class="card">
                     <div class="icons-cards-servicos"><i class="fa-solid fa-check"></i></div>
@@ -143,26 +174,62 @@
 
 
         <!--SOBRE A EMPRESA-->
-        <div  id="bloco3-tela-principal-fundo" class="col-12-md row " > 
-            <div id="bloco3-tela-principal" class="col-12-sm row">
+       
+            <div id="bloco3-tela-principal" class="col-12 row">
               <div class="col-md-6 col-sm-12">
-                  <img src="./img/vetor empresa.png" width="100%" class="img">
+                  <img src="./img/sobre-empresa.jpg" width="86%" class="img">
               </div>
               <div id="pagsobre" class="col-md-6 col-sm-12 px-0 ">
-                  <h3>Sobre a empresa</h3>
+                  <h3>Sobre a Empresa</h3>
               
                   <p>A  telecall é uma operadora regulada pela ANATEL (Licenças SCM, STFC e SMP), detentora de uma rede de fibra própria, de alta capacidade, oferencendo aos seus clientes uma nova expereência de telefonia e internet empresarial, com o mais alto padrão de qualidade, velociade e disponibilidade. Soluções que contam com uma série de serviços de valores adicionados, gerendo aos clientes maior produtividade, dinamismo e efetividade nas operações.</p>
                   <br>
                   <button class="btn2-saber"><a class="btn2" href="#">Saber Mais</a></button>
               </div>
             </div>
-        </div>
+            
+            <!--IMAGEM BLOCO 4-->
+            <div id="img-locais-rj">
+              <img src="./img/locaisrj.jpg" alt="" width="70%"  >
+            </div>
     </section>
+
+    <footer>
+
+      <div id="redes-sociais">
+        <div class="container-redes-sociais">
+          <div class="icons-container animated">
+            <div class="icon-container-redes-sociais">
+              <a href=""><i class="fab fa-instagram fa-1x"></i></a>
+            </div>
+            <div class="icon-container-redes-sociais">
+              <a href=""><i class="fab fa-linkedin-in fa-1x"></i></a>
+            </div>
+            <div class="icon-container-redes-sociais">
+              <a href=""><i class="fab fa-twitter fa-1x"></i></a>
+            </div>
+            <div class="icon-container-redes-sociais">
+              <a href=""><i class="fab fa-facebook-f fa-1x" style="margin: 0 5px;"></i></a> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="parte2-footer">
+        <a href="#">Políticas de Privacidade |</a>
+        <a href="#"> Termos de Uso |</a>
+        <a href="#">Cookies</a>
+      </div>
+      <div class="parte3-footer">
+        &copy;2022 - Desenvolvido Por <a href="https://github.com/piinheiroflavia" target="_blank"  > Flavia Pinheiro</a> 
+      </div>
+    </footer>
 
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
     <script src="./script/script.js"> </script>
+
+    <script src="./TESTE/js.js"></script>
 </body>
 </html>
