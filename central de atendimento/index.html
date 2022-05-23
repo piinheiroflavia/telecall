@@ -4,119 +4,190 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central de Atendimento</title>
+    <title>Telecall Central de Atendimento</title>
 
-        <!--FAVICON-->
-        <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
 
-        <!--BOOTSTRAP-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <!--CSS-->
-        <link rel="stylesheet" href="../css/style.css">
+    <!--RESPONSIVO-->
+    <link rel="stylesheet" href="../css/responsivo.css">
+
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!--REDES SOCIAS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!--ICONS-->
+    <script src="https://kit.fontawesome.com/7198f8d6d1.js" crossorigin="anonymous"></script>
     
-        <!--ICONS-->
-        <script src="https://kit.fontawesome.com/7198f8d6d1.js" crossorigin="anonymous"></script>
-    
-        
 </head>
 <body>
-    <header>
+    <header id="pagina-inicial" class="col-12">
         <div class="headerTopo">
             <div class="pull-right">
-                <a href="./central de atendimento/index.html" class="atendimento" target="_blank"><i class="fa-regular fa-user-headset"></i> Central de Atendimento
+                <a href="../central de atendimento/index.html" class="atendimento" target="_blank"><i class="fa-regular fa-user-headset"></i> Central de Atendimento
                 </a>
             
-            <a href="./login/index.html" class="cliente" target="_blank">
-                <i class="fa-regular fa-user"></i> Área Cliente
+            <a href="../cliente/index.html" class="cliente" target="_blank">
+              <i class="fa-solid fa-user-lock"></i> Área Cliente
             </a>
             <!--ZAP-->
             <a href="https://api.whatsapp.com/send/?phone=5521936180100&text&app_absent=0" class="wp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Fale Pelo WhatsApp</a>
-            
-            
-            <a href="" class="idioma"> <i class="fa-solid fa-globe"></i> PT - Brasil
-                        <ul class="lista-idioma">
-                            <li><a href="#  ">Português</a></li>
-                            <li><a href="#">English</a></li>
-                        </ul>
-            </a>
-            <li><a href="#">Serviços <i class="fa-solid fa-chevron-down"></i></a>
-                <ul class="dropdown">
+
+            <a href="" class="idioma"><abba ><img src="../img/estados-unidos.png" alt="Bandeira Estados Unidos" title="EN"></abba></a>
+
+            <a href="./index.html" class="idioma"><abba><img src="../img/brasil.png" alt="Bandeira Brasil" title="PT-BR"></abba></a>
+
+            </div>         
+        </div>
+        
+
+
+        <!--menu-->
+        <div id="menu-fixo" class="col-12">
+          <a href="/index.html" class="lg"><img class="logo" src="../img/telecall.png" alt=""></a>
+
+          <nav class="primeiro-menu">
+            <div class="mobile-menu">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+
+            <ul class="nav-list">
+                <li><a href="#"> <i class="fa-solid fa-house-chimney"></i> Home</a></li>
+                
+                <li><a href="#"><i class="fa-solid fa-cloud"></i> Serviços <i class="fa-solid fa-chevron-down"></i></a>                
+                  <ul class="dropdown2">
                     <li><a href="#">SMS Programável</a></li>
                     <li><a href="#">Google Verfied Calls</a></li>
                     <li><a href="#">2FA</a></li>
                     <li><a href="#">Número Máscara</a></li>
-                </ul>
-            </li>
-            </div>         
-        </div>
+                  </ul>
+            
+                  <li><a href="../cliente/index.html" class="fantasma" target="_blank">
+                      <i class="fa-solid fa-user-lock"></i> Área Cliente</a></li>
+                  
+                  <li><a href="../sobreEmpresa/index.html"><i class="fa-solid fa-building"></i> Sobre Nós</a></li>
+    
+                  <li><a href="https://api.whatsapp.com/send/?phone=5521936180100&text&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i> Fale Pelo WhatsApp</a></li>
 
-        <!--menu-->
-        <div id="menu-fixo" class="hidden-sm hidden-xs">
-            <a href="../index.html" class="lg"><img class="logo" src="../img/telecall.png" alt=""></a>
-            <nav class="primeiro-menu">
-                <ul class="dropdown">
-                    <a href="#">Home</a>
+                  <li>
+                    <a href="../central de atendimento/index.html" target="_blank"><i class="fa-solid fa-headset"></i> Central de Atendimento
+                    </a>
+                  </li>
 
-                    <li><a href="#">Serviços <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="#">SMS Programável</a></li>
-                            <li><a href="#">Google Verfied Calls</a></li>
-                            <li><a href="#">2FA</a></li>
-                            <li><a href="#">Número Máscara</a></li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-            </nav>
+                  <li><a href="#"><i class="fa-solid fa-globe"></i> Idiomas <i class="fa-solid fa-chevron-down"></i></a>      
+
+                    <ul class="dropdown2">
+                      <li><a href="#">Inglês</a></li>
+                      <li><a href="#">Português -BR </a></li>                    
+                    </ul>
+            </ul>
+          </nav>
+
         </div>
     </header>
 
+    <section class="banner-principal">
+        <img class="img-gif" src="../img/atendimento.jpg" alt="banner sobre os serviços da telecall">
+    </section>
 
     <section>
-        <div id="pag5">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="contato-info">
-                        <h2>Entre em Contato</h2>
-                        <p>@hotmail.com <br> 2199999999  </p>
-                                         
-                    </div>
-                </div>
-                <div id="ctt" class="col-md-6">
-                    <div class="Contato">
-                        <div class="form-group">
-                          <label class="control-label col-sm-2" for="fname">Nome</label>
-                          <div class="col-sm-10">          
-                            <input type="text" class="form-control" id="fname" placeholder="nome" name="fname">
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label class="control-label col-sm-2" for="lname">Sobrenome:</label>
-                          <div class="col-sm-10">          
-                            <input type="text" class="form-control" id="lname" placeholder="sobrenome" name="lname">
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label class="control-label col-sm-2" for="email">Email:</label>
-                          <div class="col-sm-10">
-                            <input type="email" class="form-control" id="email" placeholder="email" name="email">
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label class="control-label col-sm-2" for="comment">Mensagem:</label>
-                          <div class="col-sm-10">
-                            <textarea class="form-control" rows="5" id="comment" placeholder="digite aqui sua mensagem.."></textarea><br>
-                                <a class="btn5" href="#">Enviar email</a>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div id="suporte" class="col-12 row">
+        <h2>Central de Atendimento</h2>
+        <label for="nome">Nome:</label>
+        <input type="text" class="form-control"aria-label="name"><br>
+        <label for="nome">Email:</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" ><br>
+        <label for="nome">Mensagem:</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+      </div>
+ 
+ 
+      <div id="numero-atendimento" class="col-12 row">
+        <!-- card -->
+        <div class="col-12 " id="card-atendimento">
+      
+          <div class="icon-atendimento"><i class="fa-solid fa-phone"></i></div>
+          <p class="title">Telefone</p>
+               <p class="text">(21) 3030-1010 </p>
+              
+      
         </div>
+        <!-- end card-atendimento -->
+        <!-- card-atendimento -->
+        <div class="col-12 " id="card-atendimento">
+      
+          <div class="icon-atendimento"><i class="fa-solid fa-at"></i></div>
+          <p class="title">Email</p>
+          <p class="text">suporte@telecall.com</p>
+          <p class="text">Respondemos em até 24h</p>
+      
+        </div>
+        <!-- end card-atendimento -->
+        <!-- card-atendimento -->
+        <div class="col-12 " id="card-atendimento">
+      
+          <div class="icon-atendimento"><i class="fa-solid fa-building"></i></div>
+          <p class="title">Escritórios</p>
+          <p class="text"><strong>Brasil: </strong>
+              Centro empresarial Mario Henrique Simonsen
+              Av. das Américas, 3434 | Bloco 1, Sala 505
+              Barra da Tijuca | Rio de Janeiro, RJ
+              <br><br>
+              <strong>Estados Unidos: </strong>
+              848 Brickell Av - Suite 1235 - Miami FL - 33131
+              <br><br>
+              <strong>Portugal: </strong>
+              Av. da República 18 - 3° Piso/403 - Lisboa, Portugal 1050-191</p>
+      
+        </div>
+        <!-- end card-atendimento -->
+      
+      </div>
+      </div>
+
     </section>
     
-    <!--LOGIN CPF E CNPJ-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
+    <footer>
+        <div id="redes-sociais">
+          <div class="container-redes-sociais">
+            <div class="icons-container animated">
+              <div class="icon-container-redes-sociais">
+                <a href="https://www.instagram.com/telecallbr/" target="_blank"><i class="fab fa-instagram fa-1x"></i></a>
+              </div>
+              <div class="icon-container-redes-sociais">
+                <a href="https://www.linkedin.com/company/telecall/" target="_blank"><i class="fab fa-linkedin-in fa-1x"></i></a>
+              </div>
+              <div class="icon-container-redes-sociais">
+                <a href="" target="_blank"><i class="fab fa-twitter fa-1x"></i></a>
+              </div>
+              <div class="icon-container-redes-sociais">
+                <a href="https://www.facebook.com/TelecallBr" target="_blank"><i class="fab fa-facebook-f fa-1x" style="margin: 0 5px;"></i></a> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="parte2-footer">
+          <a href="#">Políticas de Privacidade |</a>
+          <a href="#"> Termos de Uso |</a>
+          <a href="#">Cookies</a>
+        </div>
+        <div class="parte3-footer">
+          &copy;2022 - Desenvolvido Por <a href="https://github.com/piinheiroflavia" target="_blank"  > Flavia Pinheiro</a> 
+        </div>
+    </footer>
+  
+  
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
+      <script src="../script/script.js"> </script>
+  
 </body>
 </html>

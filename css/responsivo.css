@@ -6,7 +6,6 @@
     .fundo-area-cliente{
         background-image: none;
         background-color: var(--cor-azul-2);
-  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "f015"; color: #fff;
     }
     #btn .cadastra-2{
         width: 30%;
@@ -27,15 +26,21 @@
         margin-top: 60px;
     }
     .cliente-footer{
-        color: var(--cor-branco);
-        margin-top: 350px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
+        display: none;
     }
 }
-
+/*MODAVO O QUE É*/
+@media screen  and (max-width: 900px){
+    #cpaas-modavo h2{
+        font-size: 1.3rem;
+        padding: 50px 10px;
+    }
+    #logistica-modavo {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0px;
+    }
+}
 
 /*CADASTRO*/
 @media screen  and (max-width: 900px){
@@ -110,4 +115,42 @@
        width: 35%;
    }
  
+}
+/*LOGIN*/
+@media screen  and (max-width: 680px){
+    .login{
+        background-image: none;
+        background-color: var(--cor-branco);
+        overflow-x: hidden;
+    }
+    .container{
+        display: none;
+        display: flex;
+        flex-direction: column;
+    }
+    #lados-login{
+        display: flex;
+        flex-direction: column;
+    }
+    #lado1{
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    #lado2{
+        width: 100%;
+    }
+  
+}
+/*LOGIN*/
+@media screen  and (max-width: 680px){
+    .container{
+        margin: auto;
+    }
+    #lados-login{
+        box-shadow: none;
+    }
+    .submit{
+        width: 50%;
+        margin-bottom: 20px;
+    }
 }

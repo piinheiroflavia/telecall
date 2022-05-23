@@ -1,5 +1,6 @@
 *{ 
     padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 :root {
     --cor-vermelho: #CA1C2A;
@@ -129,11 +130,26 @@
     margin: 8px;
     transition: 0.3s;
   }
+  body {
+    overflow-x: visible;
+  }
   @media (max-width: 700px){
     .headerTopo{
-        overflow: hidden;
+        overflow-x: hidden;
         visibility: hidden;
+        
+    }
+    
+    #pagina-inicial{
         background-color: var(--cor-vermelho);
+        background-image: url(../img/telecall-logo-white.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 25%;
+    }
+    #menu-fixo .logo{
+
+        display: none;
     }
 
   }
@@ -146,6 +162,7 @@
         
      }
     .nav-list {
+      overflow-x: hidden;
       position: absolute;
       right: 0;
       width: 50vw;
@@ -483,8 +500,6 @@
     align-items: center;
     justify-content: center;
 }
-
-
 /*REDES SOCIAIS FOOTER*/
 #redes-sociais{
     margin-top: 200px;
@@ -527,7 +542,7 @@
       transform: scale(1.05);
     }
   }
-.parte2-footer{
+.parte2-footer{ 
     color: var(--cor-branco);
     background-color:var(--cor-cinza);
     text-align: center;
@@ -546,7 +561,7 @@
     color: var(--cor-cinza);
     text-decoration: underline;
 }
-.parte3-footer{
+.parte3-footer{ 
     color: var(--cor-branco);
     background-color:var(--cor-cinza);
     text-align: center;
@@ -562,7 +577,300 @@
     color: var(--cor-branco);
     text-decoration: underline;
 }
+/*TELA CONTANTOS/ ATENDIMENTO*/
+#suporte h2{
+    color: var(--cor-cinza);
+    margin: 50px 0px 30px 0px;
+    font-size: 1.8rem;
+    font-weight: bold;
 
+}
+#suporte{
+    padding: 20px 50px;
+    margin: 30px 0px;
+}
+#numero-atendimento {
+    width: 80%;
+    padding-top: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 650px) {
+    #numero-atendimento {
+      padding-top: 80px;
+      flex-direction: column;
+    }
+  }
+  #card-atendimento {
+    width: 100%;
+    max-width: 280px;
+    min-width: 200px;
+    height: 250px;
+    background-color:#CA1C2A;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+    border: 2px solid rgba(7, 7, 7, 0.12);
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .icon-atendimento {
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    max-width: 80px;
+    background: linear-gradient(90deg, #FF7E7E 0%, #FF4848 40%, rgba(0, 0, 0, 0.28) 60%);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 0.8s ease;
+    background-position: 0px;
+    background-size: 200px;
+  }
+  
+  #card-atendimento .title {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    letter-spacing: 2px;
+  }
+  
+  #card-atendimento .text {
+    width: 80%;
+    margin: 10px 0px;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.3s ease;
+  }
+  
+  #card-atendimento:hover {
+    margin-top: 40px;
+    height: 520px;
+  }
+  
+  #card-atendimento:hover .info {
+    height: 100%;
+  }
+  
+  #card-atendimento:hover .text {
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    opacity: 1;
+    max-height: 500px;
+  }
+  
+  #card-atendimento:hover .icon-atendimento {
+    background-position: -120px;
+    transition: all 0.3s ease;
+  }
+  
+  #card-atendimento:hover .icon i {
+    background: linear-gradient(90deg, #FF7E7E, #FF4848);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+/*TELA DE MODAVO*/
+#cpaas-modavo h2{
+    padding: 60px 50px ;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.9rem;
+    color: var(--cor-vermelho);
+    font-weight:normal;
+}
+#dados-modavo{
+    padding: 20px 50px;
+    margin: 30px 0px;
+}
+#dados-modavo h3{
+    color: var(--cor-cinza);
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#dados-modavo{
+    font-size: 1.3rem;
+}
+#dados-modavo .fa-arrow-right{
+    color:var(--cor-azul-1);
+    font-size: 2rem;
+}
+#dados-modavo .fa-arrow-right:hover{
+    color: var(--cor-vermelho);
+}
+#dados-modavo .parte2-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+#logistica-modavo h3{
+    color: var(--cor-cinza);
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#logistica-modavo {
+    padding: 20px 50px;
+    margin: 30px 0px;
+}
+#logistica-modavo .usos1:hover{
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(217, 214, 214, 0.197);
+}
+#logistica-modavo .usos2:hover{
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(217, 214, 214, 0.197);
+}
+#logistica-modavo .usos3:hover{
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(217, 214, 214, 0.197);
+}
+#logistica-modavo .usos4:hover{
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(217, 214, 214, 0.197);
+}
+#logistica-modavo h5{
+    color: var(--cor-azul-2);
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#logistica-modavo .usos1:hover  h5{
+    color: var(--cor-vermelho);
+    font-size: 1.8rem;
+}
+#logistica-modavo .usos2:hover  h5{
+    color: var(--cor-vermelho);
+    font-size: 1.8rem;
+}
+#logistica-modavo .usos3:hover  h5{
+    color: var(--cor-vermelho);
+    font-size: 1.8rem;
+}
+#logistica-modavo .usos4:hover  h5{
+    color: var(--cor-vermelho);
+    font-size: 1.8rem;
+}
+#logistica-modavo .fa-box  {
+    font-size: 3rem;
+    color: var(--cor-azul-2);
+    text-align: center;
+    margin-bottom: 20px;
+}
+#logistica-modavo .usos1:hover .fa-box{
+    color: var(--cor-vermelho);
+}
+#logistica-modavo .fa-cart-arrow-down{
+    font-size: 3rem;
+    color: var(--cor-azul-2);
+    text-align: center;
+    margin-bottom: 20px;
+}
+#logistica-modavo .usos2:hover .fa-cart-arrow-down{
+    color: var(--cor-vermelho);
+}
+#logistica-modavo .fa-headset {
+    font-size: 3rem;
+    color: var(--cor-azul-2);
+    text-align: center;
+    margin-bottom: 20px;
+}
+#logistica-modavo .usos3:hover .fa-headset{
+    color: var(--cor-vermelho);
+}
+#logistica-modavo .fa-truck-medical{
+    font-size: 3rem;
+    color: var(--cor-azul-2);
+    text-align: center;
+    margin-bottom: 20px;
+}
+#logistica-modavo .usos4:hover .fa-truck-medical{
+    color: var(--cor-vermelho);
+}
+#logistica-modavo p{
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 80px;
+}
+#vantagens-modavo{
+    padding: 20px 50px;
+    margin: 30px 0px;
+}
+#vantagens-modavo h3{
+    border-bottom-width: 5px solid red;
+    color: var(--cor-cinza);
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#vantagens-modavo p{
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+#vantagens-modavo .fa-check{
+    color: var(--cor-azul-1);
+    font-size: 1.7rem;
+}
+#vantagens-modavo .fa-check:hover{
+    color: var(--cor-vermelho);
+}
+
+/*TELA SOBRE A EMPRESA*/
+#sobre-a-empresa{
+    padding: 20px 50px;
+    margin: 30px 0px;
+}
+#sobre-a-empresa h2{
+    color: var(--cor-vermelho);
+    margin: 30px 0px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#sobre-a-empresa p{
+    font-size: 1.3rem;
+}
+#sobre-a-empresa-premios{
+    padding: 20px 50px;
+    margin: 30px 0px;
+}
+#sobre-a-empresa-missao{
+    padding: 20px 50px;
+    margin: 30px 0px;
+}
+#sobre-a-empresa-visao{
+    padding: 20px 50px;
+    margin: 30px 0px;
+}
+#sobre-a-empresa-valores{
+    padding: 20px 50px;
+    margin: 30px 0px;
+}
 /*TELA DE LOGIN*/
 .login {
     background-image: url('../img/fundo.jpg');
@@ -570,17 +878,16 @@
     background-size: 100%;
     background-position-y: bottom;
     height: auto;
-    overflow: hidden;
+    overflow-x: hidden;
    
 }
 .container{
     margin-top: 50px;
-    width: 800px;
+} 
+#lados-login{
     border-radius: 5px;
     box-shadow: 0 8px 32px  rgba(31, 38, 135, 0.2);  
-    display: flex;
-    flex-wrap: wrap;
-} 
+}
 #lado1{
     padding: 50px 40px 2px 29px    ;
     color: var(--cor-branco);
@@ -607,7 +914,7 @@
     -webkit-backdrop-filter: blur( 13.5px );
 }
 #lado2 h3{
-    color: var(--cor-cinza);
+    color: var(--cor-azul-2);
     letter-spacing: 2px;
     font-size: 2rem;
 }
@@ -653,7 +960,7 @@
 .input{
     background-color: rgba(255, 255, 255, 0);
     border:0;
-    caret-color:var(--cor-vermelho);
+    caret-color:var(--cor-azul-2);
     color: #000;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.354);
     font-size: 18px;
@@ -672,7 +979,7 @@
     transition: transform 200ms;
     width: 96px;
 } 
-/*INPUT COM A BORDAR VERMELHA*/
+/*INPUT COM A BORDAR */
 .input:focus,
 .input:not(:placeholder-shown) {
     transform: translateY(8px);
@@ -711,7 +1018,7 @@
     justify-content: flex-end;
 }
 .submit { 
-   background-color:var(--cor-vermelho);
+   background-color:var(--cor-azul-2);
     border: none;
     text-transform: uppercase;
     width: 25%;
@@ -724,7 +1031,7 @@
     transition: 0.6s;
 }
 .submit:hover {
-    background-color:var(--cor-azul-2); 
+    background-color:var(--cor-azul-1); 
 }
 .submit a{
     font-weight: bold;
@@ -737,7 +1044,7 @@
     padding: 10px 15px;
     margin: 10px;
     background-color:rgba(255, 255, 255, 0);
-    color:var(--cor-vermelho);
+    color:var(--cor-azul-2);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -748,7 +1055,7 @@
 .cadastra a{
     font-weight: bold;
     text-decoration: none;
-    color: var(--cor-vermelho);
+    color: var(--cor-azul-2);
 }
 .cadastra a:hover {
     color: var(--cor-azul-2);
@@ -761,8 +1068,8 @@
     left: 0;
     width: 10px;
     height: 10px;
-    border-top: 2px solid var(--cor-vermelho);
-    border-left: 2px solid var(--cor-vermelho);
+    border-top: 2px solid var(--cor-azul-2);
+    border-left: 2px solid var(--cor-azul-2);
     transition: 0.5s;
     transition-delay: 0.3s;
 }
@@ -781,8 +1088,8 @@
     right: 0px;
     width: 10px;
     height: 10px;
-    border-bottom: 2px solid var(--cor-vermelho);
-    border-right: 2px solid var(--cor-vermelho);
+    border-bottom: 2px solid var(--cor-azul-2);
+    border-right: 2px solid var(--cor-azul-2);
     transition: 0.5s;
     transition-delay: 0.3s;
 }
@@ -799,11 +1106,11 @@
 .span a{
     text-decoration: none;
     font-size: 0.7rem;
-    color: var(--cor-vermelho);
+    color: var(--cor-azul-2);
 }
 .span a:hover{
     text-decoration: underline;
-    color: var(--cor-azul-2);
+    color: var(--cor-azul-1);
 }
 .login-footer{
     background-color: rgba(255, 255, 255, 0);
@@ -1059,8 +1366,8 @@ submit-2 a:before {
    border: none;
 }
 #cadastro-lado2 .input-cadastro, #check-inline label{
-    padding: 5px;
-    font-size: 1.2rem;
+    padding:5px;
+    font-size: 1rem;
 }
 #cadastro-lado2 .input-cadastro{
     background-color: rgba(255, 255, 255, 0);

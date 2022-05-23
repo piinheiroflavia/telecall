@@ -37,21 +37,19 @@ $("#celular")
             }  
         });
 /*EMAIL*/
-$(document).ready(function() {
-  $("#nascimento")
-    .mask("99/99/9999",{placeholder:"mm/dd/yyyy"})
-});
-
-
-
 
 	let senha = document.getElementById("Senha");
 	let confirma = document.getElementById("confirmar");
+  let email = document.getElementById("nomeMaterno");
+
+function validEmail(email){
+  return /^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/.test(email)
+}
 
 function validar(){
 	let nome = document.getElementById('nome')
 	let nascimento = document.getElementById("nascimento");
-	let email = document.getElementById("nomeMaterno");
+	
 	let materno = document.getElementById("email");
 	let endereco = document.getElementById("endereco");
 	let cpfcnpj = document.getElementById("cpfcnpj");
@@ -105,11 +103,11 @@ function showPassword() {
   if (aberto.style.display === 'block'){
     aberto.style.display = 'none';
     fechado.style.display = 'block';
-    senha.confirma.type = 'text';
+    senha.type = 'text';
   }else{
     aberto.style.display = 'block';
     fechado.style.display = 'none';
-    senha.confirma.type = 'password';
+    senha.type = 'password';
   }
 }
 function showPassword2() {
@@ -119,10 +117,68 @@ function showPassword2() {
   if (aberto2.style.display === 'block'){
     aberto2.style.display = 'none';
     fechado2.style.display = 'block';
-    senha.confirma.type = 'text';
+    confirma.type = 'text';
   }else{
     aberto2.style.display = 'block';
     fechado2.style.display = 'none';
-    senha.confirma.type = 'password';
+    confirma.type = 'password';
   }
 }
+
+
+/*NAVBAR*/
+class MobileNavbar {
+  constructor(mobileMenu, navList, navLinks,dropdown2) {
+    this.mobileMenu = document.querySelector(mobileMenu);
+    this.navList = document.querySelector(navList);
+    this.navLinks = document.querySelectorAll(navLinks);
+    this.dropdown2 = document.querySelector(dropdown2)
+    this.activeClass = "active";
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  animateLinks() {
+    this.navLinks.forEach((link, index) => {
+      link.style.animation
+        
+        ? (link.style.animation = "")
+        : (link.style.animation = `navLinkFade 0.3s ease forwards ${
+            index / 5 + 0.3
+          }s`
+          );
+    });
+  }
+
+  handleClick() {
+    this.navList.classList.toggle(this.activeClass);
+    this.mobileMenu.classList.toggle(this.activeClass);
+    this.dropdown2.classList.toggle(this.activeClass);
+    this.animateLinks();
+  }
+
+  addClickEvent() {
+    this.mobileMenu.addEventListener("click", this.handleClick);
+    this.dropdown2.addEventListener("click", this.handleClick);
+  }
+
+  init() {
+    if (this.mobileMenu) {
+      this.addClickEvent();
+    }
+    return this;
+  }
+  init() {
+    if (this.dropdown2) {
+      this.addClickEvent();
+    }
+    return this;
+  }
+}
+const mobileNavbar = new MobileNavbar(
+  ".mobile-menu",
+  ".nav-list",
+  ".nav-list li",
+  ".dropdown2"
+);
+mobileNavbar.init();

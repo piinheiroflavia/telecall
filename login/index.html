@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Telecall Login</title>
 
     <!--FAVICON-->
     <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
@@ -14,6 +14,9 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="../css/style.css">
+
+    <!--RESPONSIVO-->
+    <link rel="stylesheet" href="../css/responsivo.css">
 
     <!--ICONS-->
     <script src="https://kit.fontawesome.com/7198f8d6d1.js" crossorigin="anonymous"></script>
@@ -30,7 +33,7 @@
   </header>
 
   <div class="container">
-    <div class="row " >
+    <div class="col-12 row " id="lados-login">
         <!--LADO 1-->
           <div class="col-5" id="lado1">
             <h2>Seja Bem Vindo</h2><br>
@@ -46,7 +49,7 @@
               <h3>Entrar</h3><br>
                   <!--CPF--> <!--FALTA VÁLIDAR O CPF E O CNPJ-->
                   <div class="input-container cpf" >
-                    <input id="cpfcnpj" class="input" type="text" autocomplete="off" maxlength="17" placeholder=" " required >
+                    <input id="cpfcnpj" class="input" type="text" autocomplete="off" maxlength="17" inputmode="number" placeholder=" " required >
 
                    
                     <div class="vago"></div>
@@ -55,7 +58,7 @@
                   </div>
                   <!--SENHA-->
                   <div class="input-container senha">
-                    <input id="Senha" class="input" type="password" placeholder=" " maxlength="8" required>
+                    <input id="Senha" class="input" type="password" placeholder=" " maxlength="8" pattern="[A-Za-z]" required>
                     
 
                     <div class="vago"></div>
