@@ -58,7 +58,7 @@
             </div>
 
             <ul class="nav-list">
-                <li><a href="#"> <i class="fa-solid fa-house-chimney"></i> Home</a></li>
+                <li><a href="../index.html" target="_blank"> <i class="fa-solid fa-house-chimney"></i> Home</a></li>
                 
                 <li><a href="#"><i class="fa-solid fa-cloud"></i> Serviços <i class="fa-solid fa-chevron-down"></i></a>                
                   <ul class="dropdown2">
@@ -97,17 +97,42 @@
     </section>
 
     <section>
-      <div id="suporte" class="col-12 row">
+    <div id="suporte" class="col-12 row">
+      <div class="col-md-5">
         <h2>Central de Atendimento</h2>
-        <label for="nome">Nome:</label>
-        <input type="text" class="form-control"aria-label="name"><br>
-        <label for="nome">Email:</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" ><br>
-        <label for="nome">Mensagem:</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-
+        <h5>Fale Conosco</h5>
+        <span>Respondemos em até 24hrs</span>
       </div>
- 
+        <div id="suporte-formulario" class="col-md-7">
+          <form action="" method="get">
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="fname">Nome</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="fname" placeholder="nome" name="fname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="email" name="email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="lname">Assunto</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="lname" placeholder="assunto" name="lname" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="comment">Mensagem</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" rows="5" id="comment" placeholder="digite aqui sua mensagem.." required="require"></textarea><br>
+                    <a class="btn-suporte" href="#">Enviar email</a>
+              </div>
+            </div>
+      </form>
+    </div>
+    </div>
  
       <div id="numero-atendimento" class="col-12 row">
         <!-- card -->
