@@ -88,11 +88,7 @@
     float: right;
     font-size: 14px;
     padding: 10px 5px;
-    transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 /**/
 .logo{
@@ -128,7 +124,7 @@
     height: 2px;
     background-color: #fff;
     margin: 8px;
-    transition: 0.3s;
+    transition: 0.1s;
   }
   body {
     overflow-x: visible;
@@ -139,7 +135,6 @@
         visibility: hidden;
         
     }
-    
     #pagina-inicial{
         background-color: var(--cor-vermelho);
         background-image: url(../img/telecall-logo-white.png);
@@ -151,7 +146,10 @@
 
         display: none;
     }
-
+    .nav-list {
+        height: 100%;
+        width: 100%;
+    }
   }
   @media (max-width: 1800px) {
     body {
@@ -165,14 +163,14 @@
       overflow-x: hidden;
       position: absolute;
       right: 0;
-      width: 50vw;
-      height: 100vh;
+      width: 60vw;
+      height: 150vh;
       background-color:var(--cor-vermelho);
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       transform: translateX(100%);
-      transition: transform 0.3s ease-in;
+      transition: transform 0.1s ease-in;
     }
     .nav-list li {
       margin-left: 0;
@@ -608,57 +606,29 @@
 .form-control{
     height: 50px;
     margin: 10px 0px;
-    position: relative;
+    position: static;
     width: 100%;
 }
 .btn-suporte{
-    color: var(--cor-vermelho);
+    border-radius: 5px;
+    background-color: var(--cor-vermelho);
+    color: var(--cor-branco);
+    text-transform: uppercase;
     width: 25%;
     border: none;
-    position: relative;
-    padding: 15px;
-    margin: 10px;
-    background-color: var(--cor-branco);
-    text-decoration: none;
-    text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.8rem;
+    padding: 8px;
+    margin: 0px 10px;
+    text-align: center; 
+    position: relative;
+    transition: 0.6s;
 }
-.btn-suporte:hover {
+.btn-suporte:hover {   
+    border: 1px solid var(--cor-vermelho);
     color: var(--cor-vermelho);
+    background-color: rgba(255, 255, 255, 0);
     transition-delay: 0.1s;
-}
-.btn-suporte:before{
-    content: '';
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    border-top: 1px solid var(--cor-vermelho);
-    border-left: 1px solid var(--cor-vermelho);
-    transition: 0.5s;
-    transition-delay: 0.3s;
-}
-.btn-suporte:hover:before{ 
-    width: 100%;
-    height: 100%;
-    border-top: 1px solid var(--cor-vermelho);
-    border-left: 1px solid var(--cor-vermelho);
-    transition-delay: 0.4s;
-}
-.btn-suporte:after{
-    color:var(--cor-azul-2);
-    content: '';
-    position: absolute;
-    bottom:0px;
-    right: 0px;
-    width: 10px;
-    height: 10px;
-    border-bottom: 1px solid var(--cor-vermelho);
-    border-right: 1px solid var(--cor-vermelho);
-    transition: 0.5s;
-    transition-delay: 0.3s;
 }
 .btn-suporte:hover:after{
     width: 100%;
@@ -768,14 +738,19 @@
     transition: all 0.3s ease;
   }
 /*TELA DE MODAVO*/
+#cpaas-modavo{
+    background-color: var(--cor-azul-1);
+    padding: 50px 0px;
+    margin: 0%;
+}
 #cpaas-modavo h2{
     padding: 60px 50px ;
     text-align: center;
-    font-size: 1.8rem;
     line-height: 1.9rem;
-    color: var(--cor-vermelho);
+    color: var(--cor-branco);
     font-weight:normal;
 }
+
 #dados-modavo{
     padding: 20px 50px;
     margin: 30px 0px;
@@ -965,6 +940,217 @@
 #sobre-a-empresa-valores{
     padding: 20px 50px;
     margin: 30px 0px;
+}
+
+/*TELA 2FA*/
+#twofa-h2 h2{
+    color: var(--cor-vermelho);
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#parte-1-twofa, #parte-2-twofa-permite, #parte-3-twofa, #dados-tfa, #parte-4-twofa, #parte-5-twofa, #parte-6-twofa, #parte-7-twofa{
+    padding: 20px 50px;
+    margin: 30px 0px;
+}
+#parte-1-twofa h3, #parte-2-twofa-permite h3, #parte-3-twofa h3, #parte-4-twofa h3, #parte-5-twofa h3, #parte-6-twofa h3, #parte-7-twofa h3{
+    color: var(--cor-cinza);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+#parte-1-twofa h5, #parte-6-twofa h5,  #parte-7-twofa h5{
+    letter-spacing: 2px;
+    color: var(--cor-azul-1);
+}
+#parte-1-twofa p{
+    font-size: 1.3rem;
+}
+.twofa-oque-img{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#dados-tfa p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+#dados-tfa strong{
+    color:var(--cor-azul-1);
+    font-weight: bold;
+    font-size: 2rem;
+}
+#dados-tfa .twofa-dados2 strong{
+    font-size: 2.5rem;
+    color: var(--cor-branco);
+}
+#parte-2-twofa-permite{
+    background-image: url(../img/fundo.jpg);
+    background-repeat: no-repeat;
+    min-height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    margin: 0%;
+    overflow: hidden;
+}
+#parte-3-twofa{
+    background-color: var(--cor-azul-1);
+    margin: 0%;
+}
+#parte-3-twofa h3{
+    color: var(--cor-branco);
+}
+#parte-3-twofa p{
+    color: var(--cor-branco);
+}
+.funciona img{
+    width: 100%;
+}
+.funciona span{
+    text-align: center;
+}
+#parte-4-twofa{
+    background-image: url(../img/fundoInverte.jpg);
+    background-repeat: no-repeat;
+    min-height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    margin: 0%;
+    overflow: hidden;
+}
+#parte-4-twofa h3, #parte-5-twofa h3, #parte-6-twofa h3, #parte-7-twofa h3{
+    margin-bottom: 50px;
+}
+#parte-5-twofa p{
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+#parte-5-twofa i{
+    color: var(--cor-azul-1);
+    font-size: 1.7rem;
+}
+#parte-5-twofa i:hover{
+    color: var(--cor-vermelho);
+}
+#parte-6-twofa i, #parte-7-twofa i{
+    font-size: 4rem;
+    color: var(--cor-azul-2);
+    text-align: center;
+    margin-bottom: 20px;
+}
+#parte-7-twofa .twofa-quem-usa-img{
+    width: 40%;
+    margin: 10px;
+}
+.funciona, #parte-7-twofa-1, #parte-7-twofa-2, #parte-7-twofa-3, #parte-7-twofa-4, #parte-7-twofa-5, #parte-7-twofa-6{
+    padding: 20px;
+    margin-bottom: 50px;
+}
+/*TELA SMS PROGRAMÁVEL*/
+#sms-programavel-h2 h2{
+    color: var(--cor-vermelho);
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#bloco1-sms-programavel, #dados01-sms, #dados02-sms, #parte4-sms-jornada, #parte5-sms-beneficio{
+    padding: 20px 50px;
+    margin: 30px 0px;
+}
+#sms-programavel h3, #parte3-quem-usa h3{
+    color: var(--cor-cinza);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+#sms-programavel h5{
+    letter-spacing: 2px;
+    color: var(--cor-azul-1);
+}
+#sms-programavel p, #parte4-sms-jornada p{
+    font-size: 1.3rem;
+}
+.sms-oque-img{
+    margin-left: 40%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+}
+#parte2-sms-programavel {
+    background-image: url(../img/fundo.jpg);
+    background-repeat: no-repeat;
+    min-height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    margin: 0%;
+    overflow: hidden;
+}
+#parte2-sms-programavel h2{
+    padding: 60px 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    font-weight: bolder;
+    color: var(--cor-azul-2);
+}
+.sms-dados{
+    font-size: 1rem;
+}
+#dados01-sms p, #dados02-sms p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+#dados01-sms strong, #dados02-sms strong{
+    color:var(--cor-azul-1);
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+#parte3-quem-usa{
+    padding: 20px 50px;
+    margin: 0%;
+    background-color: var(--cor-azul-1);
+}
+#parte3-quem-usa p{
+    color: var(--cor-branco);
+    font-size: 1rem;
+}
+#parte3-quem-usa span{
+    color: var(--cor-branco);
+    margin-left: 2px;
+    font-size: 1rem;   
+}
+.quem-usa-img{
+    width: 80%; 
+}
+.img-sms-jornada{
+    width: 90%;
+    margin: 0px 20px 30px 50px;
+}
+#parte5-sms-beneficio h3{
+    color: var(--cor-cinza);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 30px; 
+}
+#parte5-sms-beneficio p{
+    line-height: 1.5rem;
+    font-size: 1.2rem; 
+}
+#parte5-sms-beneficio i{
+    color: var(--cor-azul-1);
+    font-size: 1.7rem;
+}
+#parte5-sms-beneficio i:hover{
+    color: var(--cor-vermelho);
 }
 /*TELA DE LOGIN*/
 .login {

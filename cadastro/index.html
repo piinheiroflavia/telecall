@@ -133,33 +133,34 @@
                         <!--SENHA-->
                         <div class="input-container-cadastro">
                           <input id="Senha" class="input-cadastro" type="password" placeholder=" " 
-                         minlength="8" maxlength="8" pattern="[A-Za-z]">
+                         minlength="8" maxlength="8" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" >
                           <div class="vago"></div>
                           <label for="Senha" class="placeholder">Senha</label>
                           <span class="icon2">
-                            <i id="lock" class="fa-solid fa-lock" onclick="showPassword()"></i>
-                            <i id="unlock" class="fa-solid fa-unlock" onclick="showPassword()"></i>
+                            <i id="lock" class="fa-solid fa-eye-slash" onclick="showPassword()"></i>
+                            <i id="unlock" class="fa-regular fa-eye" onclick="showPassword()"></i>
                           </span>
                         </div>
                           <!--CONFIRMAR SENHA-->
                           <div class="input-container-cadastro">
-                          <input id="confirmar" class="input-cadastro" type="password" placeholder=" "  minlength="8" maxlength="8"  pattern="[A-Za-z]">
+                          <input id="confirmar" class="input-cadastro" type="password" placeholder=" "  minlength="8" maxlength="8"  pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" >
                           <div class="vago"></div>
                           <label for="Senha" class="placeholder">Confirmar Senha</label>
                           <span class="icon2">
-                            <i id="lock2" class="fa-solid fa-lock" onclick="showPassword2()"></i>
-                            <i id="unlock2" class="fa-solid fa-unlock" onclick="showPassword2()"></i>
+                            <i id="lock2" class="fa-solid fa-eye-slash" onclick="showPassword2()"></i>
+                            <i id="unlock2" class="fa-regular fa-eye" onclick="showPassword2()"></i>
                           </span>
                         </div>
                       </div><!--input5 row-->
+                      <br><br>
                         <div id="res"> 
                           <p></p>
                         </div>
                 </div>
                 <!--BTN-->
                 <div class="col-12 "id="cadastro-lado1-btn">
-                    <button id="bttn" type="submit" class="submit-2" onclick="validar()"><a href="../index.html">Entrar</a></button>
-                    <button type="submit" class="cadastra-2"><a href="../login/index.html">Cadastrar</a></button>    
+                    <button id="bttn" type="submit" class="submit-2" onclick="validar()"><a href="">Entrar</a></button>
+                    <button type="submit" class="cadastra-2" onclick="validar()"><a href="">Cadastrar</a></button>    
                 </div>
                 
             </div>

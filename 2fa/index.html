@@ -48,7 +48,7 @@
 
         <!--menu-->
         <div id="menu-fixo" class="col-12">
-          <a href="/index.html" class="lg"><img id="logo-header" class="logo" src="../img/telecall.png" alt=""></a>
+          <a href="../index.html" class="lg"><img id="logo-header" class="logo" src="../img/telecall.png" alt=""></a>
 
           <nav class="primeiro-menu">
             <div class="mobile-menu">
@@ -62,7 +62,7 @@
                 
                 <li><a href="#"><i class="fa-solid fa-cloud"></i> Serviços <i class="fa-solid fa-chevron-down"></i></a>                
                   <ul class="dropdown2">
-                    <li><a href="#">SMS Programável</a></li>
+                    <li><a href="../sms programavel/index.html/">SMS Programável</a></li>
                     <li><a href="#">Google Verfied Calls</a></li>
                     <li><a href="../2fa/index.html">2FA</a></li>
                     <li><a href="#">Número Máscara</a></li>
@@ -96,13 +96,15 @@
    <img class="img-gif" src="../img/Banner para CPaaS.gif" alt="banner sobre os serviços da telecall">
     </section>
 
-    <section class="parte2-pagina-principal" >
-        <div id="bloco1-pagina-principal" class="col-12 row">
-           <h2>2FA</h2><br>
-            <div id="pagsobre-servico" >
-            <h3>Two-Factor Authentication</h3>
-            <h5>Autenticação de dois fatores</h5>
-                <p>É uma solução de software de comunicação que atua
+    <section>
+        <div id="twofa-h2" class="col-12 row">
+            <h2>2FA</h2><br>
+         </div>
+         <div  id="parte-1-twofa" class="col-12 row ">      
+             <div id="sms-programavel" class="col-md-6 col-sm-12 ">
+                 <h3>Two-Factor Authentication</h3>
+                 <h5>Autenticação de dois fatores</h5>
+                 <p>É uma solução de software de comunicação que atua
                     como uma base sobre a qual desenvolvedores podem
                     integrar uma variedade de aplicativos. 
                     Métodos de comunicação típicos, como voz, chamadas
@@ -112,92 +114,94 @@
                     Essas APIs permitem que as empresas expandam suas
                     ofertas sem a necessidade de hardware ou software
                     adicional.</p>
-            </div>
-        </div>
+                 <br>
+             </div>
+             <div class="col-md-6 col-sm-12">
+                <img src="../img/2FA.png" width="100%" class="twofa-oque-img">
+             </div>
+         </div>
 
-        <div id="dados-modavo" class="col-12 row">
+         <!--PARTE 2 PERMITE-->
+        <div id="parte-2-twofa-permite" class="col-12 row">
             <h3>O 2FA permite que você:</h3>
-            <div class="col-md-6 col-sm-12">
-                <p>
-                    <i class="fa-solid fa-arrow-right"></i><strong> Envie</strong> uma senha via SMS, voz ou e-mail para autenticação do usuário.
-                    <br><br>
-                    <i class="fa-solid fa-arrow-right"></i> <strong>Adicione</strong>  uma camada extra de segurança além da senha pessoal.
-                    <br><br>
-                    <i class="fa-solid fa-arrow-right"></i> <strong>Ofereça </strong> maior segurança para usuários.
-                </p>
-            </div> 
-            <div class="col-md-6 col-sm-12">
-                <img src="../img/2FA.png" width="100%" class="parte2-img">
-            </div>
+                <div id="dados-tfa"  class="col-12 row">
+                    <div class="col twofa-dados">
+                       <p><strong> Envie</strong><br> uma senha via SMS, <br> voz ou e-mail para <br> autenticação do usuário.
+                       </p>
+                    </div>
+                    <div class="col twofa-dados">
+                        <p><strong>Adicione</strong><br>  uma camada extra de <br> segurança além da senha pessoal.</p>
+                    </div>
+                    <div class="col twofa-dados">
+                        <p><strong>Ofereça </strong><br> maior segurança para <br> usuários.</p>
+                    </div>
+                </div> 
         </div>
 
-        <div id="dados-modavo" class="col-12 row">
+        <!--PARTE 3 FORTALEÇA-->
+        <div id="parte-3-twofa" class="col-12 row">
             <h3>Fortaleça a estratégia de segurança de seu negócio.</h3>
-            <p>Adicionar um número de telefone de recuperação a uma 
-                conta individual pode bloquear até:</p>
-          <br>
-                <p>
-                  <strong> 100% </strong> dos bots automatizados,
-
-                  <strong>99% </strong>  dos ataques de phishing em massa
-
-                  e <strong>66% </strong>dos ataques direcionados.
+            <p>Adicionar um número de telefone de recuperação a uma conta individual pode bloquear até:</p>
+            <br>
+            <div id="dados-tfa"  class="col-12 row">
+                <div class="col twofa-dados2">
+                    <p><strong> 100% </strong><br> dos bots automatizados.
                 </p>
+                </div>
+                <div class="col twofa-dados2">
+                    <p> <strong>99% </strong><br>  dos ataques de phishing em massa.</p>
+                </div>
+                <div class="col twofa-dados2">
+                    <p><strong>66% </strong><br> dos ataques direcionados.</p>
+                </div>
             </div> 
-        </div>
+        </div> 
 
-
-        <div id="logistica-modavo" class="col-12 row">
+        <!--PARTE 4 COMO FUNCIONA-->
+        <div id="parte-4-twofa" class="col-12 row">
             <h3>Como funciona?</h3>
             <br>
-            <div class="col usos1">
-               <img src="../img/2fa-icons1.png" width="90%" alt="">
-                <div class="col usos1">
-                    <p>Usuário acessa seu site o
+            <div class="col funciona">
+               <img src="../img/2fa-icons1.png"  alt="">
+                    <span>
+                        Usuário acessa seu site o
                         aplicativo e digita a senha
                         cadastrada para entrar em
                         seu perfil ou completar uma
-                        transação.
-                    </p>
-                </div>
+                        transação.                       
+                    </span>
             </div>
-            <div class="col usos2">
-                <img src="../img/2fa-icons2.png"  width="90%" alt="">
-                <div class="col usos2">
-                    <p>A Telecall recebe a tentativa
+            <div class="col funciona">
+                <img src="../img/2fa-icons2.png"   alt="">
+                    <span>
+                        A Telecall recebe a tentativa
                         de login e solicita que o
                         usuário insira seu número de
                         telefone para autorizar o
-                        acesso.
-                    </p>
-                </div>
+                        acesso.             
+                    </span>
             </div>
-            <div class="col usos3">
-                <img src="../img/2fa-icons3.png"  width="90%" alt="">
-                <div class="col usos3">
-                    <p>Após inserir seu número, a
-                        Telecall envia para o usuário
-                        por SMS, chamada ou e-mail
-                        um código PIN de uso único. <br>
-                    Esse código PIN é também 
-                        conhecido como OTP (One
-                        Time Password).
-                    </p>
-                </div>
+            <div class="col funciona">
+                <img src="../img/2fa-icons3.png"   alt="">
+                    <span>
+                        Após inserir seu número, a Telecall envia para o usuário
+                        por SMS, chamada ou e-mail um código PIN de uso único. <br>Esse código PIN é também conhecido como OTP (One
+                        Time Password).                   
+                    </span>
             </div>
-            <div class="col usos4">
-                <img src="../img/2fa-icons4.png"  width="90%" alt="">
-                <div class="col usos4">
-                    <p>O usuário insere o código no
+            <div class="col funciona">
+                <img src="../img/2fa-icons4.png" alt="">
+                    <span>
+                        O usuário insere o código no
                         site ou aplicativo para
                         concluir o processo de
-                        verificação.
-                    </p>
-                </div>
+                        verificação.    
+                    </span>
             </div>
         </div>
 
-        <div id="dados-modavo" class="col-12 row">
+        <!--PARTE 5 BENEFICIOS-->
+        <div id="parte-5-twofa" class="col-12 row">
             <h3>Beneficios</h3>
             <div class="col-md-6 col-sm-12">
                 <p>
@@ -215,8 +219,8 @@
             <div class="col-md-6 col-sm-12">
                 <p>
                     <i class="fa-solid fa-arrow-right"></i> <strong> Flexibilidade</strong> de canais garante que o usuário conseguirá completar a tarefa desejada
-                    mesmo quando tiver problema com um deles. Exemplo: Enviar OTP por SMS, em caso de
-                    falha, enviar OTP por chamada de voz, em caso de outra falha, enviar por e-mail.
+                    mesmo quando tiver problema com um deles. Exemplo: <br> Enviar OTP por SMS, em caso de
+                    falha, enviar OTP <br> por chamada de voz, em caso de outra falha, enviar por e-mail.
                     <br><br>
                     <i class="fa-solid fa-arrow-right"></i> <strong> Plataforma intuitiva</strong> que permite visualizar relatórios de uso por dia, mês ou ano e
                     pesquisar usando diversos critérios de filtro.
@@ -224,10 +228,11 @@
             </div>
         </div>
 
-        <div id="logistica-modavo" class="col-12 row">
-            <h3>Usos</h3>
+         <!--PARTE 6 USO-->
+        <div id="parte-6-twofa" class="col-12 row">
+            <h3>Quem Usa</h3>
             <br>
-            <div class="col usos1">
+            <div class="col">
                 <i class="fa-solid fa-hand-holding-dollar"></i>
                 <h5>Finanças</h5>
                 <p>Acesso ao portal/app
@@ -239,7 +244,7 @@
                     Digital Wallets (Google Pay, Apple Pay, Samsung Pay)
                 </p>
             </div>
-            <div class="col usos2">
+            <div class="col">
                 <i class="fa-solid fa-heart-pulse"></i>
                 <h5>Saúde</h5> 
                 <p> Acesso ao 
@@ -252,7 +257,7 @@
                     Telemedicina
                 </p>
             </div>
-            <div class="col usos3">
+            <div class="col">
                 <i class="fa-solid fa-plane"></i>
                 <h5>Turismo</h5>
                 <p>Acesso ao portal/app
@@ -266,7 +271,7 @@
                     Recuperação de Senha
                 </p>
             </div>
-            <div class="col usos4">
+            <div class="col">
                 <i class="fa-solid fa-cart-flatbed"></i>
                 <h5>Varejo</h5>
                 <p>Acesso ao portal/app
@@ -281,7 +286,7 @@
                     Recibo Eletrônico
                 </p>
             </div>
-            <div class="col usos5">
+            <div class="col">
                 <i class="fa-solid fa-building-columns"></i>
                 <h5>Governo</h5>
                 <p>Acesso ao portal/app
@@ -293,11 +298,52 @@
             </div>
         </div>
 
-        <!--QUEM USA-->
-        <div id="quem-usa" class="col-12">
-            <h3>Quem Usa</h3>
-            <img src="../img/quem-usa-2fa.jpg" alt="">
+        <!--PARTE 7 QUEM USA-->
+        <div id="parte-7-twofa" class="col-12 row">
+            <h3>Quem usa</h3>
+            <br>
+            <div class="col" id="parte-7-twofa-1">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <h5>Finanças</h5>
+                    <img src="../img/cpaas5.png" class="twofa-quem-usa-img" alt="bradesco"> <br>
+                    <img src="../img/cpaas4.png" class="twofa-quem-usa-img" alt="pic pay"> <br>
+                    <img src="../img/cpaas10.png" class="twofa-quem-usa-img" alt=""> <br>
+                    
+            </div>
+            <div class="col" id="parte-7-twofa-2">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <h5>Saúde</h5> 
+                    <img src="../img/cpaas6.png" class="twofa-quem-usa-img" alt="amil">
+            </div>
+            <div class="col" id="parte-7-twofa-3">
+                <i class="fa-solid fa-plane"></i>
+                <h5>Turismo</h5>
+                <img src="../img/cpaas7.png" class="twofa-quem-usa-img" alt="air bnb"> <br>
+                <img src="../img/cpaas3.png" class="twofa-quem-usa-img" alt="booking"> <br>
+            </div>
+            <div class="col" id="parte-7-twofa-4">
+                <i class="fa-solid fa-cart-flatbed"></i>
+                <h5>Varejo</h5>
+                <img src="../img/cpaas19.png" class="twofa-quem-usa-img" alt="amazon"> <br>
+                <img src="../img/cpaas20.png" class="twofa-quem-usa-img" alt=""> <br>
+                <img src="../img/cpaas11.png" class="twofa-quem-usa-img" alt="mercador livre"> <br>
+            </div>
+            <div class="col" id="parte-7-twofa-5">
+                <i class="fa-solid fa-building-columns"></i>
+                <h5>Logística</h5>
+                <img src="../img/cpaas8.png" class="twofa-quem-usa-img" alt="ifood"> <br>
+                <img src="../img/cpaas2.png" class="twofa-quem-usa-img" alt="pic pay"> <br>
+                <img src="../img/cpaas12.png" class="twofa-quem-usa-img" alt="uber"> <br>
+            </div>
+            <div class="col" id="parte-7-twofa-6">
+                <i class="fa-solid fa-building-columns"></i>
+                <h5>Governo</h5>
+                <img src="../img/cpaas9.png" class="twofa-quem-usa-img" alt=""> <br>
+                <img src="../img/cpaas1.png" class="twofa-quem-usa-img" alt=""> <br>
+                <img src="../img/cpaas13.png" class="twofa-quem-usa-img" alt=""> <br>
+            </div>
         </div>
+
     </section>
     
     <footer>

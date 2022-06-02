@@ -104,11 +104,13 @@
         <span>Respondemos em até 24hrs</span>
       </div>
         <div id="suporte-formulario" class="col-md-7">
-          <form action="" method="get">
+        <form action="https://api.staticforms.xyz/submit" method="post">
+          <input type="hidden" name="accessKey" value="28526c69-46d1-45fe-9d35-721843caf2ea">
+          <input type="hidden" name="redirectTo" value="https://piinheiroflavia.github.io/telecall/central%20de%20atendimento/index.html">
             <div class="form-group">
               <label class="control-label col-sm-2" for="fname">Nome</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="fname" placeholder="nome" name="fname">
+                <input type="text" class="form-control" id="fname" placeholder="nome" name="name">
               </div>
             </div>
             <div class="form-group">
@@ -120,17 +122,17 @@
             <div class="form-group">
               <label class="control-label col-sm-2" for="lname">Assunto</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="lname" placeholder="assunto" name="lname" required>
+                <input type="text" class="form-control" id="lname" placeholder="assunto" name="subject" required>
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-sm-2" for="comment">Mensagem</label>
               <div class="col-sm-10">
-                <textarea class="form-control" rows="5" id="comment" placeholder="digite aqui sua mensagem.." required="require"></textarea><br>
-                    <a class="btn-suporte" href="#">Enviar email</a>
+                <textarea class="form-control" rows="5" id="comment" name="message" placeholder="digite aqui sua mensagem.." required="require"></textarea><br>
+                    <input type="submit" value="submit" class="btn-suporte"></input>
               </div>
             </div>
-      </form>
+        </form>
     </div>
     </div>
  

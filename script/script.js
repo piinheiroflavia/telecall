@@ -1,3 +1,104 @@
+  let nome = document.getElementById('nome');
+  let nascimento = document.getElementById("nascimento");
+
+  let materno = document.getElementById("nomeMaterno");
+  let endereco = document.getElementById("endereco");
+  let cpfcnpj = document.getElementById("cpfcnpj");
+  let telefone = document.getElementById("telefone");
+  let celular = document.getElementById("celular");
+  var res = document.getElementById('res');
+  let senha = document.getElementById("Senha");
+  let confirma = document.getElementById("confirmar");
+  let email = document.getElementById("email");
+
+if (typeof(Storage)!= "undefine"){
+  
+}else{
+  console.log("Sem suporte a web Storage");
+}
+
+function gravar(){
+  var cpfcnpj = document.getElementById("cpfcnpj").value;
+  var senha = document.getElementById('Senha').value
+  localStorage.cpfcnpj=cpfcnpj;
+  localStorage.Senha=senha;
+}
+function validar(){
+   nome.value
+  nascimento.value
+  materno.value
+  email.value
+  endereco.value
+  cpfcnpj.value
+  celular.value
+  telefone.value
+  senha.value
+  confirma.value
+
+  localStorage.nome=nome;
+  localStorage.nascimento=nascimento;
+  localStorage.materno=nomeMaterno;
+  localStorage.endereco=endereco;
+  localStorage.cpfcnpj=cpfcnpj;
+  localStorage.telefone=telefone;
+  localStorage.celular=celular;
+  localStorage.Senha=senha;
+  localStorage.confirma=confirma;
+  localStorage.email=email;
+}
+function validar(){
+
+  if(nome.value == ''){
+    res.innerHTML+='Mensagem de Erro: O campo NOME é obrigatório';		
+    nome.focus();
+
+  }else if(nome.length < 15 && nome.length > 90){
+    res.innerHTML+='Mensagem de Erro: O campo NOME é obrigatório';		
+        nome.focus();
+  }else if(nascimento.value==''){
+    res.innerHTML = 'Mensagem de Erro:O campo DATA DE NASCIMENTO é obrigatório';
+    nascimento.focus();
+
+  }else if(materno.value==''){
+    res.innerHTML ='Mensagem de Erro: O campo NOME MATERNO é obrigatório';
+    materno.focus();
+
+  }else if(email.value==''){
+    res.innerHTML ='Mensagem de Erro: O campo EMAIL é obrigatório';	
+    email.focus();
+
+  }else if(endereco.value==''){
+    res.innerHTML ='Mensagem de Erro: O campo ENDEREÇO é obrigatório';
+    endereco.focus();
+
+  }else if(cpfcnpj.value==''){
+    res.innerHTML ='Mensagem de Erro: O campo CPF ou CNPJ é obrigatório';
+    cpfcnpj.focus();
+
+  }else if(celular.value==''){
+    res.innerHTML ='Mensagem de Erro: O campo CELULAR é obrigatório';
+    celular.focus();
+
+  }else if(telefone.value==''){
+    res.innerHTML ='Mensagem de Erro: O campo TELEFONE FIXO é obrigatório';
+    telefone.focus();
+
+  }else if(senha.value==''){
+    res.innerHTML = 'Mensagem de Erro: O campo SENHA é obrigatório';
+    senha.focus();
+
+  }else if(confirma.value==''){
+    res.innerHTML = 'Mensagem de Erro: O campo CONFIRMAR SENHA é obrigatório';
+    confirma.focus();
+  }else if(senha.value != confirma.value){
+    res.innerHTML ='Mensagem de Erro: Os campos SENHA e CONFIRMAR SENHA devem ser iguais';
+    
+  }else{
+    document.formulario.submit();
+  }
+  
+}
+
 /*LOGIN CPF E CNPJ*/
 $('#cpfcnpj').mask('000.000.000-00', {
     onKeyPress : function(cpfcnpj, e, field, options) {
@@ -36,64 +137,6 @@ $("#celular")
                 element.mask("(+99) 99 99999-9999");  
             }  
         });
-/*EMAIL*/
-
-	let senha = document.getElementById("Senha");
-	let confirma = document.getElementById("confirmar");
-  let email = document.getElementById("nomeMaterno");
-
-function validEmail(email){
-  return /^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/.test(email)
-}
-
-function validar(){
-	let nome = document.getElementById('nome')
-	let nascimento = document.getElementById("nascimento");
-	
-	let materno = document.getElementById("email");
-	let endereco = document.getElementById("endereco");
-	let cpfcnpj = document.getElementById("cpfcnpj");
-	let telefone = document.getElementById("telefone");
-	let celular = document.getElementById("celular");
-	var res = document.getElementById('res');
-
-	if(nome.value == ''){
-		res.innerHTML+='Mensagem de Erro: O campo NOME é obrigatório';		
-
-	}else if(nascimento.value==''){
-    	res.innerHTML = 'Mensagem de Erro:O campo DATA DE NASCIMENTO é obrigatório';
-
-	}else if(materno.value==''){
-    	res.innerHTML ='Mensagem de Erro: O campo NOME MATERNO é obrigatório';
-
-	}else if(email.value==''){
-    	res.innerHTML ='Mensagem de Erro: O campo EMAIL é obrigatório';	
-
-	}else if(endereco.value==''){
-    	res.innerHTML ='Mensagem de Erro: O campo ENDEREÇO é obrigatório';
-
-	}else if(cpfcnpj.value==''){
-    	res.innerHTML ='Mensagem de Erro: O campo CPF ou CNPJ é obrigatório';
-	
-  }else if(celular.value==''){
-		res.innerHTML ='Mensagem de Erro: O campo CELULAR é obrigatório';
-	
-  }else if(telefone.value==''){
-    	res.innerHTML ='Mensagem de Erro: O campo TELEFONE FIXO é obrigatório';
-
-	}else if(senha.value==''){
-    	res.innerHTML = 'Mensagem de Erro: O campo SENHA é obrigatório';
-
-	}else if(confirma.value==''){
-    	res.innerHTML = 'Mensagem de Erro: O campo CONFIRMAR SENHA é obrigatório';
-
-	}else if(senha.value != confirma.value){
-		res.innerHTML ='Mensagem de Erro: Os campos SENHA e CONFIRMAR SENHA devem ser iguais';
-	}else{
-	  document.formulario.submit();
-	}
-	
-}
 
 //OCULTAR A SENHA
 function showPassword() {
