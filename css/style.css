@@ -2,12 +2,41 @@
     padding: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #0B8CED #fff;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background:#fff;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #0B8CED;
+    border-radius: 20px;
+    border: 3px solid #fff;
+  }
 :root {
     --cor-vermelho: #CA1C2A;
     --cor-azul-1: #0B8CED;
     --cor-azul-2: #0C4B77;
     --cor-cinza: #31353B;
+    --cor-cinza-claro: #dcdcdc;
     --cor-branco: #fff;
+    --fundo-cinza: rgba(242, 238, 238, 0.975);
+}
+.dark {
+  --cor-branco: #e6e6e6;
+  --text-dark: #ffffff;
+  --cor-vermelho: #324b6d;
+  --cor-azul-2: #868080;
+  --cor-cinza: #4F4F4F;
+  --cor-cinza-claro: #323543;
+  --cor-azul-1: #808080;
 }
 #pagina-inicial{
     display: flex;
@@ -25,6 +54,59 @@
 .pull-right{
     float: right;
 }
+/*DARK-MODE*/
+body.dark {
+    color: #e4e6e9;
+    background-color: #292c35;
+}
+body.dark a{
+    color: #bbc0c5;
+}
+.checkbox-dark-mode {
+    opacity: 0;
+    position: absolute;
+  }
+  
+.label-dark-mode {
+    border: 2px solid #fff;
+    width: 44px;
+    left: 8px;
+    height: 19px;
+    background-color:var(--cor-vermelho);
+    display: flex;
+    border-radius:50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+  }
+  
+.ball {
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    position: absolute;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox-dark-mode:checked + .label-dark-mode .ball{
+   transform: translateX(24px);
+}
+  
+.fa-moon {
+    font-size: 0.7rem;
+    color: rgb(174, 174, 255);
+}
+  
+.fa-sun {
+    font-size: 0.7rem;
+    color: rgb(211, 211, 2);
+}
+/*FINAL DARK MODE*/
+
 .atendimento {
     text-decoration: none;
     color: #777575;
@@ -46,11 +128,11 @@
 .cliente {
     text-decoration: none;
     color: #fff;
-    background-color: #0f96ae;
+    background-color:var(--cor-azul-1);
     display: block;
     font-size: 14px;
     float: left;
-    padding: 9px 22px;
+    padding: 8.5px 22px;
     position: relative;
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -71,7 +153,7 @@
     height: 40px;
     text-align: center;
     font-size: 14px;
-    padding: 11px 22px;
+    padding: 8px 22px;
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -215,6 +297,7 @@
 
 /*PRIMEIRO MENU*/
 .primeiro-menu ul {
+
     list-style-type: none; 
     display: flex;
 
@@ -373,7 +456,7 @@
     min-width: 200px;
     height: 200px;
     background: rgba(255, 255, 255, 0.316);
-    margin: 10px 50px ;
+    margin: 10px 25px ;
     border-radius: 5px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
     font-size: 1rem;
@@ -449,9 +532,11 @@
 #bloco3-tela-principal{
     background-color: var(--cor-vermelho);
     color:var(--cor-branco);
+    margin: 0px;
     padding: 50px 40px;
 }
 #bloco3-tela-principal img{
+    border-radius: 50px;
     padding: 0px 20px 0px 10px;
 }
 #bloco3-tela-principal p{
@@ -502,7 +587,7 @@
 #redes-sociais{
     margin-top: 200px;
     padding: 25px;
-    background: #dcdcdc;
+    background-color: var(--cor-cinza-claro);
 }
 .container-redes-sociais {
     margin-bottom: 5px;
@@ -536,7 +621,7 @@
       transform: scale(1);
     }
     to {
-      box-shadow: -12px -12px 12px 0 rgba(241, 238, 238, 0.647), 12px 12px 12px 0 rgba(0, 0, 0, 0.068);
+      box-shadow: -2px -2px 10px 0 rgba(188, 186, 186, 0.647), 12px 12px 12px 0 rgba(0, 0, 0, 0.068);
       transform: scale(1.05);
     }
   }
@@ -614,7 +699,7 @@
     background-color: var(--cor-vermelho);
     color: var(--cor-branco);
     text-transform: uppercase;
-    width: 25%;
+    width: 40%;
     border: none;
     letter-spacing: 2px;
     font-size: 0.8rem;
@@ -656,7 +741,7 @@
     max-width: 280px;
     min-width: 200px;
     height: 270px;
-    background-color:#CA1C2A;
+    background-color: var(--cor-vermelho);
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
@@ -750,12 +835,11 @@
     color: var(--cor-branco);
     font-weight:normal;
 }
-
-#dados-modavo{
+#dados-modavo, #logistica-modavo, #vantagens-modavo{
     padding: 20px 50px;
     margin: 30px 0px;
 }
-#dados-modavo h3{
+#dados-modavo h3, #logistica-modavo h3{
     color: var(--cor-cinza);
     margin-bottom: 30px;
     font-size: 2rem;
@@ -777,35 +861,8 @@
     align-items: center;
     width: 75%;
 }
-#logistica-modavo h3{
-    color: var(--cor-cinza);
-    margin-bottom: 30px;
-    font-size: 2rem;
-    font-weight: bold;
-}
-#logistica-modavo {
-    padding: 20px 50px;
-    margin: 30px 0px;
-}
-#logistica-modavo .usos1:hover{
+#logistica-modavo .usos1:hover, #logistica-modavo .usos2:hover, #logistica-modavo .usos3:hover, #logistica-modavo .usos4:hover {
     padding: 10px;
-    border-radius: 5px;
-    background: rgba(217, 214, 214, 0.197);
-}
-#logistica-modavo .usos2:hover{
-    padding: 10px;
-    border-radius: 5px;
-    background: rgba(217, 214, 214, 0.197);
-}
-#logistica-modavo .usos3:hover{
-    padding: 10px;
-    border-radius: 5px;
-    background: rgba(217, 214, 214, 0.197);
-}
-#logistica-modavo .usos4:hover{
-    padding: 10px;
-    border-radius: 5px;
-    background: rgba(217, 214, 214, 0.197);
 }
 #logistica-modavo h5{
     color: var(--cor-azul-2);
@@ -813,66 +870,22 @@
     font-size: 1.5rem;
     font-weight: bold;
 }
-#logistica-modavo .usos1:hover  h5{
+#logistica-modavo .usos1:hover  h5, #logistica-modavo .usos2:hover  h5, #logistica-modavo .usos3:hover  h5, #logistica-modavo .usos4:hover  h5{
     color: var(--cor-vermelho);
-    font-size: 1.8rem;
 }
-#logistica-modavo .usos2:hover  h5{
+#logistica-modavo .usos1:hover .fa-box, #logistica-modavo .usos2:hover .fa-cart-arrow-down, #logistica-modavo .usos3:hover .fa-headset, #logistica-modavo .usos4:hover .fa-truck-medical{
     color: var(--cor-vermelho);
-    font-size: 1.8rem;
 }
-#logistica-modavo .usos3:hover  h5{
-    color: var(--cor-vermelho);
-    font-size: 1.8rem;
-}
-#logistica-modavo .usos4:hover  h5{
-    color: var(--cor-vermelho);
-    font-size: 1.8rem;
-}
-#logistica-modavo .fa-box  {
+#logistica-modavo .fa-box, #logistica-modavo .fa-cart-arrow-down, #logistica-modavo .fa-headset, #logistica-modavo .fa-truck-medical{
     font-size: 3rem;
     color: var(--cor-azul-2);
     text-align: center;
     margin-bottom: 20px;
-}
-#logistica-modavo .usos1:hover .fa-box{
-    color: var(--cor-vermelho);
-}
-#logistica-modavo .fa-cart-arrow-down{
-    font-size: 3rem;
-    color: var(--cor-azul-2);
-    text-align: center;
-    margin-bottom: 20px;
-}
-#logistica-modavo .usos2:hover .fa-cart-arrow-down{
-    color: var(--cor-vermelho);
-}
-#logistica-modavo .fa-headset {
-    font-size: 3rem;
-    color: var(--cor-azul-2);
-    text-align: center;
-    margin-bottom: 20px;
-}
-#logistica-modavo .usos3:hover .fa-headset{
-    color: var(--cor-vermelho);
-}
-#logistica-modavo .fa-truck-medical{
-    font-size: 3rem;
-    color: var(--cor-azul-2);
-    text-align: center;
-    margin-bottom: 20px;
-}
-#logistica-modavo .usos4:hover .fa-truck-medical{
-    color: var(--cor-vermelho);
 }
 #logistica-modavo p{
     line-height: 1.5rem;
     font-size: 1.2rem;
     margin-bottom: 80px;
-}
-#vantagens-modavo{
-    padding: 20px 50px;
-    margin: 30px 0px;
 }
 #vantagens-modavo h3{
     border-bottom-width: 5px solid red;
@@ -894,52 +907,74 @@
 }
 
 /*TELA SOBRE A EMPRESA*/
-#quem-usa {
-    background-color:#0B8CED
-}
-#quem-usa h3{
-    color: var(--cor-branco);
-    font-size: 2rem;
-    font-weight: bold;
-
-}
-#quem-usa img{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-
-}
-
-/*TELA SOBRE A EMPRESA*/
-#sobre-a-empresa{
-    padding: 20px 50px;
-    margin: 30px 0px;
+#sobre-a-empresa, #sobre-a-empresa-premios, #sobre-a-empresa-missao-visao, #sobre-a-empresa-valores, #sobre-a-empresa-ser-telecal{
+    padding: 10px 50px;
+    margin: 10px 0px;
 }
 #sobre-a-empresa h2{
-    color: var(--cor-vermelho);
-    margin: 30px 0px;
+    color: var(--cor-azul-2);
+    margin: 10px 0px 20px 0px;
     font-size: 2rem;
     font-weight: bold;
 }
-#sobre-a-empresa p{
+#sobre-a-empresa-premios h5,  #sobre-a-empresa-valores h5, #sobre-a-empresa-ser-telecal h5{
+    color: var(--cor-azul-2);
+    margin: 20px 0px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#sobre-a-empresa p, #sobre-a-empresa-premios p,  #sobre-a-empresa-valores p, #sobre-a-empresa-ser-telecal p{
     font-size: 1.3rem;
+    line-height: 1.6rem;
 }
 #sobre-a-empresa-premios{
-    padding: 20px 50px;
-    margin: 30px 0px;
+    background-image: url(../img/fundo.jpg);
+    background-repeat: no-repeat;
+    min-height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    margin: 0%;
+    overflow: hidden;
 }
-#sobre-a-empresa-missao{
-    padding: 20px 50px;
-    margin: 30px 0px;
+#sobre-a-empresa-premios img{
+    width: 100%;
 }
-#sobre-a-empresa-visao{
-    padding: 20px 50px;
-    margin: 30px 0px;
+#sobre-a-empresa-missao-visao h5{
+    position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg,#a0a2a4, #fff, #fff, #a0a2a4);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
-#sobre-a-empresa-valores{
-    padding: 20px 50px;
-    margin: 30px 0px;
+@keyframes animate {
+    0% {
+      background-position: -200%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+#sobre-a-empresa-missao-visao{
+    background-color: var(--cor-vermelho);
+    color: var(--cor-branco);
+    margin: 0%;
+    padding: 100px 50px;
+}
+#sobre-a-empresa-valores ol li{
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+#sobre-a-empresa-ser-telecal img{
+    width: 75%;
 }
 
 /*TELA 2FA*/
@@ -1000,10 +1035,7 @@
     background-color: var(--cor-azul-1);
     margin: 0%;
 }
-#parte-3-twofa h3{
-    color: var(--cor-branco);
-}
-#parte-3-twofa p{
+#parte-3-twofa h3, #parte-3-twofa p{
     color: var(--cor-branco);
 }
 .funciona img{
@@ -1063,8 +1095,13 @@
     padding: 20px 50px;
     margin: 30px 0px;
 }
-#sms-programavel h3, #parte3-quem-usa h3{
+#sms-programavel h3{
     color: var(--cor-cinza);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+#parte3-quem-usa h3{
+    color: var(--cor-branco);
     font-size: 1.8rem;
     font-weight: bold;
 }
@@ -1110,7 +1147,7 @@
     text-align: center;
 }
 #dados01-sms strong, #dados02-sms strong{
-    color:var(--cor-azul-1);
+    color:var(--cor-vermelho);
     font-weight: bold;
     font-size: 2.5rem;
 }
@@ -1152,6 +1189,123 @@
 #parte5-sms-beneficio i:hover{
     color: var(--cor-vermelho);
 }
+
+/*GOOGLE VERIFIED CALLS */
+#google-verified-h2 h2{
+    color: var(--cor-vermelho);
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#parte-1-g-v, #parte-2-g-v, #parte-3-g-v, #parte-4-g-v, #parte-5-g-v{
+    padding: 20px 50px;
+    margin: 30px 0px;
+}
+#parte-1-g-v h3, #parte-5-g-v h3{
+    color: var(--cor-cinza);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+#parte-1-g-v h5{
+    letter-spacing: 2px;
+    color: var(--cor-azul-1);
+}
+#parte-1-g-v img{
+    border-radius: 5px;
+    margin-left: 40px;
+    width: 80%;
+}
+#parte-2-g-v img{
+    border-radius: 5px;
+    margin-top: 80px;
+    width: 100%;
+}
+#parte-3-g-v img{
+    width: 80%;
+    border-radius: 5px;
+    margin-top: 80px;
+    margin-left: 40px;
+}
+#parte-3-g-v h3{
+    color: var(--cor-branco);
+}
+#parte-3-g-v{
+    color: var(--cor-branco);
+    padding: 20px 50px;
+    margin: 0%;
+    background-color: var(--cor-azul-1);
+}
+
+.como-funciona{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.como-funciona span{
+   margin-top: 30px;
+}
+.g-v{
+    font-size: 1.1rem;
+    margin-top: 50px;  text-align: center;
+}
+.g-v strong{
+    color: var(--cor-azul-1);
+    font-weight: bold;
+    font-size: 1.3rem;
+  
+}
+
+/*NUMERO MASCARA*/
+#numero-mascara-h2 h2{
+    color: var(--cor-vermelho);
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#bloco1-numero-mascara, #bloco2-numero-mascara, #bloco3-numero-mascara-quem-usa, #bloco4-n-masc-quem-usa{
+    padding: 20px 50px;
+    margin: 30px 0px;
+}
+#numero-mascara h3, #bloco2-numero-mascara h3, #bloco3-numero-mascara-quem-usa h3, #bloco4-n-masc-quem-usa h3{
+    color: var(--cor-cinza);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+#numero-mascara h5, #bloco3-numero-mascara-quem-usa h5, #bloco4-n-masc-quem-usa h5{
+    letter-spacing: 2px;
+    color: var(--cor-azul-1);
+    font-size: 1rem;
+}
+#numero-mascaral p{
+    font-size: 1.3rem;
+}
+.numero-mascara-oque-img{
+    margin-left: 40%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+.n-masc img{
+    left: 50px;
+    width: 50%;
+}
+.n-masc span, #bloco2-numero-mascara p{
+    font-size: 1rem;
+    text-align: center;
+}
+#bloco3-numero-mascara-quem-usa i, #bloco4-n-masc-quem-usa i{
+    font-size: 4rem;
+    color: var(--cor-azul-2);
+    margin-bottom: 20px;
+}
+#bloco4-n-masc-quem-usa .n-masc-quem-usa{
+    width: 20%;
+    margin: 10px;
+}
+
 /*TELA DE LOGIN*/
 .login {
     background-image: url('../img/fundo.jpg');
@@ -1163,13 +1317,17 @@
    
 }
 .container{
-    margin-top: 50px;
+    margin-top: 40px;
 } 
 #lados-login{
+    background-color: rgba(247, 246, 246, 0.747);
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 8.5px );
     border-radius: 5px;
     box-shadow: 0 8px 32px  rgba(31, 38, 135, 0.2);  
 }
 #lado1{
+    border-radius: 0px 0px 350px 0px;
     padding: 50px 40px 2px 29px    ;
     color: var(--cor-branco);
     background-color:var(--cor-azul-2);
@@ -1190,9 +1348,6 @@
 }
 #lado2{
     padding:  50px 29px 29px 37px;
-    background: rgba(255, 255, 255, 0.831);
-    backdrop-filter: blur( 3.5px );
-    -webkit-backdrop-filter: blur( 13.5px );
 }
 #lado2 h3{
     color: var(--cor-azul-2);
@@ -1260,6 +1415,36 @@
     transition: transform 200ms;
     width: 96px;
 } 
+#label-select{
+    color: #383842 ;
+    padding: 10px;
+    margin-top: 20px; 
+    margin-left: -25px;
+}
+select{
+    background-color:#ffffff5f ;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: none;
+    padding-left:40px;
+    padding: 5px;
+    width: 250px;
+    cursor: pointer;
+}
+select option{
+    background-color:#ffffff5f ;
+    border-radius: 5px;
+    border: none;
+    color: #282831 ;
+    opacity: 0;
+    position: relative;
+    line-height: 1;
+    transition: 0.3s ease all;
+    z-index: 2;
+}
+select option::after{
+    background-color: var(--cor-vermelho);
+}
 /*INPUT COM A BORDAR */
 .input:focus,
 .input:not(:placeholder-shown) {
@@ -1301,8 +1486,29 @@
 .submit { 
    background-color:var(--cor-azul-2);
     border: none;
+    border-radius: 5px;
     text-transform: uppercase;
-    width: 25%;
+    width: 20%;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    padding: 8px;
+    margin: 0px 10px;
+    text-align: center; 
+    position: relative;
+    transition: 0.6s;    
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--cor-branco);
+}
+.submit:hover {
+    background-color:var(--cor-azul-1); 
+}
+.cadastra{   
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid var(--cor-azul-2);
+    border-radius: 5px;
+    text-transform: uppercase;
+    width: 55%;
     letter-spacing: 2px;
     font-size: 0.8rem;
     padding: 8px;
@@ -1311,74 +1517,25 @@
     position: relative;
     transition: 0.6s;
 }
-.submit:hover {
-    background-color:var(--cor-azul-1); 
-}
-.submit a{
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--cor-branco);
-}
-.cadastra{
-    border: none;
-    position: relative;
-    padding: 10px 15px;
-    margin: 10px;
-    background-color:rgba(255, 255, 255, 0);
-    color:var(--cor-azul-2);
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    overflow: hidden;
-    transition: 0.5s;
+.cadastra:hover{
+    color: var(--cor-azul-1);
+     border: 2px solid var(--cor-azul-1);
 }
 .cadastra a{
-    font-weight: bold;
+    font-weight: bolder;
     text-decoration: none;
     color: var(--cor-azul-2);
 }
-.cadastra a:hover {
-    color: var(--cor-azul-2);
+.cadastra a:hover {   
+   
+    color: var(--cor-azul-1);
     transition-delay: 0.1s;
-}
-.cadastra:before{
-    content: '';
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    border-top: 2px solid var(--cor-azul-2);
-    border-left: 2px solid var(--cor-azul-2);
-    transition: 0.5s;
-    transition-delay: 0.3s;
-}
-.cadastra:hover:before{ 
-    width: 100%;
-    height: 100%;
-    border-top: 2px solid var(--cor-azul-2);
-    border-left: 2px solid var(--cor-azul-2);
-    transition-delay: 0.4s;
-}
-.cadastra:after{
-    color:var(--cor-azul-2);
-    content: '';
-    position: absolute;
-    bottom:0px;
-    right: 0px;
-    width: 10px;
-    height: 10px;
-    border-bottom: 2px solid var(--cor-azul-2);
-    border-right: 2px solid var(--cor-azul-2);
-    transition: 0.5s;
-    transition-delay: 0.3s;
 }
 .cadastra:hover:after{
     width: 100%;
     height: 100%;
-    border-bottom: 2px solid var(--cor-azul-2);
-    border-right: 2px solid var(--cor-azul-2);
+    border-bottom: 1px solid var(--cor-vermelho);
+    border-right: 1px solid var(--cor-vermelho);
     transition-delay: 0.4s;
 }
 .span{
@@ -1420,7 +1577,7 @@
     font-size: 1.7rem;
 }
 .area-cliente p{
-    font-size: 1.3rem;
+    font-size: 1rem;
    text-align: justify;
 }
 .area-cliente-logo{
@@ -1438,8 +1595,9 @@
 }
 .submit-2 { 
     border: none;
+    border-radius: 5px;
     text-transform: uppercase;
-    width: 20%;
+    width: 15%;
     letter-spacing: 2px;
     font-size: 0.8rem;
     padding: 8px;
@@ -1470,77 +1628,54 @@
     text-indent: 0px;
 }
 .submit-2 a{
+    padding: 20px 30px;
     font-weight: bold;
     text-decoration: none;
     color: var(--cor-azul-2);
 }
-submit-2 a:before {
-    content: "\f055";
-    font-family: FontAwesome;
-    color:rgba(0, 0, 0, 0.354);
-    right:0;
-    position:absolute;
-
-}
-.cadastra-2{
-    width: 25%;
+.cadastra-2{   
+    background-color: rgba(255, 255, 255, 0);
     border: none;
-    position: relative;
-    padding: 10px;
-    margin: 10px;
-    background-color: var(--cor-azul-2);
-    text-decoration: none;
+    border-radius: 5px;
     text-transform: uppercase;
+    width: 25%;
     letter-spacing: 2px;
     font-size: 0.8rem;
+    padding: 8px;
+    margin: 0px 5px;
+    text-align: center; 
+    position: relative;
+    transition: 0.6s;
+    transition: all 0.2s linear 0s;
 }
-.cadastra-2 a{
-    font-weight: bold;
+ .cadastra-2 a{ 
+    width: 100%;
+    border-radius: 5px;
+    padding: 8px 50px;
+    border: 2px solid var(--cor-branco);
+    font-weight: bolder;
     text-decoration: none;
     color: var(--cor-branco);
 }
-.cadastra-2 a:hover {
-    color: var(--cor-branco);
-    transition-delay: 0.1s;
-}
-.cadastra-2:before{
-    content: '';
+.cadastra-2 a:before { 
     position: absolute;
-    top:0;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    border-top: 2px solid var(--cor-branco);
-    border-left: 2px solid var(--cor-branco);
-    transition: 0.5s;
-    transition-delay: 0.3s;
-}
-.cadastra-2:hover:before{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
     width: 100%;
-    height: 100%;
-    border-top: 2px solid var(--cor-branco);
-    border-left: 2px solid var(--cor-branco);
-    transition-delay: 0.4s;
+    transition: all 0.2s linear 0s;
 }
-.cadastra-2:after{
-    color:var(--cor-azul-2);
-    content: '';
-    position: absolute;
-    bottom:0px;
-    right: 0px;
-    width: 10px;
-    height: 10px;
-    border-bottom: 2px solid var(--cor-branco);
-    border-right: 2px solid var(--cor-branco);
-    transition: 0.5s;
-    transition-delay: 0.3s;
+.cadastra-2 a:hover::after{
+    font-family:"Font Awesome 5 Free";
+    content: " \f061";
+    
 }
-.cadastra-2:hover:after{
-    width: 100%;
-    height: 100%;
-    border-bottom: 2px solid var(--cor-branco);
-    border-right: 2px solid var(--cor-branco);
-    transition-delay: 0.4s;
+.cadastra-2 a:before { 
+    opacity: 1;
+    text-indent: 0px;
 }
 .cliente-footer{
     background-color: rgba(255, 255, 255, 0);
@@ -1563,6 +1698,12 @@ submit-2 a:before {
     height: auto;
     
 }
+#lado1-cliente {
+    border-radius: 10px 10px 0px 0px;
+    padding: 50px 40px 2px 29px;
+    color: var(--cor-branco);
+    background-color: var(--cor-azul-2);
+}
 .cadastro-logo{
     margin: 5px;
     width: 40%;
@@ -1570,6 +1711,7 @@ submit-2 a:before {
     flex-wrap: wrap;
 }
 .cadastro{
+    margin-top: -20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1583,24 +1725,25 @@ submit-2 a:before {
     flex-wrap: wrap;
 } 
 #cadastro-lado1{
-    padding: 50px 29px 2px 29px;
+    padding: 20px 29px 2px 29px;
+    border-radius:20px 20px 2px 2px ;
     color: var(--cor-branco);
     background-color:var(--cor-azul-2);
 }
 #cadastro-lado1 h2{
-    color: var(--cor-branco);
+    color:var(--cor-branco);
     letter-spacing: 0.5px;
 
 }
 .icon{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 3px;
     color:var(--cor-branco);
 }
 #cadastro-lado2{
-    padding:  20px 29px 29px 29px;
-    color: var(--cor-branco);
-    background-color:var(--cor-azul-2);   
+    padding:  20px 29px 2px 29px;
+    color:#000;
+    background-color:var(--fundo-cinza);   
 }
 #cadastro-lado2 .input1, .input2, .input3, .input4, .input5{
     display: flex;
@@ -1609,6 +1752,7 @@ submit-2 a:before {
     justify-content: space-around;
 }
 #cadastro-lado2 h4{
+    color: var(--cor-cinza);
     letter-spacing: 2px;
     font-size: 1.7rem;
 }
@@ -1623,7 +1767,7 @@ submit-2 a:before {
     flex-direction: row;
 }
 #cadastro-lado2 input[type="date"]#data-nascimento{ 
-    color: var(--cor-branco);
+    color:var(--cor-cinza);
 }
 #cadastro-lado2 .icon2{
     position: absolute;
@@ -1632,7 +1776,7 @@ submit-2 a:before {
     cursor: pointer;
     right: 20px;
     transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.354);
+    color: rgba(0, 0, 0, 0.354);
 } 
 #unlock{
     display: none;
@@ -1642,7 +1786,7 @@ submit-2 a:before {
     align-items: center;
 }
 .form-check input #feminino #masculino #outros [type="radio"]{ 
-    color: #000000;
+    color: rgba(255, 255, 255, 0);
    border: none;
 }
 #cadastro-lado2 .input-cadastro, #check-inline label{
@@ -1652,9 +1796,9 @@ submit-2 a:before {
 #cadastro-lado2 .input-cadastro{
     background-color: rgba(255, 255, 255, 0);
     border:0;
-    caret-color:var(--cor-branco);
-    color:var(--cor-branco);
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.81);
+    caret-color: var(--cor-azul-2);;
+    color:rgba(0, 0, 0, 0.414);
+    border-bottom: 0.5px solid  var(--cor-azul-2);;
     font-size: 18px;
     height: 100%;
     width: 100%;
@@ -1675,14 +1819,14 @@ submit-2 a:before {
 #cadastro-lado2 .input-cadastro:focus,
 .input-cadastro:not(:placeholder-shown) {
     transform: translateY(8px);
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.81);
+    border-bottom: 0.5px solid  var(--cor-azul-2);;
 }
 #cadastro-lado2 .input-cadastro:focus ~ .vago,
 .input-cadastro:not(:placeholder-shown) ~ .vago {
     transform: translateY(8px);
 }
 #cadastro-lado2 .placeholder {
-    color: #ffffff;
+    color: #000;
     line-height: 14px;
     pointer-events: none;
     position: absolute;
@@ -1697,15 +1841,43 @@ submit-2 a:before {
     transform: translateY(-20px) translateX(10px) scale(0.75);
 }
 #cadastro-lado2 .input-cadastro:not(:placeholder-shown) ~ .placeholder {
-    color: #ffffff;
+    color: #0000;
 }  
 #cadastro-lado2 .input-cadastro:focus ~ .placeholder {
-    color: rgb(255, 255, 255);
+    color: #000 ;
 }
 #cadastro-lado1-btn{
-    padding: 50px 40px 10px 29px;
-    color: var(--cor-branco);
+    padding: 10px 40px 10px 29px;
+    color:  var(--cor-azul-2);;
+    background-color:var(--fundo-cinza);  
+}
+.cadastra-3{   
     background-color:var(--cor-azul-2);
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    padding: 8px;
+    margin: 0px 10px;
+    text-align: center; 
+    position: relative;
+    transition: 0.6s;
+    width: 25%;
+    border-radius: 5px;
+    padding: 8px 15px;
+    border: 2px solid var(--cor-azul-2);
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--cor-branco);
+}
+.cadastra-3:hover{
+    background-color: rgba(230, 226, 226, 0.975);
+    color: var(--cor-azul-2);
+}
+.cadastra-3:hover::after{
+    font-family:"Font Awesome 5 Free";
+    content: " \f061";
 }
 .cadastro-footer{
     background-color: rgba(255, 255, 255, 0);

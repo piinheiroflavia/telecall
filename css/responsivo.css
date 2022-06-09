@@ -8,21 +8,26 @@
         background-color: var(--cor-azul-2);
     }
     #btn .cadastra-2{
-        width: 30%;
+        width: 80%;
+    }
+    .submit-2{
+        margin-bottom: 20px;
+        width: 50%;
     }
     .container{
         box-shadow: none;
     }
     .area-cliente h2{
-        font-size: 2.3rem;
+        font-size: 1.7rem;
     }
     .area-cliente h4{
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     .area-cliente p{
-        font-size: 1.8rem;
+        font-size: 1rem;
     }
     #btn{
+        flex-direction: column;
         margin-top: 60px;
     }
     .cliente-footer{
@@ -51,6 +56,9 @@
         --cor-cinza: #31353B;
         --cor-branco: #fff;
     }
+    #cadastro-lado1 h2{
+        color: var(--cor-branco);
+    }
     #cadastro-lado1{
         padding-top: 2px;
     }
@@ -63,6 +71,9 @@
     }
     .container-cadastro{
         box-shadow: none;
+    }
+    #cadastro-lado2, #cadastro-lado1-btn{
+        background-color: var(--cor-branco);
     }
     #cadastro-lado2 .input-cadastro #check-inline{
         padding: 5px;

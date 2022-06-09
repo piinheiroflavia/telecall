@@ -30,7 +30,7 @@
     </header>
      
     <section class="cadastro">
-        <form class="container-cadastro" name='formulario' method='get'>
+        <form class="container-cadastro" name='formulario' method='post' id="formCadastro">
             <div class="row " >    
                 <!--LADO 1-->
                 <div class="col-offset-2 " id="cadastro-lado1">
@@ -45,15 +45,16 @@
                   <div class=" input1" >
                       <!--NOME-->
                       <div class="input-container-cadastro" >
-                          <input id="nome" class="input-cadastro" type="text" minlength="15" maxlength="60" placeholder=" "  >
+                          <input id="nome" class="input-cadastro" type="text" minlength="15" maxlength="60" placeholder=" "  required="required" onkeyup="validNome()" >
                           <div class="vago"></div>
-                          <label for="nome" class="placeholder">Nome</label>                      
+                          <label for="nome" class="placeholder" id="resN">Nome</label>                  
                       </div>
+                    
                       <!--NOME SOCIAL-->
                       <div class="input-container-cadastro" >
-                        <input id="social" class="input-cadastro" type="text" minlength="15" maxlength="60" placeholder=" ">
+                        <input id="social" class="input-cadastro" type="text" minlength="15" maxlength="60" placeholder=" " onkeyup="validNomeSocial()">
                         <div class="vago"></div>
-                        <label for="nome" class="placeholder">Nome Social</label>                      
+                        <label for="nome" class="placeholder"  id="resNs">Nome Social</label>                      
                     </div>
                   </div>
 
@@ -62,20 +63,19 @@
                     <div class="col-12 input1" > 
                       <!--DATA DE NASCIMENTO-->
                       <div class="input-container-cadastro">
-                          <input id="nascimento" class="input-cadastro" type="date" placeholder=" " >
+                          <input id="nascimento" class="input-cadastro" type="date" placeholder=" "  required="required" onkeyup="validNascimento()">
                           <div class="vago"></div>
-                          <label for="data-nascimento" class="placeholder">Data de Nascimento</label>
+                          <label for="data-nascimento" class="placeholder"  id="resDn">Data de Nascimento</label>
                       </div>
-                      <!--SEXO-->
-                      <div class="input-container-cadastro">
+                     <!--sexo-->
+                     <div class="input-container-cadastro">
                         <div class="form-check form-check-inline" id="check-inline">
-                          <label for="">Sexo:   </label>
-                          <input type="radio" id="feminino" name="sexo" value="fem" checked>
-                            <label for="huey">Feminino</label>
-                          <input type="radio" id="masculino" name="sexo" value="mas">
-                            <label for="dewey">Masculino</label>
-                          <input type="radio" id="outros " name="sexo" value="out">
-                            <label for="dewey">Outros</label>                           
+                          <label for="" id="label-select">Sexo:   </label>
+                          <select name="select"  >
+                            <option value="valor1">Feminino</option>
+                            <option value="valor2">Masculino</option>
+                            <option value="valor3">Outros</option>
+                          </select>            
                         </div>
                       </div>       
                       </div><!--input5 row-->
@@ -84,15 +84,15 @@
                     <div class="input2">
                       <!--NOME MATERNO-->
                       <div class="input-container-cadastro">
-                          <input id="nomeMaterno" class="input-cadastro" type="text" placeholder=" " minlength="15" maxlength="60"  >
+                          <input id="nomeMaterno" class="input-cadastro" type="text" placeholder=" " minlength="15" maxlength="60"   required="required" onkeyup="validMaterno()">
                           <div class="vago"></div>
-                          <label for="nome-materno" class="placeholder">Nome Materno</label>                            
+                          <label for="nome-materno" class="placeholder" id="resNm">Nome Materno</label>                            
                       </div> 
                       <!--LOGIN-->
                     <div class="input-container-cadastro">
-                        <input id="email" class="input-cadastro" type="email" placeholder=" " >
+                        <input id="email" class="input-cadastro" type="email" placeholder=" " required="required" onkeyup="validEmail()">
                         <div class="vago"></div>
-                        <label for="email" class="placeholder">Email</label>                   
+                        <label for="email" class="placeholder" id="resEmail">Email</label>                   
                       </div>
                     </div><!--input5 row-->
 
@@ -100,15 +100,15 @@
                     <div class="input3">
                       <!--ENDEREÇO COMPLETO-->
                       <div class="input-container-cadastro">
-                          <input id="endereco" class="input-cadastro" type="text" placeholder=" " maxlength="60" >
+                          <input id="endereco" class="input-cadastro" type="text" placeholder=" " maxlength="60"  required="required" onkeyup="validEndereco()">
                           <div class="vago"></div>
-                          <label for="endereco" class="placeholder">Endereço Completo</label>                       
+                          <label for="endereco" class="placeholder" id="resEnd">Endereço Completo</label>                       
                         </div>
                       <!--CPF/ CNPJ-->
                         <div class="input-container-cadastro" >
-                          <input id="cpfcnpj" class="input-cadastro" type="text" autocomplete="off" maxlength="17" placeholder=" " >
+                          <input id="cpfcnpj" class="input-cadastro" type="text" autocomplete="off" maxlength="17" placeholder=" " required="required" onkeyup="validCpfCnp()">
                           <div class="vago"></div>
-                          <label for="cpfcnpj" class="placeholder">CPF ou CNPJ</label>                     
+                          <label for="cpfcnpj" class="placeholder" id="resCpf">CPF ou CNPJ</label>                     
                         </div>
                     </div><!--input5 row-->
 
@@ -116,15 +116,15 @@
                     <div class="input4">
                       <!--CELULAR-->
                       <div class="input-container-cadastro">
-                          <input id="celular" class="input-cadastro" type="tel" placeholder=" " >
+                          <input id="celular" class="input-cadastro" type="tel" placeholder=" " required="required" onkeyup="validCelular()" >
                           <div class="vago"></div>
-                            <label for="celular" class="placeholder">Celular</label>                      
+                            <label for="celular" class="placeholder" id="resCel" >Celular</label>                      
                         </div>
                       <!--TELEFONE FIXO-->
                       <div class="input-container-cadastro">
-                          <input id="telefone" class="input-cadastro" type="tel" placeholder=" " >
+                          <input id="telefone" class="input-cadastro" type="tel" placeholder=" " required onkeyup="validTelefone()" >
                           <div class="vago"></div>
-                            <label for="telefone" class="placeholder">Telefone Fixo</label>
+                            <label for="telefone" class="placeholder" id="resTel">Telefone Fixo</label>
                         </div>
                     </div><!--input5 row-->
 
@@ -133,9 +133,9 @@
                         <!--SENHA-->
                         <div class="input-container-cadastro">
                           <input id="Senha" class="input-cadastro" type="password" placeholder=" " 
-                         minlength="8" maxlength="8" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" >
+                         minlength="8" maxlength="8" required="required" onkeyup="validSenha()" onkeypress="return ApenasLetras(event,this)">
                           <div class="vago"></div>
-                          <label for="Senha" class="placeholder">Senha</label>
+                          <label for="Senha" class="placeholder" id="resSenha">Senha</label>
                           <span class="icon2">
                             <i id="lock" class="fa-solid fa-eye-slash" onclick="showPassword()"></i>
                             <i id="unlock" class="fa-regular fa-eye" onclick="showPassword()"></i>
@@ -143,24 +143,27 @@
                         </div>
                           <!--CONFIRMAR SENHA-->
                           <div class="input-container-cadastro">
-                          <input id="confirmar" class="input-cadastro" type="password" placeholder=" "  minlength="8" maxlength="8"  pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" >
+                          <input id="confirmar" class="input-cadastro" type="password" placeholder=" "  minlength="8" maxlength="8" required="required" onkeyup="validConfirmaSenha()" onkeypress="return ApenasLetras(event,this)">
                           <div class="vago"></div>
-                          <label for="Senha" class="placeholder">Confirmar Senha</label>
+                          <label for="Senha" class="placeholder" id="resConSenha">Confirmar Senha</label>
                           <span class="icon2">
                             <i id="lock2" class="fa-solid fa-eye-slash" onclick="showPassword2()"></i>
                             <i id="unlock2" class="fa-regular fa-eye" onclick="showPassword2()"></i>
                           </span>
                         </div>
                       </div><!--input5 row-->
-                      <br><br>
-                        <div id="res"> 
-                          <p></p>
-                        </div>
+                      <br>
+                    <div id="respErro" class="loader"> 
+                      <p></p>
+                    </div>
+                    <div id="respSucesso" class="loader"> 
+                      <p></p>
+                    </div>
+                    <br>
                 </div>
                 <!--BTN-->
                 <div class="col-12 "id="cadastro-lado1-btn">
-                    <button id="bttn" type="submit" class="submit-2" onclick="validar()"><a href="">Entrar</a></button>
-                    <button type="submit" class="cadastra-2" onclick="validar()"><a href="">Cadastrar</a></button>    
+                    <button type="button" class="cadastra-3"  onclick="validar()">Cadastrar</button>   
                 </div>
                 
             </div>
@@ -170,8 +173,7 @@
       &copy; 2022 - Desenvolvido Por Flavia Pinheiro
     </footer>
         
-      
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
   <script src="../script/script.js"></script>
 </body>

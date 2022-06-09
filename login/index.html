@@ -49,16 +49,17 @@
               <h3>Entrar</h3><br>
                   <!--CPF--> <!--FALTA VÁLIDAR O CPF E O CNPJ-->
                   <div class="input-container cpf" >
-                    <input id="cpfcnpj" class="input" type="text" autocomplete="off" maxlength="17" inputmode="number" placeholder=" " required >
+                    <input id="entraCpfcnpj" class="input" type="text" autocomplete="off" maxlength="17" inputmode="number" placeholder=" " required  onkeyup="entrarValidCpfCnp()">
 
                    
                     <div class="vago"></div>
-                    <label for="cpfcnpj" class="placeholder">CPF ou CNPJ</label>
+                    <label for="cpfcnpj" id="resCpf" class="placeholder">CPF ou CNPJ</label>
                     <span class="icon1"><i class="fa-solid fa-user"></i></span>
                   </div>
+
                   <!--SENHA-->
                   <div class="input-container senha">
-                    <input id="Senha" class="input" type="password" placeholder=" " maxlength="8" pattern="[A-Za-z]" required>
+                    <input id="Senha" class="input" type="password" placeholder=" " maxlength="8"  required onkeypress="return ApenasLetras(event,this)">
                     
 
                     <div class="vago"></div>
@@ -67,12 +68,19 @@
                       <i id="lock" class="fa-solid fa-eye-slash" onclick="showPassword()"></i> 
                       <i id="unlock" class="fa-regular fa-eye" onclick="showPassword()"></i>
                     </span>
+                  </div><br>
+                  <div id="respErro" class="loader"> 
+                    <p></p>
                   </div>
+                  <div id="respSucesso" class="loader"> 
+                    <p></p>
+                  </div>
+                  <br>
                   <span class="span">Para alterar a senha <a href="#"><strong>clique aqui!</strong></a></span>
                   <!--BTN-->
                   <div class="" id="btn">
-                    <button type="submit" class="submit" onclick="gravar()"><a href="../index.html">Entrar</a></button>
-                    <button type="submit" class="cadastra"><a href="../cadastro/index.html">Cadastre-se</a></button>
+                    <button type="button" class="submit" onclick="gravar()">Entrar</button>
+                    <button type="button" class="cadastra"><a href="../cadastro/index.html">Cadastre-se</a></button>
                   </div>
                   </div>
     </div>         

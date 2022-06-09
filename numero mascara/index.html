@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecall SMS Programável Modavo</title>
+
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
+
+    <!--RESPONSIVO-->
+    <link rel="stylesheet" href="../css/responsivo.css">
+
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!--REDES SOCIAS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!--ICONS-->
+    <script src="https://kit.fontawesome.com/7198f8d6d1.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header id="pagina-inicial" class="col-12">
+        <div class="headerTopo">
+            <div class="pull-right">
+                <a href="../central de atendimento/index.html" class="atendimento" target="_blank"><i class="fa-regular fa-user-headset"></i> Central de Atendimento
+                </a>
+            
+            <a href="../cliente/index.html" class="cliente" target="_blank">
+              <i class="fa-solid fa-user-lock"></i> Área Cliente
+            </a>
+            <!--ZAP-->
+            <a href="https://api.whatsapp.com/send/?phone=5521936180100&text&app_absent=0" class="wp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Fale Pelo WhatsApp</a>
+
+            <a href="" class="idioma"><abba ><img src="../img/estados-unidos.png" alt="Bandeira Estados Unidos" title="EN"></abba></a>
+
+            <a href="../index.html" class="idioma"><abba><img src="../img/brasil.png" alt="Bandeira Brasil" title="PT-BR"></abba></a>
+
+            </div>         
+        </div>
+        
+
+
+        <!--menu-->
+        <div id="menu-fixo" class="col-12">
+          <a href="../index.html" class="lg"><img id="logo-header" class="logo" src="../img/telecall.png" alt=""></a>
+
+          <nav class="primeiro-menu">
+            <div class="mobile-menu">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+
+            <ul class="nav-list">
+                <li><input type="checkbox" class="checkbox-dark-mode" id="checkbox-dark-mode">
+                    <label for="checkbox-dark-mode" class="label-dark-mode" onclick="darkMode()">
+                      <i class="fas fa-moon"></i>
+                      <i class='fas fa-sun'></i>
+                      <div class='ball'>
+                    </label>
+                  </li>
+                <li><a href="../index.html"> <i class="fa-solid fa-house-chimney"></i> Home</a></li>
+                
+                <li><a href="#"><i class="fa-solid fa-cloud"></i> Serviços <i class="fa-solid fa-chevron-down"></i></a>                
+                  <ul class="dropdown2">
+                    <li><a href="../sms programavel/index.html">SMS Programável</a></li>
+                    <li><a href="#">Google Verfied Calls</a></li>
+                    <li><a href="../2fa/index.html">2FA</a></li>
+                    <li><a href="#">Número Máscara</a></li>
+                  </ul>
+            
+                  <li><a href="../cliente/index.html" class="fantasma" target="_blank">
+                      <i class="fa-solid fa-user-lock"></i> Área Cliente</a></li>
+                  
+                  <li><a href="../sobreEmpresa/index.html"><i class="fa-solid fa-building"></i> Sobre Nós</a></li>
+    
+                  <li><a href="https://api.whatsapp.com/send/?phone=5521936180100&text&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i> Fale Pelo WhatsApp</a></li>
+
+                  <li>
+                    <a href="../central de atendimento/index.html" target="_blank"><i class="fa-solid fa-headset"></i> Central de Atendimento
+                    </a>
+                  </li>
+
+                  <li><a href="#"><i class="fa-solid fa-globe"></i> Idiomas <i class="fa-solid fa-chevron-down"></i></a>      
+
+                    <ul class="dropdown2">
+                      <li><a href="#">Inglês</a></li>
+                      <li><a href="#">Português -BR </a></li>                    
+                    </ul>
+            </ul>
+          </nav>
+
+        </div>
+    </header>
+
+    <section class="banner-principal">
+   <img class="img-gif" src="../img/Banner para CPaaS.gif" alt="banner sobre os serviços da telecall">
+    </section>
+
+    <section>
+        <div id="numero-mascara-h2" class="col-12 row">
+           <h2>Número Máscara</h2><br>
+        </div>
+        <div  id="bloco1-numero-mascara" class="col-12 row ">      
+            <div id="numero-mascara" class="col-md-6 col-sm-12 ">
+                <h3>Proteja identidades profissionais</h3>
+                <h5>Conecte-se com seus clientes.</h5>
+                <p>Garanta aos seus clientes a capacidade de fazer chamadas e enviar 
+                    mensagens sem expor seus números de telefone pessoais. </p>
+                <br>
+                <p><strong>Mascare</strong> um número de telefone para interações com mais privacidade.</p>
+                <p><strong>Permite</strong> que empresas façam negócios usando menos números de telefone.</p>
+                <p><strong>Oferece</strong> uma experiência mais segura e profissional.</p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <img src="../img/mascara01.png" class="numero-mascara-oque-img" alt="imagem celular sobre o que" >
+            </div>
+        </div>
+
+
+        <div id="bloco2-numero-mascara" class="col-12 row">
+           
+            <div class="col n-masc">
+                <p>Usuário faz uma chamada através de um aplicativo.</p><br><br>
+               <img src="../img/mascara02.png"  alt=""><br><br>
+                    <span>
+                        Ex: usuário liga para o
+                        entregador ou motorista
+                        de taxi ou entra em
+                        contato com a central de
+                        atendimento.                    
+                    </span>
+            </div>
+            <div class="col n-masc">
+                <p>Plataforma 
+                    mascara o número 
+                    original.</p><br><br><br><br>
+                <img src="../img/mascara05.png"   alt=""><br><br>
+                    <span>
+                        A plataforma recebe a
+                        chamada e mascara o
+                        número antes de conectar
+                        com o destinatário.           
+                    </span>
+            </div>
+            <div class="col n-masc">
+                <p>Ambas as partes 
+                    são conectadas.</p><br><br><br><br>
+                <img src="../img/mascara04.png"   alt=""><br><br>
+                    <span>
+                        A plataforma conecta ambas as partes mantendo a privacidade dos dois.                  
+                    </span>
+            </div>
+        </div>
+
+
+        <div id="bloco3-numero-mascara-quem-usa" class="col-12 row">
+            <h3>Quem Usa</h3>
+            <div class="col">
+                <br>
+                <i class="fa-solid fa-taxi"></i>
+                <h5>Apps de Transporte</h5>
+                <p>Permite que motorista e 
+                    passageiro se comuniquem
+                    sem compartilhar seus
+                    números pessoais.
+                </p>
+            </div>
+            <div class="col">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <h5>Apps de 
+                    Relacionamento</h5> 
+                <p> Permite uma maneira
+                    privada e segura para 
+                    usuários interagirem sem
+                    expor contatos pessoais.
+                </p>
+            </div>
+            <div class="col">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+                <h5>E-Commerce</h5>
+                <p>Acesso ao portal/app
+                    Permite que clientes
+                    entrem em contato através
+                    do aplicativo. Podem
+                    também integrar chamadas
+                    internacionais.
+                </p>
+            </div>
+            <div class="col">
+                <i class="fa-solid fa-truck-arrow-right"></i>
+                <h5>Entregas & Logística</h5>
+                <p>Mantenha seu cliente
+                    informado sobre
+                    entregas e serviços, tire 
+                    dúvidas, etc
+                </p>
+            </div>
+        </div>
+
+
+        <div id="bloco4-n-masc-quem-usa" class="col-12 row">
+            <h3>Quem Usa</h3>
+            <br><br><br>
+            <div class="col">
+                <i class="fa-solid fa-taxi"></i>
+                <h5>Apps de Transporte</h5>
+                    <img src="../img/cpaas12.png" class="n-masc-quem-usa" alt=""><br>
+                    <img src="../img/cpaas14.png" class="n-masc-quem-usa" alt="">
+                    <br><br><br>
+            </div>
+            <div class="col">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <h5>Apps de 
+                    Relacionamento</h5> 
+                    <img src="../img/cpaas15.png" class="n-masc-quem-usa" alt=""><br>
+                    <img src="../img/cpaas16.png" class="n-masc-quem-usa" alt="">
+                    <br><br><br>
+            </div>
+            <div class="col">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+                <h5>E-Commerce</h5>
+                <img src="../img/cpaas17.png" class="n-masc-quem-usa" alt="">
+                <br><br><br>
+            </div>
+            <div class="col">
+                <i class="fa-solid fa-truck-arrow-right"></i>
+                <h5>Entregas & Logística</h5>
+                <img src="../img/cpaas2.png" class="n-masc-quem-usa" alt=""><br>
+                <img src="../img/cpaas8.png" class="n-masc-quem-usa" alt="">
+                <br><br><br>
+            </div>
+        </div>
+
+        <div  id="parte-1-twofa" class="col-12 row ">      
+            <div id="sms-programavel" class="col-md-6 col-sm-12 ">
+                <h3>Quem mais pode usar?</h3><br>
+                <p> 43% das empresas brasileiras adotou o Home 
+                    Office como padrão. <br> Mesmo após o fim da pandemia, estatísticas
+                    indicam que o modelo de trabalho Home 
+                    Office deve crescer cerca de 30%.
+                    </p>
+                <p> Funcionários que não possuem celular empresarial ou ramal 
+                    virtual podem se beneficiar do uso de um número máscara 
+                    permanente do trabalho vinculado ao seu telefone celular, 
+                    assim protegendo seus número pessoais.</p>
+                <br>
+            </div>
+            <div class="col-md-6 col-sm-12">
+               <img src="../img/mascara03.png" width="100%" class="twofa-oque-img">
+            </div>
+        </div>
+
+        <div id="parte-5-twofa" class="col-12 row">
+            <h3>Recursos Avançados</h3>
+            <div class="col-md-6 col-sm-12">
+                <p>
+                    <i class="fa-solid fa-arrow-right"></i><strong>  SMS</strong> Número máscara é totalmente funcional para chamadas de voz e SMS;
+                    <br><br>
+                    <i class="fa-solid fa-arrow-right"></i><strong>  Geo Match</strong> Combine o código do país do número mascarado com o da chamada de origem 
+                    passando pro cliente a impressão de que vocês estão na mesma região;
+                    <br><br>
+                    <i class="fa-solid fa-arrow-right"></i> <strong>   Gestão de Sessões</strong>Habilite números máscara permanentes, bloqueie chamadas indesejadas, 
+                    validade de sessão e etc;                  
+                    <br><br>            
+                    <i class="fa-solid fa-arrow-right"></i><strong>  Relatórios </strong>Acesso direto do cliente à relatórios detalhados;               
+                </p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <p>
+                    <i class="fa-solid fa-arrow-right"></i> <strong>Números Simultâneos</strong> Use o mesmo número máscara em várias ligações simultâneas;
+                    <br><br>
+                    <i class="fa-solid fa-arrow-right"></i> <strong> Triagem de Conteúdo</strong>  Recurso SMS onde você pode sinalizar conteúdos sensíveis para proteger 
+                    dados do cliente;
+                    <br><br>
+                    <i class="fa-solid fa-arrow-right"></i> <strong>Escalabilidade Ilimitada</strong> compre e adicione números conforme necessário.
+                </p>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div id="redes-sociais">
+            <div class="container-redes-sociais">
+                <div class="icons-container animated">
+                  <div class="icon-container-redes-sociais">
+                    <a href="https://www.instagram.com/telecallbr/" target="_blank"><i class="fab fa-instagram fa-1x"></i></a>
+                  </div>
+                  <div class="icon-container-redes-sociais">
+                    <a href="https://www.linkedin.com/company/telecall/" target="_blank"><i class="fab fa-linkedin-in fa-1x"></i></a>
+                  </div>
+                  <div class="icon-container-redes-sociais">
+                    <a href="" target="_blank"><i class="fab fa-twitter fa-1x"></i></a>
+                  </div>
+                  <div class="icon-container-redes-sociais">
+                    <a href="https://www.facebook.com/TelecallBr" target="_blank"><i class="fab fa-facebook-f fa-1x" style="margin: 0 5px;"></i></a> 
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="parte2-footer">
+            <a href="#">Políticas de Privacidade |</a>
+            <a href="#"> Termos de Uso |</a>
+            <a href="#">Cookies</a>
+        </div>
+        <div class="parte3-footer">
+              &copy;2022 - Desenvolvido Por <a href="https://github.com/piinheiroflavia" target="_blank"  > Flavia Pinheiro</a> 
+        </div>
+    </footer>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
+    <script src="../script/script.js"> </script>
+</body>
+</html>
