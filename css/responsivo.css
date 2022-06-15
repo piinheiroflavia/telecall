@@ -114,16 +114,11 @@
         
     }
    #cadastro-lado1-btn{
-    padding: 40px 10px 10px 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: center;
-    align-items: center;
+    padding: 40px 5px 10px 5px;
+    
    }
-   .cadastra-2 {
-       width: 35%;
+   .cadastra-3 {
+       width: 90%;
    }
  
 }

@@ -10,9 +10,13 @@
   var resNm = document.getElementById('resNm');
   var validaMaterno = false;
 
-  let endereco = document.getElementById("endereco");
-  var resEnd = document.getElementById('resEnd');
-  var validaEndereco = false;
+  let cep = document.getElementById("cep");
+  var resCep = document.getElementById('resCep');
+  var validaCep = false;
+
+  let numero = document.getElementById("numero-casa");
+  var resNum = document.getElementById('resNum');
+  var validaNum = false;
 
   let cpfcnpj = document.getElementById("cpfcnpj");
   var resCpf = document.getElementById('resCpf');
@@ -52,18 +56,23 @@
   var fundoCards = document.getElementById('fundo-cards')
 //fundo img tela de cadastro
 
-
   const theme = window.localStorage.getItem("theme");
   if (theme === "dark") document.body.classList.add("dark");
 
 
   function darkMode(){
     document.body.classList.toggle('dark');
+    darkMode = true;
+    document.getElementsByClassName('fundo-cards').src = 'src = img/fundo.jpeg'; 
+
+
     if (theme === "dark") {
       window.localStorage.setItem("theme", "light");
+      fundoCards.style.backgroundImage= 'none'
+      
+
     } else window.localStorage.setItem("theme", "dark");
-
-
+     
     };  
 
   
@@ -75,7 +84,7 @@ if (typeof(Storage)!= "undefine"){
 
 //INICIO PAGINA DE LOGIN
 //VALIDAÇÃO LOGIN E LOCAL STORAGE
-var entraCpfcnpj = document.getElementById("entraCpfcnpj");
+
 validaentraCpfcnpj = false;
 
  /*CPF E CNPJ*/
@@ -103,36 +112,66 @@ function entrarValidCpfCnp() {
 }
 function gravar(){
 
-  if (validaentraCpfcnpj || validaSenha){
+  var entraCpfcnpj = document.getElementById("entraCpfcnpj");
+  var resCpf = document.getElementById("resCpf");
 
-    let login = JSON.parse(localStorage.getItem('login') || '[]');
+  var Senhaa = document.getElementById('Senha');
+  var senhaLogin = document.getElementById("senha-login");
+  
+  let userLogado = JSON.parse(localStorage.getItem('userLogado'))
+  let areaCliente = document.getElementsByClassName('cliente')
 
-//ADICIONA OS DADOS A UMA LISTA NO LOCAL STORAGE
-    login.push( 
-        {cpfOuCnpj: entraCpfcnpj.value},
-        {senha: senha.value},
-        
-    )
-    localStorage.setItem('login', JSON.stringify(login))
-    
-    respErro.setAttribute('style', 'display: bloco');
-    
-    respSucesso.innerHTML = '<strong>loading...</strong>'
-    respErro.innerHTML =''
+  let listaUsuarios = []
 
-//AO logar REDIRECIONA A OUTRA PÁGINA
-    setTimeout(()=>{
-      window.location.href= "https://piinheiroflavia.github.io/telecall"
-    }, 5000)
-    
-  }else{
-    respErro.setAttribute('style', 'display: bloco')
-    respErro.style.color= 'red'
-    respSucesso.innerHTML = ''
-    respErro.innerHTML = 'Preencha todos os campos corretamente'
+  let userValid = {
 
+    login: '',
+    user:'',
+    senha: ''
   }
-     
+
+  listaUsuarios = JSON.parse(localStorage.getItem('listaUsuarios'));
+
+  listaUsuarios.forEach((item) => {
+
+    if (entraCpfcnpj.value == item.CpfCnpj && Senhaa.value == item.Senha){
+      userValid = {
+        login: item.CpfCnpj,
+        user: item.Nome,
+        senha: item.Senha
+       
+      }
+    }
+  })
+  console.log(userValid)
+
+  if (entraCpfcnpj.value == userValid.login && Senhaa.value == userValid.senha){
+    respErro.setAttribute('style', 'display: bloco');
+    respSucesso.innerHTML = '<strong>loading...</strong>';
+    respErro.innerHTML ='';
+
+    //token => garante que o usuario esta logado//  só aparece depois do ponto
+    let token = Math.random().toString(16).substring(2);
+    localStorage.setItem('token', token) ;
+
+    setTimeout(()=>{
+      window.location.href= "https://piinheiroflavia.github.io/telecall/index.html"
+    }, 3000);
+
+    areaCliente.innerHTML = `Olá ${userLogado.Nome}`;
+    
+  }else {
+
+    resCpf.setAttribute('style', 'color: red');
+    entraCpfcnpj.setAttribute('style', 'border-color: red');
+    senhaLogin.setAttribute('style', 'color: red');
+    Senhaa.setAttribute('style', 'border-color: red');
+    respErro.setAttribute('style', 'display: bloco');
+    respErro.style.color= 'red';
+    respSucesso.innerHTML = '';
+    respErro.innerHTML = 'Usuário não cadastrado';
+    entraCpfcnpj.focus()
+  }  
 }
 //fim da pagina de login
 
@@ -142,34 +181,38 @@ function gravar(){
 function validNome(){
   if(nome.value == ''){
     nome.style.borderBlockColor = ' red'
-    resN.innerHTML = 'Nome ';		
+    resN.innerHTML = 'Nome *';		
     resN.style.color = 'red'
   nome.focus();
   }else if (nome.value.length < 15 || nome.value.length >= 90 ){
     nome.style.borderBlockColor = ' red'
-    resN.innerHTML = 'Nome *Insira no minimo 15 caracteres';		
+    resN.innerHTML = 'Nome *Insira no min. 15 caracteres';	
+    resN.style.fontSize = ' 0.8rem'	
     resN.style.color = 'red';
     validaNome = false;
   }else{
     resN.innerHTML='Nome ';
     resN.style.color = 'black'
     nome.style.borderBlockColor = ' #008000'
+    resN.style.fontSize = ' 1.2rem'
     validaNome = true;
 }
 }
 
 function validNomeSocial() {
   if(social.value == ''){
-  resNs.innerHTML = 'nome social ';		
+  resNs.innerHTML = 'Nome Social* ';		
   social.focus();
   }else if (social.value.length < 3 || social.value.length >= 90 ){
     social.style.borderBlockColor = ' red'
-    resNs.innerHTML = 'nome social *Insira no minimo 15 caracteres';		
+    resNs.innerHTML = 'N. Social *Insira no min 3 caracteres';
+    resNs.style.fontSize = ' 0.8rem'	
     resNs.style.color = 'red';
   }else{
   resNs.innerHTML='nome social ';
   resNs.style.color = 'black'
   social.style.borderBlockColor = ' #008000'
+  resNs.style.fontSize = ' 1.2rem'
 }
 }
 
@@ -188,13 +231,13 @@ function validNascimento(){
 function validMaterno(){
 if(materno.value == ''){
   materno.style.borderBlockColor = ' red'
-  resNm.innerHTML = 'materno ';		
+  resNm.innerHTML = 'Materno* ';		
   resNm.style.color = 'red'
   materno.focus();
   validaMaterno = false;
   }else if (materno.value.length < 15 || materno.value.length >= 90 ){
     materno.style.borderBlockColor = ' red'
-    resNm.innerHTML = 'Materno *Insira no minimo 15 caracteres';		
+    resNm.innerHTML = ' *Insira no min. 15 caracteres';
     resNm.style.color = 'red';
     validaMaterno = false;
   }else{
@@ -205,17 +248,19 @@ if(materno.value == ''){
 }
 }
 
-function validEmail(){
+function validEmail(emaill){
+
+  let ev = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
 
    if(email.value==''){
       email.style.borderBlockColor = ' #CA1C2A'
-      resEmail.innerHTML ='Email *exemplo@gmail.com';		
+      resEmail.innerHTML ='Email*';		
       resEmail.style.color = ' red'
       email.focus();
       validaEmail = false;
-    }else if (email.value.length < 8 ){
+    } else if (!ev.test(emaill)) {
       email.style.borderBlockColor = ' red'
-      resEmail.innerHTML = 'Email *exemplo@gmail.com';		
+      resEmail.innerHTML = 'Email* Inválido';		
       resEmail.style.color = 'red';
     }else{
         resEmail.style.color = 'black'
@@ -225,25 +270,44 @@ function validEmail(){
     }
 }
 
-function validEndereco(){
+/*$(document).ready(function(){
+  $('#cep').mask('99 999-999');
+});
+*/
+function validCep(){
 
-  if(endereco.value==''){
-    endereco.style.borderBlockColor = ' #CA1C2A'
-    resEnd.innerHTML='Endereço *Rua xavier, Nº, Bairro, RJ';		
-    resEnd.style.color = ' red'
-    endereco.focus();
-    validaEndereco = false;
-  }else if (endereco.value.length < 15 ){
-    endereco.style.borderBlockColor = ' red'
-    resEnd.innerHTML = 'Endereço *Rua xavier, Nº, Bairro, RJ';		
-    resEnd.style.color = 'red';
+  if(cep.value==''){
+    cep.style.borderBlockColor = ' #CA1C2A'
+    resCep.innerHTML='CEP';		
+    resCep.style.color = ' red'
+    cep.focus();
+    validaCep = false;
   }else{
-    resEnd.style.color = 'black'
-    resEnd.innerHTML='Endereço ';	
-    endereco.style.borderBlockColor = ' #008000'
-    validaEndereco = true;
+    resCep.style.color = 'black'
+    resCep.innerHTML='CEP ';	
+    cep.style.borderBlockColor = ' #008000'
+    validaCep = true;
   }
+}
 
+function validNumeroCasa(){
+
+  if(numero.value==''){
+    numero.style.borderBlockColor = ' #CA1C2A'
+    resNum.innerHTML='Nº Casa*';		
+    resNum.style.color = ' red'
+    numero.focus();
+    validaNum = false;
+  }else if (email.value.length < 0 ){
+    email.style.borderBlockColor = ' red'
+    resEmail.innerHTML = 'Nº Casa*';		
+    resEmail.style.color = 'red';
+  }else{
+    resNum.style.color = 'black'
+    resNum.innerHTML='Nº Casa';	
+    numero.style.borderBlockColor = ' #008000'
+    validaNum = true;
+  }
 }
 
 
@@ -251,13 +315,14 @@ function validCelular(){
 
   if(celular.value==''){
     celular.style.borderBlockColor = ' #CA1C2A'
-    resCel.innerHTML='Celular *(+55) 21 9 9999-9999';		
+    resCel.innerHTML='Celular *2222222222';		
     resCel.style.color = ' red'
+    resCel.style.fontSize = ' 0.8rem'
     celular.focus();
     validaCelular = false;
   }else if (celular.value.length <20 ){
       celular.style.borderBlockColor = ' red'
-      resCel.innerHTML = 'Celular *(+55) 21 9 9999-9999';		
+      resCel.innerHTML = 'Celular *';		
       resCel.style.color = 'red';
     validaCelular = false;
   }else{
@@ -382,25 +447,27 @@ function validConfirmaSenha(){
 //VERIFICAR SE TODOS OS CAMPOS ESTAO VAZIOS ANTES DE CADASTRAR
 function validar(){
 
-  if (validaNome && validaNascimento && validaEmail && validaEndereco && validaCpfCnpj && validaCelular && validaTelefone && validaSenha && validaconSenha){
+  if (validaNome && validaNascimento && validaEmail && validaCep && validaNum && validaCpfCnpj && validaCelular && validaTelefone && validaSenha && validaconSenha){
 
     let listaUsuarios = JSON.parse(localStorage.getItem('listaUsarios') || '[]');
 
 //ADICIONA OS DADOS A UMA LISTA NO LOCAL STORAGE
     listaUsuarios.push( 
-        {Nome: nome.value},
-        {Social: social.value},
-        {Nascimento: nascimento.value},
-        {Materno: materno.value,},
-        {Email: email.value}, 
-        {Endereco: endereco.value},
-        {CpfCnpj: cpfcnpj.value},
-        {Celuar: celular.value},
-        {Telefone: telefone.value},   
-        {Senha: senha.value},
-        {Confirma: confirma.value,}
+      {
+        Nome: nome.value,
+        Social: social.value,
+        Nascimento: nascimento.value,
+        Materno: materno.value,
+        Email: email.value, 
+        Endereco: endereco.value,
+        CpfCnpj: cpfcnpj.value,
+        Celuar: celular.value,
+        Telefone: telefone.value,   
+        Senha: senha.value,
+        Confirma: confirma.value,
+      }
     )
-    localStorage.setItem('listUser', JSON.stringify(listaUsuarios))
+    localStorage.setItem('listaUsuarios', JSON.stringify(listaUsuarios))
     
     respErro.setAttribute('style', 'display: bloco', 'color: #0C4B77')
     respSucesso.innerHTML = '<strong>Cadastrando usuário...</strong>'
@@ -531,3 +598,13 @@ const mobileNavbar = new MobileNavbar(
   ".dropdown2"
 );
 mobileNavbar.init();
+
+const root = document.documentElement;
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+const marqueeContent = document.querySelector("ul.marquee-content");
+
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+for(let i=0; i<marqueeElementsDisplayed; i++) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}

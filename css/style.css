@@ -419,8 +419,8 @@ body.dark a{
     margin: 30px 0px;
 }
 /*CARDS*/
-#fundo-cards{
-    background-image: url('../img/fundo.jpg');
+.fundo-cards{
+ background-image: url('../img/fundo.jpg');
     background-repeat: no-repeat;
     min-height: 350px;
     background-attachment: fixed;
@@ -429,13 +429,15 @@ body.dark a{
     background-size: cover;
     height: auto;
     overflow: hidden;
+
+
 }
 #content {
     max-width: 1024px;
     width: 100%;
-    padding: 0 4%;
-    padding-top: 250px;
-    margin: 0 auto;
+    padding: 0%;
+    padding-top: 25px;
+    margin: 0px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -530,9 +532,11 @@ body.dark a{
     transition: all 0.3s ease;
 }
 #bloco3-tela-principal{
-    background-color: var(--cor-vermelho);
+    background:#CA1C2A;  /* fallback for old browsers */
+    background: linear-gradient(to top, var(--cor-vermelho),#eb3141 );
     color:var(--cor-branco);
     margin: 0px;
+    margin-top: -25px;
     padding: 50px 40px;
 }
 #bloco3-tela-principal img{
@@ -585,7 +589,6 @@ body.dark a{
 }
 /*REDES SOCIAIS FOOTER*/
 #redes-sociais{
-    margin-top: 200px;
     padding: 25px;
     background-color: var(--cor-cinza-claro);
 }
@@ -1741,7 +1744,7 @@ select option::after{
     color:var(--cor-branco);
 }
 #cadastro-lado2{
-    padding:  20px 29px 2px 29px;
+    padding:  20px 17px 2px 17px;
     color:#000;
     background-color:var(--fundo-cinza);   
 }
@@ -1804,6 +1807,15 @@ select option::after{
     width: 100%;
     outline: 0;
     padding: 2px 5px ;  
+}
+#cadastro-lado2 #numero-casa-div, #cadastro-lado2  #bairro-div, #cadastro-lado2  #cidade-div, #cadastro-lado2  #estado-div, #cadastro-lado2  #cpf-cnpj-div, #cadastro-lado2  #celular-div, #cadastro-lado2  #telefone-div, #cadastro-lado2  #senha-div, #cadastro-lado2  #conf-senha-div, #cadastro-lado2  #nome-materno-div, #cadastro-lado2  #cep-div, #cadastro-lado2  #endereco-div, #cadastro-lado2  #nome-div, #cadastro-lado2  #nome-social-div, #cadastro-lado2  #email-div{
+    background-color: rgba(255, 255, 255, 0);
+    border:0;
+    caret-color: var(--cor-azul-2);;
+    color:rgba(0, 0, 0, 0.414);
+    font-size: 18px;
+    outline: 0;
+    padding: 2px 13px ;  
 }
 #cadastro-lado2 .vago { 
     border-radius: 10px;
