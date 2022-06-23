@@ -148,7 +148,7 @@ function gravar(){
     localStorage.setItem('token', token) ;
 
     setTimeout(()=>{
-      window.location.href= "/index.html"
+      window.location.assign= "/index.html"
     }, 3000);
 
     localStorage.setItem('userLogado', JSON.stringify(userValid))
@@ -487,7 +487,7 @@ function validar(){
     respErro.innerHTML =''
 //AO CADASTRAR REDIRECIONA A OUTRA PÁGINA
     setTimeout(()=>{
-      window.location.href= "/login/index.html"
+      window.location.assign= "/login/index.html"
     }, 3000)
     
 //se nem todos os campos são preenchidos
