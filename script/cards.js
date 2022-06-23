@@ -5,7 +5,7 @@ class DraggingEvent {
   constructor(target = undefined) {
     this.target = target;
   }
-  
+ //criando eventos para as funções
   event(callback) {
     let handler;
     
@@ -48,11 +48,12 @@ class DraggingEvent {
     })
   }
   
-  // Get the distance that the user has dragged
+// criando a distancia para arastar
   getDistance(callback) {
     function distanceInit(e1) {
       let startingX, startingY;
       
+//arastando o card um
       if ("touches" in e1) {
         startingX = e1.touches[0].clientX
         startingY = e1.touches[0].clientY
@@ -61,7 +62,7 @@ class DraggingEvent {
         startingY = e1.clientY
       }
       
-
+//arastando o card dois
       return function(e2) {
         if (e2 === null) {
           return callback(null)
@@ -91,7 +92,7 @@ class CardCarousel extends DraggingEvent {
   constructor(container, controller = undefined) {
     super(container)
     
-    // DOM elements
+// elementos DOM
     this.container = container
     this.controllerElement = controller
     this.cards = container.querySelectorAll(".card")
@@ -101,18 +102,16 @@ class CardCarousel extends DraggingEvent {
     this.cardWidth = this.cards[0].offsetWidth / this.container.offsetWidth * 100
     this.xScale = {};
     
-    // Resizing
+//redimensionando
     window.addEventListener("resize", this.updateCardWidth.bind(this))
     
     if (this.controllerElement) {
       this.controllerElement.addEventListener("keydown", this.controller.bind(this))      
-    }
-
-    
-    // Initializers
+    }  
+//inicializando 
     this.build()
     
-    // Bind dragging event
+// evento para mover/arrastar o card
     super.getDistance(this.moveCards.bind(this))
   }
   

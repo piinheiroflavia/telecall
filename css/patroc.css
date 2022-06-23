@@ -3,7 +3,7 @@
 :root {
   
   --marquee-width: 100vw;
-  --marquee-height: 10vh;
+  --marquee-height: 8vh;
   /* --marquee-elements: 12; */ /* defined with JavaScript */
   --marquee-elements-displayed: 5;
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
@@ -53,24 +53,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
   flex-shrink: 0;
   width: var(--marquee-element-width);
   max-height: 100%;
-  font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
+  font-size: calc(var(--marquee-height)*3/4);
   white-space: nowrap;
 }
 
 .marquee-content li img {
-  width: 30%;
-  /* height: 100%; */
+  width: 25%;
+  height: 80%;
 }
 
 @media (max-width: 600px) {
   html { font-size: 12px; }
   :root {
     --marquee-width: 100vw;
-    --marquee-height: 16vh;
+    --marquee-height: 5vh;
     --marquee-elements-displayed: 3;
   }
   .marquee:before, .marquee:after { width: 5rem; }

@@ -56,11 +56,12 @@
 }
 /*DARK-MODE*/
 body.dark {
+    transition: all .2s ease;
     color: #e4e6e9;
     background-color: #292c35;
 }
 body.dark a{
-    color: #bbc0c5;
+    color: #055b9d;
 }
 .checkbox-dark-mode {
     opacity: 0;
@@ -68,11 +69,11 @@ body.dark a{
   }
   
 .label-dark-mode {
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     width: 44px;
     left: 8px;
     height: 19px;
-    background-color:var(--cor-vermelho);
+    background-color:transparent;
     display: flex;
     border-radius:50px;
     align-items: center;
@@ -202,6 +203,7 @@ body.dark a{
 }
   
   .mobile-menu div {
+    overflow-x: hidden;
     width: 32px;
     height: 2px;
     background-color: #fff;
@@ -209,13 +211,12 @@ body.dark a{
     transition: 0.1s;
   }
   body {
-    overflow-x: visible;
+    overflow-x: hidden;
   }
   @media (max-width: 700px){
     .headerTopo{
         overflow-x: hidden;
-        visibility: hidden;
-        
+        visibility: hidden;     
     }
     #pagina-inicial{
         background-color: var(--cor-vermelho);
@@ -225,7 +226,6 @@ body.dark a{
         background-size: 25%;
     }
     #menu-fixo .logo{
-
         display: none;
     }
     .nav-list {
@@ -235,7 +235,7 @@ body.dark a{
   }
   @media (max-width: 1800px) {
     body {
-      overflow-x: hidden;
+      overflow-x:hidden;
     }
     .fantasma  { 
        color: #fff;
@@ -245,8 +245,8 @@ body.dark a{
       overflow-x: hidden;
       position: absolute;
       right: 0;
-      width: 60vw;
-      height: 150vh;
+      width: auto;
+      height: auto;
       background-color:var(--cor-vermelho);
       flex-direction: column;
       align-items: center;
@@ -268,7 +268,7 @@ body.dark a{
   }
   
   .nav-list.active {
-    padding: 20px;
+    padding: 13px;
     transform: translateX(0);
     align-items: flex-start;
   }
@@ -354,6 +354,7 @@ body.dark a{
 /*BANNER*/
 .img-gif{
     width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .parte2-pagina-principal h2{
     text-align: center;
@@ -370,15 +371,29 @@ body.dark a{
     font-size: 1.8rem;
     font-weight: bold;
     letter-spacing: 2px;
-    margin-bottom: 70px;
+    margin-bottom: 65px;
 }
 /*IMAGEM*/
 .parte2-img{
+    animation: float 4s ease-in-out infinite;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 75%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.6s;
+}
+@keyframes float{
+	0%,100%{
+		
+		transform:translatey(0)
+	}
+	40%{
+		
+		transform:translatey(-10px)
+	}
 }
 /*PLATAFORMA DE COMUNICAÇÃO E SERVIÇO*/
 #pagsobre-servico h3{
@@ -420,8 +435,8 @@ body.dark a{
 }
 /*CARDS*/
 .fundo-cards{
- background-image: url('../img/fundo.jpg');
-    background-repeat: no-repeat;
+    background-image: url('../img/fundo.jpg');
+   background-repeat: no-repeat;
     min-height: 350px;
     background-attachment: fixed;
     background-position: center;
@@ -429,8 +444,17 @@ body.dark a{
     background-size: cover;
     height: auto;
     overflow: hidden;
-
-
+}
+.fundo-cards.dark{
+    background-image: url('../img/fundoDark.jpg');
+   background-repeat: no-repeat;
+    min-height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    overflow: hidden;
 }
 #content {
     max-width: 1024px;
@@ -532,8 +556,8 @@ body.dark a{
     transition: all 0.3s ease;
 }
 #bloco3-tela-principal{
-    background:#CA1C2A;  /* fallback for old browsers */
-    background: linear-gradient(to top, var(--cor-vermelho),#eb3141 );
+    box-shadow: rgb(52 51 51 / 35%) 0px 3px 10px;
+    background-color: var(--cor-vermelho); 
     color:var(--cor-branco);
     margin: 0px;
     margin-top: -25px;
@@ -589,7 +613,7 @@ body.dark a{
 }
 /*REDES SOCIAIS FOOTER*/
 #redes-sociais{
-    padding: 25px;
+    padding: 8px;
     background-color: var(--cor-cinza-claro);
 }
 .container-redes-sociais {
@@ -603,15 +627,15 @@ body.dark a{
   }
   .icons-container a:hover{
     color:var(--cor-azul-2);
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .icons-container > .icon-container-redes-sociais {
-    padding: 0.9rem 0.9rem;
+    padding: 0.5rem 0.8rem;
     border-radius: 0.5em;
     transition: all 0.2s ease-in-out;
   }
   .icons-container.not-animated > .icon-container-redes-sociais {
-    box-shadow: -12px -12px 12px 0 rgba(110, 107, 107, 0.353), 12px 12px 12px 0 rgba(0, 0, 0, 0.252);
+    box-shadow: -9px -9px 9px 0 rgba(110, 107, 107, 0.353), 9px 9px 9px 0 rgba(0, 0, 0, 0.252);
     transform: scale(1.05);
   }
   .icons-container.animated > .icon-container-redes-sociais {
@@ -624,7 +648,7 @@ body.dark a{
       transform: scale(1);
     }
     to {
-      box-shadow: -2px -2px 10px 0 rgba(188, 186, 186, 0.647), 12px 12px 12px 0 rgba(0, 0, 0, 0.068);
+      box-shadow: -2px -2px 8px 0 rgba(167, 166, 166, 0.647), 8px 8px 8px 0 rgba(23, 23, 23, 0.068);
       transform: scale(1.05);
     }
   }
@@ -633,7 +657,7 @@ body.dark a{
     background-color:var(--cor-cinza);
     text-align: center;
     font-size: 0.8rem;
-    padding: 20px 0px 10px 0px   ;
+    padding: 15px 0px 10px 0px   ;
 }
 .parte2-footer a{
     font-size: 0.7rem;
@@ -727,7 +751,7 @@ body.dark a{
 }
 #numero-atendimento {
     width: 80%;
-    padding-top: 50px;
+    padding: 90px 0px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -827,6 +851,7 @@ body.dark a{
   }
 /*TELA DE MODAVO*/
 #cpaas-modavo{
+    box-shadow: rgb(52 51 51 / 35%) 0px 3px 10px;
     background-color: var(--cor-azul-1);
     padding: 50px 0px;
     margin: 0%;
@@ -911,8 +936,8 @@ body.dark a{
 
 /*TELA SOBRE A EMPRESA*/
 #sobre-a-empresa, #sobre-a-empresa-premios, #sobre-a-empresa-missao-visao, #sobre-a-empresa-valores, #sobre-a-empresa-ser-telecal{
-    padding: 10px 50px;
-    margin: 10px 0px;
+    padding: 20px 50px;
+    margin: 20px 0px;
 }
 #sobre-a-empresa h2{
     color: var(--cor-azul-2);
@@ -929,18 +954,7 @@ body.dark a{
 #sobre-a-empresa p, #sobre-a-empresa-premios p,  #sobre-a-empresa-valores p, #sobre-a-empresa-ser-telecal p{
     font-size: 1.3rem;
     line-height: 1.6rem;
-}
-#sobre-a-empresa-premios{
-    background-image: url(../img/fundo.jpg);
-    background-repeat: no-repeat;
-    min-height: 350px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: auto;
-    margin: 0%;
-    overflow: hidden;
-}
+}   
 #sobre-a-empresa-premios img{
     width: 100%;
 }
@@ -967,10 +981,11 @@ body.dark a{
     }
   }
 #sobre-a-empresa-missao-visao{
-    background-color: var(--cor-vermelho);
+    box-shadow: rgb(52 51 51 / 35%) 0px 3px 10px;
+    background-color: var(--cor-azul-2);
     color: var(--cor-branco);
     margin: 0%;
-    padding: 100px 50px;
+    padding: 130px 50px;
 }
 #sobre-a-empresa-valores ol li{
     font-size: 1.3rem;
@@ -988,11 +1003,11 @@ body.dark a{
     font-size: 2rem;
     font-weight: bold;
 }
-#parte-1-twofa, #parte-2-twofa-permite, #parte-3-twofa, #dados-tfa, #parte-4-twofa, #parte-5-twofa, #parte-6-twofa, #parte-7-twofa{
+#parte-1-twofa, .parte-2-twofa-permite, #parte-3-twofa, #dados-tfa, #parte-4-twofa, #parte-5-twofa, #parte-6-twofa, #parte-7-twofa{
     padding: 20px 50px;
     margin: 30px 0px;
 }
-#parte-1-twofa h3, #parte-2-twofa-permite h3, #parte-3-twofa h3, #parte-4-twofa h3, #parte-5-twofa h3, #parte-6-twofa h3, #parte-7-twofa h3{
+#parte-1-twofa h3, .parte-2-twofa-permite h3, #parte-3-twofa h3, #parte-4-twofa h3, #parte-5-twofa h3, #parte-6-twofa h3, #parte-7-twofa h3{
     color: var(--cor-cinza);
     font-size: 1.8rem;
     font-weight: bold;
@@ -1005,6 +1020,7 @@ body.dark a{
     font-size: 1.3rem;
 }
 .twofa-oque-img{
+   
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1023,18 +1039,8 @@ body.dark a{
     font-size: 2.5rem;
     color: var(--cor-branco);
 }
-#parte-2-twofa-permite{
-    background-image: url(../img/fundo.jpg);
-    background-repeat: no-repeat;
-    min-height: 350px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: auto;
-    margin: 0%;
-    overflow: hidden;
-}
 #parte-3-twofa{
+    box-shadow: rgb(52 51 51 / 35%) 0px 3px 10px;
     background-color: var(--cor-azul-1);
     margin: 0%;
 }
@@ -1046,17 +1052,6 @@ body.dark a{
 }
 .funciona span{
     text-align: center;
-}
-#parte-4-twofa{
-    background-image: url(../img/fundoInverte.jpg);
-    background-repeat: no-repeat;
-    min-height: 350px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: auto;
-    margin: 0%;
-    overflow: hidden;
 }
 #parte-4-twofa h3, #parte-5-twofa h3, #parte-6-twofa h3, #parte-7-twofa h3{
     margin-bottom: 50px;
@@ -1095,8 +1090,12 @@ body.dark a{
     font-weight: bold;
 }
 #bloco1-sms-programavel, #dados01-sms, #dados02-sms, #parte4-sms-jornada, #parte5-sms-beneficio{
-    padding: 20px 50px;
-    margin: 30px 0px;
+    padding: 15px 50px;
+    margin: 10px 0px;
+}
+#dados01-sms{
+    padding: 0px 50px ;
+    margin: 0%;
 }
 #sms-programavel h3{
     color: var(--cor-cinza);
@@ -1123,19 +1122,9 @@ body.dark a{
     align-items: center;
     width: 55%;
 }
-#parte2-sms-programavel {
-    background-image: url(../img/fundo.jpg);
-    background-repeat: no-repeat;
-    min-height: 350px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: auto;
-    margin: 0%;
-    overflow: hidden;
-}
+
 #parte2-sms-programavel h2{
-    padding: 60px 50px;
+    padding: 40px 50px;
     text-align: center;
     font-size: 1.5rem;
     line-height: 1.9rem;
@@ -1148,6 +1137,7 @@ body.dark a{
 #dados01-sms p, #dados02-sms p{
     font-size: 1.5rem;
     text-align: center;
+    animation: float 12s ease-in-out infinite;
 }
 #dados01-sms strong, #dados02-sms strong{
     color:var(--cor-vermelho);
@@ -1155,7 +1145,8 @@ body.dark a{
     font-size: 2.5rem;
 }
 #parte3-quem-usa{
-    padding: 20px 50px;
+    box-shadow: rgba(52, 51, 51, 0.35) 0px 5px 15px;
+    padding: 40px 50px;
     margin: 0%;
     background-color: var(--cor-azul-1);
 }
@@ -1170,6 +1161,7 @@ body.dark a{
 }
 .quem-usa-img{
     width: 80%; 
+   
 }
 .img-sms-jornada{
     width: 90%;
@@ -1205,7 +1197,10 @@ body.dark a{
     padding: 20px 50px;
     margin: 30px 0px;
 }
-#parte-1-g-v h3, #parte-5-g-v h3{
+#parte1-google-verified p{
+    font-size: 1.3rem;
+}
+#parte-1-g-v h3, #parte-5-g-v h3,  #parte-4-g-v h3{
     color: var(--cor-cinza);
     font-size: 1.8rem;
     font-weight: bold;
@@ -1225,6 +1220,8 @@ body.dark a{
     width: 100%;
 }
 #parte-3-g-v img{
+    animation: float 5s ease-in-out infinite;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
     width: 80%;
     border-radius: 5px;
     margin-top: 80px;
@@ -1234,6 +1231,7 @@ body.dark a{
     color: var(--cor-branco);
 }
 #parte-3-g-v{
+    box-shadow: rgb(52 51 51 / 35%) 0px 3px 10px;
     color: var(--cor-branco);
     padding: 20px 50px;
     margin: 0%;
@@ -1317,11 +1315,18 @@ body.dark a{
     background-position-y: bottom;
     height: auto;
     overflow-x: hidden;
-   
+}
+.login.dark{
+    background-image: none ;
 }
 .container{
     margin-top: 40px;
 } 
+.header-cliente{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 #lados-login{
     background-color: rgba(247, 246, 246, 0.747);
     backdrop-filter: blur( 1.5px );
@@ -1573,6 +1578,9 @@ select option::after{
     height: 769px;
     background-position-y: bottom;
 }
+.fundo-area-cliente.dark{
+    background-image: none;
+}
 .area-cliente h2{
     font-size: 2rem;
 }
@@ -1699,7 +1707,9 @@ select option::after{
     background-size: 100%;
     background-position-y: bottom;
     height: auto;
-    
+}
+.fundo-cadastro.dark{
+    background-image: none;
 }
 #lado1-cliente {
     border-radius: 10px 10px 0px 0px;

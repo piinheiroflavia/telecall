@@ -139,7 +139,7 @@
                       </div>
                        <!--CPF/ CNPJ-->
                       <div class="input-container-cadastro" id="cpf-cnpj-div">
-                          <input id="cpfcnpj" class="input-cadastro" type="text" autocomplete="off" maxlength="17" placeholder=" " required="required" onkeyup="validCpfCnp()">
+                          <input id="cpfcnpj" class="input-cadastro" type="text" autocomplete="off" maxlength="11" placeholder=" " required="required" oninput="validaCpf(TestaCPF(this.value));">
                           <div class="vago"></div>
                           <label for="cpfcnpj" class="placeholder" id="resCpf">CPF ou CNPJ</label>                     
                       </div>
@@ -202,8 +202,8 @@
       &copy; 2022 - Desenvolvido Por Flavia Pinheiro
     </footer>
         
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
   <script src="../script/script.js"></script>
   <script src="../script/api-cep.js"></script>
 </body>

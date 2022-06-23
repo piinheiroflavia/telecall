@@ -28,12 +28,14 @@ const pesquisarCep = async( ) => {
     
     if(cepValido(cep)){
 
+    //adicionando o cep digitado do input dentro da api pra buscar
         const url = `https://viacep.com.br/ws/${cep}/json/`;
     //recebendo do fetch
         const dados = await fetch(url);
     //pegando os dados e aplicando o json
         const endereco = await dados.json();
 
+    //se o cep não existir mensagem de erro
         if (endereco.hasOwnProperty('erro')){
             document.getElementById('endereco').value = 'CEP não encontrado'
         }else{

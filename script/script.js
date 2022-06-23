@@ -52,10 +52,8 @@
 
 //DARK MODE
   const checkbox = document.getElementById('checkbox-dark-mode');
-//fundo img dos cards
-  var fundoCards = document.getElementById('fundo-cards')
-//fundo img tela de cadastro
 
+//adiciona para que fique salvo o modo dark no localstorage e não saia quando ir para outra página
   const theme = window.localStorage.getItem("theme");
   if (theme === "dark") document.body.classList.add("dark");
 
@@ -63,13 +61,10 @@
   function darkMode(){
     document.body.classList.toggle('dark');
     darkMode = true;
-    document.getElementsByClassName('fundo-cards').src = 'src = img/fundo.jpeg'; 
 
-
+//condição que verifica se está em light ou dark para salvar
     if (theme === "dark") {
       window.localStorage.setItem("theme", "light");
-      fundoCards.style.backgroundImage= 'none'
-      
 
     } else window.localStorage.setItem("theme", "dark");
      
@@ -84,13 +79,12 @@ if (typeof(Storage)!= "undefine"){
 
 //INICIO PAGINA DE LOGIN
 //VALIDAÇÃO LOGIN E LOCAL STORAGE
-
 validaentraCpfcnpj = false;
 
  /*CPF E CNPJ*/
 $('#entraCpfcnpj').mask('000.000.000-00', {
   onKeyPress : function(entraCpfcnpj, e, field, options) {
-    const masks = ['000.000.000-000', '00.000.000/0000-00'];
+    const masks = ['000.000.000-00'];
     const mask = (entraCpfcnpj.length > 14) ? masks[1] : masks[0];
     $('#entraCpfcnpj').mask(mask, options);
   }
@@ -99,17 +93,18 @@ function entrarValidCpfCnp() {
 
   if( entraCpfcnpj.value==''){
      entraCpfcnpj.style.borderBlockColor = ' #CA1C2A'
-    
      resCpf.style.color = ' red'
     entraCpfcnpj.focus();
     validaentraCpfcnpj = false;
   }else{
     resCpf.style.color = 'black'
-    resCpf.innerHTML='CPF ou CNPJ ';	
+    resCpf.innerHTML='CPF ';	
      entraCpfcnpj.style.borderBlockColor = ' #008000'
     validaentraCpfcnpj = true;
   }
 }
+//função que ocorre para verificar se o usuário foi cadastrado e tem conta
+//
 function gravar(){
 
   var entraCpfcnpj = document.getElementById("entraCpfcnpj");
@@ -118,9 +113,6 @@ function gravar(){
   var Senhaa = document.getElementById('Senha');
   var senhaLogin = document.getElementById("senha-login");
   
-  let userLogado = JSON.parse(localStorage.getItem('userLogado'))
-  let areaCliente = document.getElementsByClassName('cliente')
-
   let listaUsuarios = []
 
   let userValid = {
@@ -137,7 +129,7 @@ function gravar(){
     if (entraCpfcnpj.value == item.CpfCnpj && Senhaa.value == item.Senha){
       userValid = {
         login: item.CpfCnpj,
-        user: item.Nome,
+        user: item.Social,
         senha: item.Senha
        
       }
@@ -148,6 +140,7 @@ function gravar(){
   if (entraCpfcnpj.value == userValid.login && Senhaa.value == userValid.senha){
     respErro.setAttribute('style', 'display: bloco');
     respSucesso.innerHTML = '<strong>loading...</strong>';
+
     respErro.innerHTML ='';
 
     //token => garante que o usuario esta logado//  só aparece depois do ponto
@@ -155,11 +148,10 @@ function gravar(){
     localStorage.setItem('token', token) ;
 
     setTimeout(()=>{
-      window.location.href= "https://piinheiroflavia.github.io/telecall/index.html"
+      window.location.href= "/index.html"
     }, 3000);
 
-    areaCliente.innerHTML = `Olá ${userLogado.Nome}`;
-    
+    localStorage.setItem('userLogado', JSON.stringify(userValid))
   }else {
 
     resCpf.setAttribute('style', 'color: red');
@@ -176,8 +168,9 @@ function gravar(){
 //fim da pagina de login
 
 
-//página de cadastro
-//ESSAS FUNCÕES VERIFICA SE OS CAMPOS ESTÃO SENDO PREENCHIDOS CORRETAMENTE
+//PÁGINA DE CADASTRO
+
+/*FUNÇÕES QUE INDETIFICAM SE O CAMPO ESTÁ VÁLIDO (COR VERDE), CASO O ALGUNS CAMPOS FIQUE VAZIO OU MENOR QUE 15 CARACTERES O CAMPO FICA VERMELHO, */
 function validNome(){
   if(nome.value == ''){
     nome.style.borderBlockColor = ' red'
@@ -250,6 +243,7 @@ if(materno.value == ''){
 
 function validEmail(emaill){
 
+//regex da validação de email 
   let ev = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
 
    if(email.value==''){
@@ -258,6 +252,7 @@ function validEmail(emaill){
       resEmail.style.color = ' red'
       email.focus();
       validaEmail = false;
+ //lse if verifica se o email inserido bate com o reGex (precisa ter um @ e de 2 a 3 caracteres após o ponto)
     } else if (!ev.test(emaill)) {
       email.style.borderBlockColor = ' red'
       resEmail.innerHTML = 'Email* Inválido';		
@@ -270,10 +265,6 @@ function validEmail(emaill){
     }
 }
 
-/*$(document).ready(function(){
-  $('#cep').mask('99 999-999');
-});
-*/
 function validCep(){
 
   if(cep.value==''){
@@ -310,12 +301,11 @@ function validNumeroCasa(){
   }
 }
 
-
 function validCelular(){
 
   if(celular.value==''){
     celular.style.borderBlockColor = ' #CA1C2A'
-    resCel.innerHTML='Celular *2222222222';		
+    resCel.innerHTML='Celular *';		
     resCel.style.color = ' red'
     resCel.style.fontSize = ' 0.8rem'
     celular.focus();
@@ -348,33 +338,78 @@ $("#celular")
             }  
         });
 }
-  /*CPF E CNPJ*/
-$('#cpfcnpj').mask('000.000.000-00', {
-    onKeyPress : function(cpfcnpj, e, field, options) {
-      const masks = ['000.000.000-000', '00.000.000/0000-00'];
-      const mask = (cpfcnpj.length > 14) ? masks[1] : masks[0];
-      $('#cpfcnpj').mask(mask, options);
-    }
-});
-function validCpfCnp() {
 
-  if(cpfcnpj.value==''){
-    cpfcnpj.style.borderBlockColor = ' #CA1C2A'
-    
-    resCpf.style.color = ' red'
-    cpfcnpj.focus();
-    validaCpfCnpj = false;
+  /*MÁSCARA CPF COM JQUERY */
+$('#cpfcnpj').mask('000.000.000-00', {
+    }
+);
+/*FUNÇÃO QUE INDETIFICA SE O CAMPO ESTÁ VÁLIDO E DE ACORDO COM OS REQUISITOS PARA VERIFICAR SE EXISTE O CPF*/
+  function validaCpf(retorno) {
+    if (retorno == true) {
+      resCpf.style.color = 'black'
+      resCpf.innerHTML='CPF ou CNPJ ';	
+      cpfcnpj.style.borderBlockColor = ' #008000'
+      validaCpfCnpj = true;
+    } else {
+      cpfcnpj.style.borderBlockColor = ' #CA1C2A'   
+      resCpf.innerHTML='CPF* Inválido ';	
+      resCpf.style.color = ' red'
+      cpfcnpj.focus();
+      validaCpfCnpj = false;
+    }
+}
+
+function TestaCPF(strCPF) {
+  
+  str = strCPF.replace('.', '').replace('.', '').replace('-', '');
+  var cpfmask = str;
+  var Soma;
+  var Resto;
+  Soma = 0;
+  if (cpfmask == "00000000000" || cpfmask == "11111111111" || cpfmask == "22222222222" || cpfmask == "33333333333" || cpfmask == "44444444444" || cpfmask == "55555555555" || cpfmask == "66666666666" || cpfmask == "77777777777" || cpfmask == "88888888888" || cpfmask == "99999999999")
+  return false;
+
+for (i=1; i<=9; i++) Soma = Soma + parseInt(cpfmask.substring(i-1, i)) * (11 - i);
+Resto = (Soma * 10) % 11;
+
+  if ((Resto == 10) || (Resto == 11))  Resto = 0;
+  if (Resto != parseInt(cpfmask.substring(9, 10)) ) return false;
+
+Soma = 0;
+  for (i = 1; i <= 10; i++) Soma = Soma + parseInt(cpfmask.substring(i-1, i)) * (12 - i);
+  Resto = (Soma * 10) % 11;
+
+  if ((Resto == 10) || (Resto == 11))  Resto = 0;
+  if (Resto != parseInt(cpfmask.substring(10, 11) ) ) return false;
+  return true;
+  
+}
+
+
+
+function validTelefone(){
+  
+  if(telefone.value==''){
+    telefone.style.borderBlockColor = ' #CA1C2A'
+    resTel.innerHTML='Telefone*';		
+    resTel.style.color = ' red'
+    telefone.focus();
+    validaTelefone = false;
+  }else if (telefone.value.length < 15 ){
+    telefone.style.borderBlockColor = ' red'
+    resTel.innerHTML = 'telefone *';		
+    resTel.style.color = 'red';
+    validaTelefone = false;
   }else{
-    resCpf.style.color = 'black'
-    resCpf.innerHTML='CPF ou CNPJ ';	
-    cpfcnpj.style.borderBlockColor = ' #008000'
-    validaCpfCnpj = true;
+    resTel.style.color = 'black'
+    resTel.innerHTML='Telefone ';		
+    telefone.style.borderBlockColor = ' #008000'
+    validaTelefone = true;
   }
   
 
 }
-
-  /*TELEFONE*/
+  /*MÁSCARA TELEFONE COM JQUERY */
   $("#telefone")
           .mask("(+99) 99 9999-9999")
           .focusout(function (event) {  
@@ -389,28 +424,6 @@ function validCpfCnp() {
                   element.mask("(+99) 99 9999-9999");  
               }  
           });
-function validTelefone(){
-  
-  if(telefone.value==''){
-    telefone.style.borderBlockColor = ' #CA1C2A'
-    resTel.innerHTML='Telefone *(+55) 21 9999-9999';		
-    resTel.style.color = ' red'
-    telefone.focus();
-    validaTelefone = false;
-  }else if (telefone.value.length < 15 ){
-    telefone.style.borderBlockColor = ' red'
-    resTel.innerHTML = 'telefone *(+55) 21 9999-9999';		
-    resTel.style.color = 'red';
-    validaTelefone = false;
-  }else{
-    resTel.style.color = 'black'
-    resTel.innerHTML='Telefone ';		
-    telefone.style.borderBlockColor = ' #008000'
-    validaTelefone = true;
-  }
-  
-
-}
 
 function validSenha() {
 
@@ -427,7 +440,7 @@ function validSenha() {
     validaSenha = true;
   }
 }
-
+//função que verifica se o confirma senha e a senha são iguais
 function validConfirmaSenha(){
 
   if((confirma.value == '')||(senha.value != confirma.value)){
@@ -444,14 +457,14 @@ function validConfirmaSenha(){
   }
 }
 
-//VERIFICAR SE TODOS OS CAMPOS ESTAO VAZIOS ANTES DE CADASTRAR
+//VERIFICAR SE TODOS OS CAMPOS ESTAO VAZIOS ANTES DE CADASTRAR O USUÁRIO
 function validar(){
 
   if (validaNome && validaNascimento && validaEmail && validaCep && validaNum && validaCpfCnpj && validaCelular && validaTelefone && validaSenha && validaconSenha){
 
     let listaUsuarios = JSON.parse(localStorage.getItem('listaUsarios') || '[]');
 
-//ADICIONA OS DADOS A UMA LISTA NO LOCAL STORAGE
+//ADICIONA OS DADOS A UMA ARRAY NO LOCAL STORAGE
     listaUsuarios.push( 
       {
         Nome: nome.value,
@@ -474,9 +487,10 @@ function validar(){
     respErro.innerHTML =''
 //AO CADASTRAR REDIRECIONA A OUTRA PÁGINA
     setTimeout(()=>{
-      window.location.href= "https://piinheiroflavia.github.io/telecall/login/index.html"
+      window.location.href= "/login/index.html"
     }, 3000)
     
+//se nem todos os campos são preenchidos
   }else{
     respErro.setAttribute('style', 'display: bloco', 'color: #0C4B77')
     respSucesso.innerHTML = ''
@@ -487,7 +501,7 @@ function validar(){
      
 }
 
-//APENAS LETRAS NA SENHA
+//FUNÇÃO PARA ACEITAR APENAS LETRAS NA SENHA
 function ApenasLetras(e, t) {
   try {
       if (window.event) {
@@ -511,7 +525,7 @@ function ApenasLetras(e, t) {
       }
     }
     
-//OCULTAR A SENHA
+//OCULTAR A SENHA LOGIN
 function showPassword() {
   const aberto = document.getElementById('lock');
   const fechado = document.getElementById('unlock');
@@ -526,6 +540,7 @@ function showPassword() {
     senha.type = 'password';
   }
 }
+//OCULTAR A SENHA CADASTRO
 function showPassword2() {
   const aberto2 = document.getElementById('lock2');
   const fechado2 = document.getElementById('unlock2');
@@ -559,8 +574,8 @@ class MobileNavbar {
       link.style.animation
         
         ? (link.style.animation = "")
-        : (link.style.animation = `navLinkFade 0.3s ease forwards ${
-            index / 5 + 0.3
+        : (link.style.animation = `navLinkFade 0.1s ease forwards ${
+            index / 5 + 0.1
           }s`
           );
     });
@@ -572,7 +587,7 @@ class MobileNavbar {
     this.dropdown2.classList.toggle(this.activeClass);
     this.animateLinks();
   }
-
+//adicionando o evento de clicar
   addClickEvent() {
     this.mobileMenu.addEventListener("click", this.handleClick);
     this.dropdown2.addEventListener("click", this.handleClick);
@@ -608,3 +623,31 @@ root.style.setProperty("--marquee-elements", marqueeContent.children.length);
 for(let i=0; i<marqueeElementsDisplayed; i++) {
   marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
 }
+
+//quando o clinte for logado
+let logadoC =   document.querySelector('.cliente');
+let areaCliente = document.querySelector('.fantasma');
+let userLogado = JSON.parse(localStorage.getItem('userLogado'));
+
+var sair =   document.querySelector('.sair');
+
+logadoC.innerHTML = "Olá " + userLogado.user
+sair.innerHTML = '<i class= "fa-solid fa-arrow-right-from-bracket"></i> Sair'
+areaCliente.innerHTML = '<i class="fa-solid fa-user-large"></i> Sua Conta';
+
+/*function sair(Sair){
+  
+  
+  console.log('foi')
+
+  localStorage.removeItem('token');
+
+  setTimeout(()=>{
+    window.location.href= "/index.html"
+  }, 3000);
+
+}
+
+if (localStorage.getItem('token') == null){
+  alert ('logar')
+}*/
