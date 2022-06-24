@@ -162,14 +162,15 @@
                         <!--SENHA-->
                         <div class="input-container-cadastro" id="senha-div">
                           <input id="Senha" class="input-cadastro" type="password" placeholder=" " 
-                         minlength="8" maxlength="8" required="required" onkeyup="validSenha()" onkeypress="return ApenasLetras(event,this)">
-                          <div class="vago"></div>
+                         minlength="8" maxlength="8" required="required" onkeyup="validSenha()" onkeypress="return ApenasLetras(event,this)"></div>
+                         <div class="vago">
                           <label for="Senha" class="placeholder" id="resSenha">Senha</label>
                           <span class="icon2">
                             <i id="lock" class="fa-solid fa-eye-slash" onclick="showPassword()"></i>
                             <i id="unlock" class="fa-regular fa-eye" onclick="showPassword()"></i>
                           </span>
                         </div>
+                      </div>
                           <!--CONFIRMAR SENHA-->
                           <div class="input-container-cadastro" id="conf-senha-div">
                           <input id="confirmar" class="input-cadastro" type="password" placeholder=" "  minlength="8" maxlength="8" required="required" onkeyup="validConfirmaSenha()" onkeypress="return ApenasLetras(event,this)">
