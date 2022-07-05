@@ -42,48 +42,36 @@
               <p>Aqui você encontra informações sobre sua conta,<strong> extrato telefônico</strong>, <strong>segunda via</strong>,<strong> histórico de mensagens</strong> e <strong>financeiro</strong>.</p>
               <br>
               <br><br><br><br>
-                <a href="../cliente/index.html"><i class="fa-solid fa-circle-arrow-left icon"></i></a>
+                <a href="../login/index.html"><i class="fa-solid fa-circle-arrow-left icon"></i></a>
                 <a href="../index.html"><i class="fa-solid fa-house-chimney icon"></i></a>
           </div> 
         <!--LADO 2-->
             <div class="col-7" id="lado2"> 
-              <h3>Entrar</h3><br>
+              <h3>Precisamos verificar sua identidade</h3><br>
                   <!--CPF--> <!--FALTA VÁLIDAR O CPF E O CNPJ-->
                   <div class="input-container cpf" >
                     <input id="entraCpfcnpj" class="input" type="text" autocomplete="off" maxlength="17" inputmode="number" placeholder=" " required  onkeyup="entrarValidCpfCnp()">
 
                    
                     <div class="vago"></div>
-                    <label for="cpfcnpj" id="resCpf" class="placeholder">CPF ou CNPJ</label>
-                    <span class="icon1"><i class="fa-solid fa-user"></i></span>
+                    <label for="cpfcnpj" id="resCpf" class="placeholder">Digite seu CPF</label>
+                    <span class="icon1"></span>
                   </div>
 
-                  <!--SENHA-->
+                  <!--EMAIL-->
                   <div class="input-container senha">
-                    <input id="Senha" class="input" type="password" placeholder=" " maxlength="8"  required onkeypress="return ApenasLetras(event,this)">
-                    
-
+                    <input id="email" class="input" type="email" placeholder=" " onkeyup="validEmail(this.value)"  required >
                     <div class="vago"></div>
-                    <label for="Senha" id="senha-login" class="placeholder">Senha</label>  
-                    <span class="icon2">
-                      <i id="lock" class="fa-solid fa-eye-slash" onclick="showPassword()"></i> 
-                      <i id="unlock" class="fa-regular fa-eye" onclick="showPassword()"></i>
-                    </span>
+                    <label for="email" id="senha-login" class="placeholder">Digite seu email</label>  
                   </div><br>
-                  <div id="respErro" class="loader"> 
-                    <p></p>
+                  <div class="loader"> 
+                    <span>Enviaremos um código ao seu email <br> Aguarde uns segundos..</span>
                   </div>
-                  <div id="respSucesso" class="loader"> 
-                    <p></p>
-                  </div>
-                  <br>
-                  <span class="span">Para alterar a senha <a href="../rest conta/"><strong>clique aqui!</strong></a></span>
                   <!--BTN-->
                   <div class="" id="btn">
-                    <button type="button" class="submit" onclick="gravar()">Entrar</button>
-                    <button type="button" class="cadastra"><a href="../cadastro/index.html">Cadastre-se</a></button>
+                    <button type="button" class="submit" >Enviar</button>
                   </div>
-                  </div>
+                </div>
     </div>         
   </div>
 

@@ -613,11 +613,11 @@ body.dark a{
 }
 /*REDES SOCIAIS FOOTER*/
 #redes-sociais{
-    padding: 8px;
+    padding: 5px;
     background-color: var(--cor-cinza-claro);
 }
 .container-redes-sociais {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
   
   .icons-container {
@@ -630,7 +630,7 @@ body.dark a{
     font-size: 1rem;
   }
   .icons-container > .icon-container-redes-sociais {
-    padding: 0.5rem 0.8rem;
+    padding: 0.3rem 0.6rem;
     border-radius: 0.5em;
     transition: all 0.2s ease-in-out;
   }

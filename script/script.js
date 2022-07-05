@@ -55,10 +55,12 @@
 
 //adiciona para que fique salvo o modo dark no localstorage e não saia quando ir para outra página
   const theme = window.localStorage.getItem("theme");
+  /* verifica se o tema armazenado no localStorage é escuro,
+se sim aplica o tema escuro ao body */
   if (theme === "dark") document.body.classList.add("dark");
 
 
-  function darkMode(){
+  function darkMode(){ 
     document.body.classList.toggle('dark');
     darkMode = true;
 
@@ -210,6 +212,7 @@ function validNomeSocial() {
 }
 
 function validNascimento(){
+ 
   if(nascimento.value==''){
     nascimento.style.borderBlockColor = ' #CA1C2A'
     nascimento.focus();
@@ -626,13 +629,17 @@ for(let i=0; i<marqueeElementsDisplayed; i++) {
 
 //quando o clinte for logado
 let logadoC =   document.querySelector('.cliente');
+let areaClienteIg = document.querySelector('.fantasmaIg');
 let areaCliente = document.querySelector('.fantasma');
 let userLogado = JSON.parse(localStorage.getItem('userLogado'));
-
+var sairIg =   document.querySelector('.sairIg'); //English
 var sair =   document.querySelector('.sair');
 
-logadoC.innerHTML = "Olá " + userLogado.user
-sair.innerHTML = '<i class= "fa-solid fa-arrow-right-from-bracket"></i> Sair'
+logadoC.innerHTML = '<i class="fa-solid fa-user-large " ></i> ' +  userLogado.user
+
+sairIg.innerHTML = '<i class= "fa-solid fa-arrow-right-from-bracket"></i> Exit'; //English
+sair.innerHTML = '<i class= "fa-solid fa-arrow-right-from-bracket"></i> Sair';
+areaClienteIg.innerHTML = '<i class="fa-solid fa-user-large"></i> Your Account'; //English
 areaCliente.innerHTML = '<i class="fa-solid fa-user-large"></i> Sua Conta';
 
 /*function sair(Sair){

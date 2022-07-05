@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="Inglês">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecall</title>
+
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
+
+    <!--RESPONSIVO-->
+    <link rel="stylesheet" href="../css/responsivo.css">
+
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!--REDES SOCIAS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!--ICONS-->
+    <script src="https://kit.fontawesome.com/7198f8d6d1.js" crossorigin="anonymous"></script>
+
+    <!--CARDS DEPOIMENTO-->
+    <link rel="stylesheet" href="../css/cards.css">
+    <!--PATROCINIO-->
+    <link rel="stylesheet" href="../css/patroc.css">
+    
+</head>
+<body>
+    <header id="pagina-inicial" class="col-12">
+        <div class="headerTopo">
+            <div class="pull-right">
+              <a href="../central de atendimento/index.html" class="atendimento" target="_blank"><i class="fa-regular fa-user-headset"></i> call center
+              </a>           
+              <a href="../cliente/index.html" class="cliente" target="_blank">
+              <i class="fa-solid fa-user-lock"></i> Client Area
+              </a>
+            <!--ZAP-->
+              <a href="https://api.whatsapp.com/send/?phone=5521936180100&text&app_absent=0" class="wp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Talk by WhatsApp</a>
+
+            <a href="./index.html" class="idioma"><abba ><img src="../img/estados-unidos.png" alt="Bandeira Estados Unidos" title="EN"></abba></a>
+
+            <a href="../index.html" class="idioma"><abba><img src="../img/brasil.png" alt="Bandeira Brasil" title="PT-BR"></abba></a>
+
+            </div>         
+        </div>
+        <!--menu-->
+        <div id="menu-fixo" class="col-12">
+          <a href="../index.html" class="lg"><img class="logo" src="../img/telecall.png" alt=""></a>
+          <nav class="primeiro-menu">
+            <div class="mobile-menu">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+
+            <ul class="nav-list">
+              <li><input type="checkbox" class="checkbox-dark-mode" id="checkbox-dark-mode">
+                <label for="checkbox-dark-mode" class="label-dark-mode" onclick="darkMode()">
+                  <i class="fas fa-moon"></i>
+                  <i class='fas fa-sun'></i>
+                  <div class='ball'>
+                </label>
+              </li>
+                <li><a href="../index.html"> <i class="fa-solid fa-house-chimney"></i> Home</a></li>
+                
+                <li><a href="#"><i class="fa-solid fa-cloud"></i> services <i class="fa-solid fa-chevron-down"></i></a>                
+                  <ul class="dropdown2">
+                    <li><a href="../sms programavel/index.html">Programmable SMS</a></li>
+                    <li><a href="../google verified/index.html">Google Verfied Calls</a></li>
+                    <li><a href="../2fa/index.html">2FA</a></li>
+                    <li><a href="../numero mascara/index.html">Mask Number</a></li>
+                  </ul>
+            
+                  <li><a href="../cliente/index.html" class="fantasmaIg" target="_blank">
+                      <i class="fa-solid fa-user-lock"></i> Client Area</a></li>
+                  
+                  <li><a href="../sobreEmpresa/index.html"><i class="fa-solid fa-building"></i> About Us</a></li>
+    
+                  <li><a href="https://api.whatsapp.com/send/?phone=5521936180100&text&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i> Talk by WhatsApp</a></li>
+
+                  <li>
+                    <a href="../central de atendimento/index.html" target="_blank"><i class="fa-solid fa-headset"></i> call center
+                    </a>
+                  </li>
+
+                  <li><a href="#"><i class="fa-solid fa-globe"></i> languages <i class="fa-solid fa-chevron-down"></i></a>      
+
+                    <ul class="dropdown2">
+                      <li><a href="./index.html">English</a></li>
+                      <li><a href="../index.html">Portuguese-BR </a></li>                    
+                    </ul>
+                  <li><a href="" onclick="sair()" class="sairIg"></a></li>
+
+            </ul>
+          </nav>
+
+        </div>
+    </header>
+
+    <section class="banner-principal">
+   <img class="img-gif" src="../img/Banner para CPaaS.gif" alt="banner sobre os serviços da telecall">
+    </section>
+
+    <section class="parte2-pagina-principal" >
+        <h2>Discover our services</h2>
+        <h4>Platform and solutions</h4>
+        <div  id="bloco1-pagina-principal" class="col-12 row "> 
+            <div class="col-md-6 col-sm-12">
+                <img src="../img/modavo p.png" width="70%" class="parte2-img">
+            </div>
+            <div id="pagsobre-servico" class="col-md-6 col-sm-12 px-0 ">
+                <h3>Communications Platform as a Service</h3>
+                <p>It is a communication software solution that works
+                    as a foundation upon which developers can
+                    integrate a variety of applications. <br>
+                    Typical communication methods such as voice, calls
+                    video or SMS text messages, can be
+                    embedded in other systems through APIs that
+                    connect to the CPaaS platform. <br>
+                    These APIs allow companies to expand their
+                    offers without the need for hardware or software
+                    additional.</p>
+                <br>
+                <button class="parte2-btn" ><a href="../modavo o que é/index.html" target="_blank">Know More</a></button>  
+            </div>
+        </div>
+
+        <!--CARDS-->
+    <div class="fundo-cards">
+      <div  id="content" class="p-4 p-md-5 mb-4 row ">
+              <div class="col-md-6 col-sm-12">
+                <a href="../sms programavel/index.html" target="_blank">
+                  <div class="card">
+                    <div class="icons-cards-servicos"><i class="fa-solid fa-comment-sms"></i></div>
+                    <p class="title">Programmable SMS</p>
+                    <p class="text">SMS is the fastest, most efficient and cost effective way to communicate with your customers.</p>
+                  </div>
+                </a>
+              </div>
+          <br>
+              <div class="col-md-6 col-sm-12">
+                <a href="../google verified/index.html" target="_blank">
+                  <div class="card">
+                    <div class="icons-cards-servicos"><i class="fa-solid fa-check"></i></div>
+                      <p class="title">Googles Verfied Calls</p>
+                      <p class="text">allows companies to display
+                        for the customer at the time of calling your brand,..</p>
+                  </div>
+                </a>
+              </div>
+      </div>
+           <!--CARDS-->
+      <div  id="content" class="p-4 p-md-5 mb-4 row " background="red">
+            <div class="col-md-6 col-sm-12">
+              <a href="../2fa/index.html" target="_blank" class="ancora-cards-tela-principal">
+                <div class="card">
+                  <div class="icons-cards-servicos"><i class="fa-solid fa-lock"></i></div>
+                    <p class="title">2FA</p>
+                    <p class="text">Strengthen your business security strategy.</p>
+                </div>
+              </a>
+            </div>
+          <br>
+            <div class="col-md-6 col-sm-12">
+              <a href="../sms programavel/index.html" target="_blank">
+                <div class="card">
+                  <div class="icons-cards-servicos"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <p class="title">Mask Number</p>
+                    <p class="text">Protect professional identities</p>
+                  </div>
+                </div>
+              </a>
+      </div>
+    </div>
+
+
+
+        <!--SOBRE A EMPRESA-->
+       
+            <div id="bloco3-tela-principal" class="col-12 row">
+              <div class="col-md-6 col-sm-12">
+                  <img src="../img/sobre-empresa.jpg" width="86%" class="img">
+              </div>
+              <div id="pagsobre" class="col-md-6 col-sm-12 px-0 ">
+                  <h3>About Us</h3>
+              
+                  <p>ATelecall is an ANATEL regulated operator (SCM, STFC and SMP Licenses), owner of a high-capacity fiber network, offering its customers the highest standard of quality, speed and accessibility in telephone and internet solutions. Services that include a wide range of added values, offering clients more productive, dynamic and effective operations.</p>
+                  <br>
+                  <button class="btn2-saber"><a class="btn2" href="../sobreEmpresa/index.html" target="_blank">Know More</a></button>
+              </div>
+            </div>
+            
+            <!-- DEPOIMENTOS-->
+            <div id="bloco4-tela-principal">
+              <h4>Depoimentos</h4>
+                <div class="card-carousel">
+                  <div class="card" id="1">
+                    <div class="image-container"></div>
+                    <p>"The Telecall team did a fantastic job. Totally committed professionals. Overall, a perfect delivery."</p><br>
+                    <h6>Leonardo Cohen – SLS World Championship</h6>
+                      <span>Finals 2018 – Rio de Janeiro</span>
+                  </div>
+                  <div class="card" id="2">
+                    <div class="image-container"></div>
+                    <p>“It is with our hearts overflowing with pride and gratitude that we conclude one more edition of Rock in Rio. Every imagination lived in the seven days of the festival would never have been possible without the participation of brands and professionals like you, who believed in us and helped make our dreams reality...”</p>
+                    <h6>Laila Dias</h6>
+                      <span>Account Executive - Brasil</span>
+                  </div>
+                  <div class="card" id="3">
+                    <div class="image-container"></div>
+                      <p>“.. Telecall really helped us with a Dedicated Internet of 200MB, point to point, 0800, follow me, WIFI ... to support all of our Committee's needs. Telecall was 100%.”
+                    </p><br>
+                      <h6>Diego Mendes</h6>
+                      <span>Operations Manager | Australian Olympic Committee</span>
+                  </div>
+            </div>
+    </section>
+
+    <footer>
+      <!--PARTROCINADORES-->
+      <div id="patrocinadores">
+        <div class="marquee">
+          <ul class="marquee-content">
+            <li><img src="../img/Telecompartners3.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners2.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners4.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners5.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners6.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners7.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners8.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners9.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners10.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners11.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners12.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners14.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners15.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners16.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners17.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners18.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners19.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners20.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners21.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners22.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners23.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners24.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners25.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners26.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners27.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners28.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners29.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners30.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners31.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners32.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+            <li><img src="../img/Telecompartners33.png" width="20%" alt=""></li>
+            <li><span>Sponsor</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="redes-sociais">
+        <div class="container-redes-sociais">
+          <div class="icons-container animated">
+            <div class="icon-container-redes-sociais">
+              <a href="https://www.instagram.com/telecallbr/" target="_blank"><i class="fab fa-instagram fa-1x"></i></a>
+            </div>
+            <div class="icon-container-redes-sociais">
+              <a href="https://www.linkedin.com/company/telecall/" target="_blank"><i class="fab fa-linkedin-in fa-1x"></i></a>
+            </div>
+            <div class="icon-container-redes-sociais">
+              <a href="https://api.whatsapp.com/send/?phone=5521936180100&text&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="icon-container-redes-sociais">
+              <a href="https://www.facebook.com/TelecallBr" target="_blank"><i class="fab fa-facebook-f fa-1x" style="margin: 0 5px;"></i></a> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="parte2-footer">
+        <a href="#">Privacy Policies |</a>
+        <a href="#">Terms of use |</a>
+        <a href="#">Cookies</a>
+      </div>
+      <div class="parte3-footer">
+        &copy;2022 - Developed by <a href="https://github.com/piinheiroflavia" target="_blank"> Flavia Pinheiro</a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
+    <script src="../script/script.js"></script>
+    <script src="../script/cards.js"></script>
+</body>
+</html>

@@ -68,7 +68,7 @@
                     <div class="col-12 input1" > 
                       <!--DATA DE NASCIMENTO-->
                       <div class="input-container-cadastro" id="data-nascimento-div">
-                          <input id="nascimento" class="input-cadastro" type="date" placeholder=" "  required="required" onkeyup="validNascimento()">
+                          <input id="nascimento" class="input-cadastro" type="date" placeholder=" "  required="required" onblur="validNascimento(this.value);">
                           <div class="vago"></div>
                           <label for="data-nascimento" class="placeholder"  id="resDn">Data de Nascimento</label>
                       </div>
@@ -141,7 +141,7 @@
                       <div class="input-container-cadastro" id="cpf-cnpj-div">
                           <input id="cpfcnpj" class="input-cadastro" type="text" autocomplete="off" maxlength="11" placeholder=" " required="required" oninput="validaCpf(TestaCPF(this.value));">
                           <div class="vago"></div>
-                          <label for="cpfcnpj" class="placeholder" id="resCpf">CPF ou CNPJ</label>                     
+                          <label for="cpfcnpj" class="placeholder" id="resCpf">CPF</label>                     
                       </div>
                       <!--CELULAR-->
                       <div class="input-container-cadastro" id="celular-div">
